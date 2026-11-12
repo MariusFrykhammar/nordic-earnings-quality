@@ -6,6 +6,7 @@ const ITEMS = [
   { href: "/", label: "Findings" },
   { href: "/compare/", label: "Compare" },
   { href: "/methodology/", label: "Methodology" },
+  { href: "/about/", label: "About" },
 ];
 
 /** Logo mark: two lines that start together and part ways (profit and cash). */

@@ -41,6 +41,20 @@ export default function Home() {
         <div className="stat"><div className="k">With a red flag</div><div className="v">{nFlagged}</div><div className="s">of seven tests</div></div>
         <div className="stat"><div className="k">Data as of</div><div className="v" style={{ fontSize: 20, paddingTop: 4, fontFamily: "var(--font)", fontWeight: 600 }}>{today}</div><div className="s">{nReports.toLocaleString("en-GB")} companies, FY2020–FY2025</div></div>
       </div>
+      <div className="guide">
+        <div>
+          <h3>What the gap means</h3>
+          <p className="small muted">Profit is booked when it is earned; cash arrives when customers pay. A widening gap means more of the profit sits in receivables, inventory or other estimates.</p>
+        </div>
+        <div>
+          <h3>What a red flag is</h3>
+          <p className="small muted">Seven tests from the earnings-quality literature, each compared with sector peers. A flag is a question to ask the company, with common innocent explanations listed beside it.</p>
+        </div>
+        <div>
+          <h3>Where the numbers come from</h3>
+          <p className="small muted">Official annual reports in the EU&apos;s machine-readable format. Every figure links to the exact line in the filing. <Link href="/about/">Why this was built</Link></p>
+        </div>
+      </div>
       {hero && heroRow && (
         <section>
           <figure className="card hero-figure">

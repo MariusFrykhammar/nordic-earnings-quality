@@ -4,6 +4,7 @@ import { allLeis, getCompany, getFlags, getIndex, series } from "@/lib/data";
 import { COUNTRY, eurM, flagSentence } from "@/lib/format";
 import { DivergenceChart } from "@/components/charts";
 import FinTable from "@/components/FinTable";
+import { CHECKLIST } from "@/lib/glossary";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -71,7 +72,9 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
                 <span className="g"><i />Profit ahead of cash</span>
               </div>
               <DivergenceChart data={series(c)} currency={cur} />
-              <p className="small muted" style={{ margin: "4px 0 0" }}>{cur} millions. Hover a year for the values.</p>
+              <p className="small muted" style={{ margin: "6px 0 0" }}>
+                {cur} millions. Over time the two lines should move together; operating cash flow normally sits above net profit because depreciation is a non-cash cost. Shaded areas mark years where profit ran ahead of cash.
+              </p>
             </div>
           </div>
           <aside aria-labelledby="notes" className="card">
@@ -85,6 +88,12 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
                     <p>{flagSentence(f.flag, f.evidence, c.latest_year)}</p>
                     <p className="why">Can signal: {rules[f.flag]?.signals}</p>
                     <p className="why">Innocent explanations: {rules[f.flag]?.innocent}</p>
+                    {CHECKLIST[f.flag] && (
+                      <details className="why small">
+                        <summary style={{ cursor: "pointer" }}>What to check in the annual report</summary>
+                        <ul style={{ margin: "6px 0 0", paddingLeft: 18 }}>{CHECKLIST[f.flag].map((x) => <li key={x}>{x}</li>)}</ul>
+                      </details>
+                    )}
                   </div>
                 ))}
               </div>

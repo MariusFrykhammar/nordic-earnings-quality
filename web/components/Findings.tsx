@@ -120,19 +120,19 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
             <tr>
               <th className="rank">#</th>
               <th>Company</th>
-              <th>Profit vs cash, 2020–</th>
+              <th title="Net profit (blue) and operating cash flow (orange) per fiscal year since 2020">Profit vs cash, 2020–</th>
               {tab === "recv" ? (
                 <>
-                  <th className="r">Receivables</th>
-                  <th className="r">Revenue</th>
+                  <th className="r" title="Change in trade receivables, latest fiscal year">Receivables, change</th>
+                  <th className="r" title="Change in revenue, latest fiscal year">Revenue, change</th>
                 </>
               ) : (
                 <>
-                  <th className="r">Net profit</th>
-                  <th className="r">Operating cash flow</th>
+                  <th className="r" title="Change in net profit, latest fiscal year vs the year before">Net profit, change</th>
+                  <th className="r" title="Change in operating cash flow, latest fiscal year vs the year before">Operating cash flow, change</th>
                 </>
               )}
-              <th className="r">Revenue</th>
+              <th className="r" title="Latest fiscal year, converted at the ECB average rate">Revenue, EUR</th>
               <th>Red flags</th>
             </tr>
           </thead>

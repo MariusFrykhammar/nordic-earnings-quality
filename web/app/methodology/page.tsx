@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getFlags } from "@/lib/data";
+import { DEFINITIONS, REFERENCES } from "@/lib/glossary";
 
 export const metadata: Metadata = { title: "Methodology: earnings quality scanner" };
 
@@ -51,6 +52,26 @@ export default function Methodology() {
         inventory and receivables flags, since revaluations and project inventories are part of their business model.
       </p>
 
+      </div><div className="card"><h2>Definitions and formulas</h2>
+      <p>All figures are consolidated group figures as reported, in the company&apos;s reporting currency. Growth rates compare the latest fiscal year with the previous one, and averages use the opening and closing balance.</p>
+      <dl>
+        {Object.values(DEFINITIONS).map((d) => (
+          <div key={d.term}>
+            <dt>{d.term}</dt>
+            <dd style={{ fontFamily: "var(--mono)", fontSize: 13 }}>{d.formula}</dd>
+            <dd className="muted">{d.reading}</dd>
+          </div>
+        ))}
+      </dl>
+      </div><div className="card"><h2>How the data is processed</h2>
+      <ol>
+        <li>List every annual report filed in Sweden, Norway, Denmark and Finland since fiscal 2020, and keep one version per company and year (the latest processed).</li>
+        <li>Read only consolidated group facts; segment and breakdown figures are skipped.</li>
+        <li>Map each metric to standard IFRS concepts in a fixed order, then to company-specific concepts by name in five languages. Every value records which concept it came from.</li>
+        <li>Fill a year without its own report from the next year&apos;s comparatives, and flag it.</li>
+        <li>Add legal names (GLEIF), listing and trading venue (ESMA), industry codes (national registers) and euro rates (ECB).</li>
+        <li>Check balance-sheet identities, signs and implausible margins, and spot-check against published figures.</li>
+      </ol>
       </div><div className="card"><h2>Limitations</h2>
       <p>
         Companies tag their reports differently, and some report key lines only in their own company-specific tags.
@@ -59,6 +80,10 @@ export default function Methodology() {
         companies are still unclassified. Data was last refreshed on {meta.generated}.
       </p>
       <p>Nothing on this site is investment advice. The code and data are open on GitHub.</p>
+      </div>
+      <div className="card"><h2>Further reading</h2>
+      <p>The flags draw on a long academic literature on earnings quality. A good starting point:</p>
+      <ul className="small">{REFERENCES.map((r) => <li key={r} style={{ marginBottom: 6 }}>{r}</li>)}</ul>
       </div>
     </section>
   );
