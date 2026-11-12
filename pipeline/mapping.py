@@ -69,6 +69,8 @@ CONCEPTS: dict[str, tuple[str, list[str], list[list[str]]]] = {
     # financial-sector markers (used for classification only)
     "interest_income": ("D", ["RevenueFromInterest", "InterestRevenueCalculatedUsingEffectiveInterestMethod", "InterestIncome"], []),
     "insurance_revenue": ("D", ["InsuranceRevenue", "RevenueFromInsuranceContractsIssued"], []),
+    "fee_commission_income": ("D", ["FeeAndCommissionIncome", "RevenueFromFeeAndCommissionIncome"], []),
+    "loans_to_customers": ("I", ["LoansAndAdvancesToCustomers"], []),
 }
 
 # D&A concepts that include impairment: noted in provenance, EBITDA labelled accordingly.

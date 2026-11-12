@@ -88,8 +88,12 @@ def classify(name: str, wd: dict | None, latest: dict) -> tuple[str, str]:
     has_ebit = latest.get("ebit") is not None
     if latest.get("insurance_revenue") is not None and not has_ebit:
         return "Insurance", "data: insurance revenue"
-    if latest.get("interest_income") is not None and not has_rev and not has_ebit:
-        return "Banks & financial services", "data: interest income, no revenue/EBIT"
+    ii, ta0 = latest.get("interest_income"), latest.get("total_assets")
+    if not has_rev and (latest.get("fee_commission_income") is not None or (ii and ta0 and ii / ta0 >= 0.02)):
+        return "Banks & financial services", "data: commission or material interest income, no revenue tag"
+    lc = latest.get("loans_to_customers")
+    if lc and latest.get("total_assets") and lc / latest["total_assets"] > 0.3:
+        return "Banks & financial services", "data: loans to customers > 30% of assets"
     ta, ip = latest.get("total_assets"), latest.get("investment_property")
     if ta and ip and ip / ta > 0.4:
         return "Real estate", "data: investment property > 40% of assets"
@@ -97,7 +101,7 @@ def classify(name: str, wd: dict | None, latest: dict) -> tuple[str, str]:
         s = from_industries(wd["industries"])
         if s:
             return s, "wikidata: " + "; ".join(wd["industries"][:3])
-    if any(k in n for k in ("bank", "sparebank", "sparbank", "pankki", "försäkring", "forsikring", "vakuutus", "insurance")):
+    if any(k in n for k in ("bank", "sparebank", "sparbank", "pankki", "kredit", "kreditt", "försäkring", "forsikring", "vakuutus", "insurance")):
         return ("Insurance" if any(k in n for k in ("försäkring", "forsikring", "vakuutus", "insurance")) else "Banks & financial services"), "name"
     if any(k in n for k in ("fastighet", "eiendom", "ejendom", "kiinteistö", "property", "properties", "real estate")):
         return "Real estate", "name"

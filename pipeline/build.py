@@ -19,6 +19,7 @@ REPORT_METRICS = [
     "inventories", "goodwill_measure", "capex", "capex_intangible", "da",
 ]
 MIN_REVENUE_EUR_M = 25  # rankings only include companies at least this size (latest year)
+IFRS_CAND = re.compile(r"Revenue|Sales|Income|Operating|ProfitLoss|CashFlows", re.I)
 DATA = Path("data")
 CAND = re.compile(r"revenue|sales|turnover|omsättning|omsattning|inntekt|omsætning|liikevaihto|operat|rörelse|drift|liike|ebit|"
                   r"profit|result|cashflow|kassaflöde|kontantstr", re.I)
@@ -187,6 +188,7 @@ def main() -> None:
             src = y["src"]
             series[label] = {
                 "raw": vals, "prov": prov,
+                "ifrs_d": sorted(k.split(":", 1)[1] for k in y["D"] if k.startswith("ifrs-full:")),
                 "ext": sorted({k.split(":", 1)[1] for k in list(y["D"]) + list(y["I"]) if not k.startswith("ifrs-full:")}), "v": v, "fy_end": str(fy_end), "currency": cur,
                 "own_report": y["own"], "source": fetch.BASE + (src.get("viewer_url") or ""),
                 "source_period_end": src.get("period_end"),
@@ -288,6 +290,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             "rankable": c["rankable"], "revenue_eur_m": c["revenue_eur_m"],
             "n_flags": len(c["flags"]), "flags": [f["flag"] for f in c["flags"]],
             "profit_cash_gap": rnd(lat["m"].get("profit_cash_gap")),
+            "profit_cash_gap_scaled": rnd(lat["m"].get("profit_cash_gap_scaled")),
             "net_profit_growth": rnd(lat["m"].get("net_profit_growth")), "ocf_growth": rnd(lat["m"].get("ocf_growth")),
             "receivables_growth": rnd(lat["m"].get("receivables_growth")), "revenue_growth": rnd(lat["m"].get("revenue_growth")),
             "ebit_margin": rnd(lat["m"].get("ebit_margin")), "cash_conversion_3y": rnd(lat["m"].get("cash_conversion_3y")),
@@ -315,9 +318,13 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
 
     ranked = [r for r in index if r["rankable"]]
     lists = {
-        "most_flags": sorted([r for r in ranked if r["n_flags"]], key=lambda r: (-r["n_flags"], -(r["profit_cash_gap"] or -9)))[:50],
+        "most_flags": sorted([r for r in ranked if r["n_flags"]], key=lambda r: (-r["n_flags"], -(r["profit_cash_gap_scaled"] or -9)))[:50],
+        # profit up, cash flow down; ranked by (change in net profit - change in OCF) / prior-year revenue,
+        # which avoids the base effects of growth rates on small numbers
         "widest_profit_cash_gap": sorted(
-            [r for r in ranked if r["profit_cash_gap"] is not None], key=lambda r: -r["profit_cash_gap"])[:50],
+            [r for r in ranked if r["profit_cash_gap_scaled"] is not None and r["sector"] != "Real estate"
+             and (r["net_profit_growth"] or 0) > 0 and (r["ocf_growth"] or 0) < 0],
+            key=lambda r: -r["profit_cash_gap_scaled"])[:50],
         "fastest_receivables_build_up": sorted(
             [r for r in ranked if r["receivables_growth"] is not None and r["revenue_growth"] is not None],
             key=lambda r: -(r["receivables_growth"] - r["revenue_growth"]))[:50],
@@ -368,6 +375,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             needs.append({"lei": c["lei"], "name": c["name"], "country": c["country"], "sector": c["sector"],
                           "year": c["latest_year"], "missing": missing,
                           "candidate_extension_concepts": [e for e in s["ext"] if CAND.search(e)][:15],
+                          "ifrs_duration_concepts": [e for e in s["ifrs_d"] if IFRS_CAND.search(e)][:25],
                           "source": s["source"]})
     (DIAG / "needs_override.json").write_text(json.dumps(needs, ensure_ascii=False, indent=1))
     (DIAG / "extension_auto_matches.json").write_text(json.dumps(ext_auto, ensure_ascii=False, indent=1))

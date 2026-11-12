@@ -89,4 +89,9 @@ def year_metrics(cur: dict, prev: dict | None) -> dict:
         m["profit_cash_gap"] = m["net_profit_growth"] - m["ocf_growth"]
     else:
         m["profit_cash_gap"] = None
+    np_, ocf, pnp, pocf, prev_rev = cur.get("net_profit"), cur.get("ocf"), p.get("net_profit"), p.get("ocf"), p.get("revenue")
+    if None not in (np_, ocf, pnp, pocf) and prev_rev and prev_rev > 0:
+        m["profit_cash_gap_scaled"] = ((np_ - pnp) - (ocf - pocf)) / prev_rev
+    else:
+        m["profit_cash_gap_scaled"] = None
     return m

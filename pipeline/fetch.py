@@ -27,11 +27,16 @@ def get_json(url: str, use_cache: bool = True, store: bool = True) -> dict | Non
     p = _cache_path(url)
     if use_cache and p.exists():
         return json.loads(p.read_text())
-    for attempt in range(4):
+    for attempt in range(8):
         try:
             r = _session.get(url, timeout=90)
             if r.status_code == 404:
                 return None
+            if r.status_code == 429 or r.status_code >= 500:
+                wait = float(r.headers.get("Retry-After") or 0) or min(120, 10 * 2 ** attempt)
+                print(f"  .. {r.status_code}, waiting {wait:.0f}s")
+                time.sleep(wait)
+                continue
             r.raise_for_status()
             data = r.json()
             if store:
@@ -39,7 +44,7 @@ def get_json(url: str, use_cache: bool = True, store: bool = True) -> dict | Non
                 p.write_text(json.dumps(data))
             return data
         except (requests.RequestException, ValueError) as e:
-            if attempt == 3:
+            if attempt == 7:
                 print(f"  ! failed {url}: {e}")
                 return None
             time.sleep(2 * (attempt + 1))
@@ -57,7 +62,7 @@ def list_filings(country: str, extra: dict | None = None, use_cache: bool = Fals
         page += 1
         doc = get_json(url, use_cache=use_cache)
         if not doc:
-            break
+            raise RuntimeError(f"listing failed for {country} at page {page}; aborting so no partial data is written")
         entities = {e["id"]: e.get("attributes", {}) for e in doc.get("included", []) if e.get("type") == "entity"}
         for f in doc.get("data", []):
             a = dict(f.get("attributes", {}))
@@ -68,6 +73,7 @@ def list_filings(country: str, extra: dict | None = None, use_cache: bool = Fals
             a["_lei"] = ent.get("identifier")
             a["_name"] = ent.get("name")
             out.append(a)
+        time.sleep(1.0)  # be polite to the API
         nxt = (doc.get("links") or {}).get("next")
         url = (nxt if nxt.startswith("http") else BASE + nxt) if nxt else None
         if page > 200:
