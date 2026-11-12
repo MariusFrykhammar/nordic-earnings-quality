@@ -7,7 +7,7 @@
   "non_financial": 401,
   "excluded_financial_or_untagged": 38,
   "gate_core4_3yrs": 328,
-  "rankable": 266,
+  "rankable": 270,
   "sectors": [
    [
     "Unclassified",
@@ -91,7 +91,7 @@
   "listing": [
    [
     "listed shares",
-    328
+    333
    ],
    [
     "no listed shares (ESMA FIRDS)",
@@ -99,7 +99,7 @@
    ],
    [
     "shares traded only outside Nordic exchanges (ESMA FIRDS)",
-    16
+    11
    ]
   ],
   "venues": [
@@ -112,20 +112,16 @@
     16
    ],
    [
+    "Nasdaq First North Sweden",
+    7
+   ],
+   [
     "NGM Main Regulated",
     6
    ],
    [
-    "FIRST NORTH SWEDEN - NORDIC@MID",
-    6
-   ],
-   [
-    "NORDIC SME",
+    "NGM Nordic SME",
     2
-   ],
-   [
-    "Nasdaq First North Sweden",
-    1
    ],
    [
     "Oslo Børs",
@@ -259,7 +255,7 @@
   "non_financial": 265,
   "excluded_financial_or_untagged": 37,
   "gate_core4_3yrs": 210,
-  "rankable": 126,
+  "rankable": 127,
   "sectors": [
    [
     "Unclassified",
@@ -347,7 +343,7 @@
   "listing": [
    [
     "listed shares",
-    163
+    166
    ],
    [
     "no listed shares (ESMA FIRDS)",
@@ -355,7 +351,7 @@
    ],
    [
     "shares traded only outside Nordic exchanges (ESMA FIRDS)",
-    10
+    7
    ]
   ],
   "venues": [
@@ -503,7 +499,7 @@
   "non_financial": 255,
   "excluded_financial_or_untagged": 46,
   "gate_core4_3yrs": 169,
-  "rankable": 60,
+  "rankable": 63,
   "sectors": [
    [
     "Unclassified",
@@ -591,11 +587,11 @@
    ],
    [
     "listed shares",
-    87
+    90
    ],
    [
     "shares traded only outside Nordic exchanges (ESMA FIRDS)",
-    8
+    5
    ]
   ],
   "venues": [
@@ -608,7 +604,7 @@
     8
    ],
    [
-    "FIRST NORTH DENMARK - NORDIC@MID",
+    "Nasdaq First North Denmark",
     5
    ],
    [

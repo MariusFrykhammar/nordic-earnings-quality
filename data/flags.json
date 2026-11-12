@@ -87,36 +87,36 @@
   },
   "peer_thresholds": {
    "all": {
-    "cash_conversion_3y_p10": 0.8332863446923265,
-    "accruals_ratio_p90": -0.0038033049877665114,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
-    "n": 507
+    "cash_conversion_3y_p10": 0.8346963026446176,
+    "accruals_ratio_p90": -0.0034759717593810333,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
+    "n": 514
    },
    "Unclassified": {
-    "cash_conversion_3y_p10": 0.8224324842721455,
-    "accruals_ratio_p90": -0.0016295577389192537,
-    "intangible_capex_to_revenue_p90": 0.07107476727512876,
-    "n": 236,
+    "cash_conversion_3y_p10": 0.8238259572566992,
+    "accruals_ratio_p90": -0.003505350893601239,
+    "intangible_capex_to_revenue_p90": 0.07214826790088077,
+    "n": 241,
     "peer_group": "Unclassified"
    },
    "Industrials": {
-    "cash_conversion_3y_p10": 0.9570225902105747,
-    "accruals_ratio_p90": -0.009577835998492996,
-    "intangible_capex_to_revenue_p90": 0.04842621527491331,
-    "n": 91,
+    "cash_conversion_3y_p10": 0.9584546292400472,
+    "accruals_ratio_p90": -0.009089516062285457,
+    "intangible_capex_to_revenue_p90": 0.04841100862890327,
+    "n": 93,
     "peer_group": "Industrials"
    },
    "Materials": {
     "cash_conversion_3y_p10": 0.9233194825825966,
     "accruals_ratio_p90": -0.0004795403377733942,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
     "n": 23,
     "peer_group": "Materials"
    },
    "Telecom & media": {
-    "cash_conversion_3y_p10": 0.8332863446923265,
+    "cash_conversion_3y_p10": 0.8346963026446176,
     "accruals_ratio_p90": -0.011291760362048259,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
     "n": 12,
     "peer_group": "Telecom & media"
    },
@@ -144,21 +144,21 @@
    "Transport & shipping": {
     "cash_conversion_3y_p10": 0.8774918822443408,
     "accruals_ratio_p90": -0.01950767064068189,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
     "n": 26,
     "peer_group": "Transport & shipping"
    },
    "Energy": {
     "cash_conversion_3y_p10": 0.7187491019972773,
     "accruals_ratio_p90": -0.006726021700145582,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
     "n": 13,
     "peer_group": "Energy"
    },
    "Utilities": {
-    "cash_conversion_3y_p10": 0.8332863446923265,
+    "cash_conversion_3y_p10": 0.8346963026446176,
     "accruals_ratio_p90": 0.04523686699150847,
-    "intangible_capex_to_revenue_p90": 0.07228220205997424,
+    "intangible_capex_to_revenue_p90": 0.07295187285544155,
     "n": 10,
     "peer_group": "Utilities"
    }
@@ -1035,6 +1035,32 @@
     "cash_conversion_3y": null
    },
    {
+    "lei": "549300VPZURYDFG0AB60",
+    "name": "REC Silicon Holdings",
+    "legal_name": "REC SILICON HOLDINGS AS",
+    "country": "NO",
+    "sector": "Industrials",
+    "market": null,
+    "currency": "USD",
+    "latest_year": 2025,
+    "in_universe": true,
+    "listing_status": "listed shares: home venue not identified (ESMA FIRDS)",
+    "rankable": true,
+    "revenue_eur_m": 69.2,
+    "n_flags": 1,
+    "flags": [
+     "high_accruals"
+    ],
+    "profit_cash_gap": null,
+    "profit_cash_gap_scaled": 2.4055,
+    "net_profit_growth": null,
+    "ocf_growth": null,
+    "receivables_growth": -0.4753,
+    "revenue_growth": -0.4446,
+    "ebit_margin": -0.3325,
+    "cash_conversion_3y": null
+   },
+   {
     "lei": "2138001LK2Z2HSER4U15",
     "name": "Prosafe",
     "legal_name": "PROSAFE SE",
@@ -1137,6 +1163,32 @@
     "revenue_growth": 0.0186,
     "ebit_margin": 0.4252,
     "cash_conversion_3y": 0.6965
+   },
+   {
+    "lei": "213800ATZVDWWKJ8NI47",
+    "name": "Asetek",
+    "legal_name": "ASETEK A/S",
+    "country": "DK",
+    "sector": "Unclassified",
+    "market": null,
+    "currency": "USD",
+    "latest_year": 2025,
+    "in_universe": true,
+    "listing_status": "listed shares: home venue not identified (ESMA FIRDS)",
+    "rankable": true,
+    "revenue_eur_m": 36.7,
+    "n_flags": 1,
+    "flags": [
+     "inventory_build_up"
+    ],
+    "profit_cash_gap": null,
+    "profit_cash_gap_scaled": 0.3715,
+    "net_profit_growth": null,
+    "ocf_growth": -5.371,
+    "receivables_growth": -0.0869,
+    "revenue_growth": -0.2096,
+    "ebit_margin": -0.2402,
+    "cash_conversion_3y": null
    },
    {
     "lei": "7437000VHKJDQQJWF837",
@@ -1352,11 +1404,11 @@
     "legal_name": "Verve Group Media SE",
     "country": "SE",
     "sector": "Unclassified",
-    "market": "FIRST NORTH SWEDEN - NORDIC@MID",
+    "market": "Nasdaq First North Sweden",
     "currency": "EUR",
     "latest_year": 2025,
     "in_universe": true,
-    "listing_status": "listed shares: FIRST NORTH SWEDEN - NORDIC@MID",
+    "listing_status": "listed shares: Nasdaq First North Sweden",
     "rankable": true,
     "revenue_eur_m": 550.9,
     "n_flags": 1,
@@ -1449,58 +1501,6 @@
     "revenue_growth": -0.2775,
     "ebit_margin": 0.0534,
     "cash_conversion_3y": null
-   },
-   {
-    "lei": "213800R2TQW1OZGYDX93",
-    "name": "Sotkamo Silver",
-    "legal_name": "SOTKAMO SILVER AB",
-    "country": "SE",
-    "sector": "Unclassified",
-    "market": "Nasdaq Helsinki",
-    "currency": "SEK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "listing_status": "listed shares: Nasdaq Helsinki",
-    "rankable": true,
-    "revenue_eur_m": 35.6,
-    "n_flags": 1,
-    "flags": [
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": null,
-    "profit_cash_gap_scaled": 0.115,
-    "net_profit_growth": null,
-    "ocf_growth": -0.7509,
-    "receivables_growth": 1.0825,
-    "revenue_growth": -0.0456,
-    "ebit_margin": 0.0224,
-    "cash_conversion_3y": 2.3259
-   },
-   {
-    "lei": "213800GIV9N2A714T434",
-    "name": "DOF Group",
-    "legal_name": "DOF GROUP ASA",
-    "country": "NO",
-    "sector": "Energy",
-    "market": "Oslo Børs",
-    "currency": "USD",
-    "latest_year": 2025,
-    "in_universe": true,
-    "listing_status": "listed shares: Oslo Børs",
-    "rankable": true,
-    "revenue_eur_m": 1656.7,
-    "n_flags": 1,
-    "flags": [
-     "profit_without_cash"
-    ],
-    "profit_cash_gap": 1.2801,
-    "profit_cash_gap_scaled": 0.1112,
-    "net_profit_growth": 1.6236,
-    "ocf_growth": 0.3435,
-    "receivables_growth": 0.1414,
-    "revenue_growth": 0.3509,
-    "ebit_margin": 0.2795,
-    "cash_conversion_3y": 0.403
    }
   ],
   "widest_profit_cash_gap": [
@@ -3099,11 +3099,11 @@
     "legal_name": "Verve Group Media SE",
     "country": "SE",
     "sector": "Unclassified",
-    "market": "FIRST NORTH SWEDEN - NORDIC@MID",
+    "market": "Nasdaq First North Sweden",
     "currency": "EUR",
     "latest_year": 2025,
     "in_universe": true,
-    "listing_status": "listed shares: FIRST NORTH SWEDEN - NORDIC@MID",
+    "listing_status": "listed shares: Nasdaq First North Sweden",
     "rankable": true,
     "revenue_eur_m": 550.9,
     "n_flags": 1,

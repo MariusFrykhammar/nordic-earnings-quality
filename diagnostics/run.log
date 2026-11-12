@@ -1,43 +1,43 @@
-21:56:59 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
+22:01:16 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:57:39 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
+22:01:55 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:58:27 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
+22:02:43 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:59:07 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
-21:59:07 unique filings to process: 5552
-21:59:07   facts 0/5552 (0s)
-21:59:07   facts 250/5552 (0s)
-21:59:07   facts 500/5552 (0s)
-21:59:07   facts 750/5552 (0s)
-21:59:08   facts 1000/5552 (0s)
-21:59:08   facts 1250/5552 (1s)
-21:59:08   facts 1500/5552 (1s)
-21:59:08   facts 1750/5552 (1s)
-21:59:08   facts 2000/5552 (1s)
-21:59:08   facts 2250/5552 (1s)
-21:59:08   facts 2500/5552 (1s)
-21:59:08   facts 2750/5552 (1s)
-21:59:09   facts 3000/5552 (1s)
-21:59:09   facts 3250/5552 (2s)
-21:59:09   facts 3500/5552 (2s)
-21:59:09   facts 3750/5552 (2s)
-21:59:09   facts 4000/5552 (2s)
-21:59:09   facts 4250/5552 (2s)
-21:59:09   facts 4500/5552 (2s)
-21:59:10   facts 4750/5552 (2s)
-21:59:10   facts 5000/5552 (3s)
-21:59:10   facts 5250/5552 (3s)
-21:59:10   facts 5500/5552 (3s)
-21:59:10 downloads failed: 0
-21:59:11 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
-21:59:11 wikidata lookup for 1272 LEIs
-21:59:26 wikidata hits: 638
-21:59:29 companies assembled: 1207
+22:03:22 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
+22:03:22 unique filings to process: 5552
+22:03:22   facts 0/5552 (0s)
+22:03:23   facts 250/5552 (0s)
+22:03:23   facts 500/5552 (0s)
+22:03:23   facts 750/5552 (0s)
+22:03:23   facts 1000/5552 (1s)
+22:03:23   facts 1250/5552 (1s)
+22:03:23   facts 1500/5552 (1s)
+22:03:23   facts 1750/5552 (1s)
+22:03:24   facts 2000/5552 (1s)
+22:03:24   facts 2250/5552 (1s)
+22:03:24   facts 2500/5552 (1s)
+22:03:24   facts 2750/5552 (2s)
+22:03:24   facts 3000/5552 (2s)
+22:03:24   facts 3250/5552 (2s)
+22:03:24   facts 3500/5552 (2s)
+22:03:25   facts 3750/5552 (2s)
+22:03:25   facts 4000/5552 (2s)
+22:03:25   facts 4250/5552 (2s)
+22:03:25   facts 4500/5552 (3s)
+22:03:25   facts 4750/5552 (3s)
+22:03:25   facts 5000/5552 (3s)
+22:03:25   facts 5250/5552 (3s)
+22:03:26   facts 5500/5552 (3s)
+22:03:26 downloads failed: 0
+22:03:28 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
+22:03:28 wikidata lookup for 1272 LEIs
+22:03:46 wikidata hits: 638
+22:03:48 companies assembled: 1207
   FIRDS FULINS_E_20261107_01of02.zip: 812 issuers so far
   FIRDS FULINS_E_20261107_02of02.zip: 813 issuers so far
-22:00:01 reference data: {'gleif': 'ok: 1207 of 1207 LEIs', 'firds': 'ok: 813 issuers with listed equity', 'registries': 'ok: industry codes for 412 companies (NO, FI; SE/DK need credentials)'}
-22:00:02 done
+22:04:19 reference data: {'gleif': 'ok: 1207 of 1207 LEIs', 'firds': 'ok: 813 issuers with listed equity', 'registries': 'ok: industry codes for 412 companies (NO, FI; SE/DK need credentials)'}
+22:04:20 done
