@@ -30,7 +30,7 @@ def summarise(report: dict) -> dict:
         extra = set(d) - {"concept", "entity", "period", "unit", "language"}
         for k in extra:
             dims[k.split(":")[0]] += 1
-        if not extra:
+        if not extra and (d.get("unit") or "").startswith("iso4217:"):  # monetary only, skip text blocks
             consolidated.append(
                 {"c": d.get("concept"), "p": d.get("period"), "u": d.get("unit"), "v": f.get("value"), "dec": f.get("decimals")}
             )
