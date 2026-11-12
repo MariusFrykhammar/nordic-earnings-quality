@@ -6,14 +6,15 @@ export const metadata: Metadata = { title: "Methodology: earnings quality scanne
 export default function Methodology() {
   const { meta } = getFlags();
   return (
-    <section className="prose" style={{ borderTop: 0 }}>
+    <section className="prose" style={{ marginTop: 0 }}>
+      <p className="eyebrow">Methodology</p>
       <h1>How the scanner works</h1>
       <p className="lede">
         Every figure comes from a listed company&apos;s official annual report. The scanner computes a few ratios and
         flags patterns that analysts usually want explained. It does not judge whether a company has done anything wrong.
       </p>
 
-      <h2>Where the numbers come from</h2>
+      <div className="card"><h2>Where the numbers come from</h2>
       <p>
         Listed companies in the EU and Norway publish their annual reports in a machine-readable format (ESEF), where each
         figure carries a standard accounting tag. The scanner reads the consolidated group figures from these reports via
@@ -27,7 +28,7 @@ export default function Methodology() {
         ))}
       </dl>
 
-      <h2>Which companies are included</h2>
+      </div><div className="card"><h2>Which companies are included</h2>
       <p>
         Rankings cover non-financial companies whose shares are admitted to trading on a Nordic exchange according to
         ESMA&apos;s register, with revenue of at least €{meta.min_revenue_eur_m_for_rankings} million and an annual report for
@@ -35,7 +36,7 @@ export default function Methodology() {
         Bond-only issuers are shown on their own pages but not ranked.
       </p>
 
-      <h2>The seven red flags</h2>
+      </div><div className="card"><h2>The seven red flags</h2>
       <p>Each flag is tested on the latest fiscal year. Where a rule mentions peers, it compares with companies in the same sector when there are at least ten of them, otherwise with all non-financial companies.</p>
       <dl>
         {Object.entries(meta.rules).map(([k, r]) => (
@@ -51,7 +52,7 @@ export default function Methodology() {
         inventory and receivables flags, since revaluations and project inventories are part of their business model.
       </p>
 
-      <h2>Limitations</h2>
+      </div><div className="card"><h2>Limitations</h2>
       <p>
         Companies tag their reports differently, and some report key lines only in their own company-specific tags.
         Figures labelled &ldquo;before special items&rdquo; or &ldquo;adjusted&rdquo; are never used. Sector labels come from the
@@ -59,6 +60,7 @@ export default function Methodology() {
         companies are still unclassified. Data was last refreshed on {meta.generated}.
       </p>
       <p>Nothing on this site is investment advice. The code and data are open on GitHub.</p>
+      </div>
     </section>
   );
 }

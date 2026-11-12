@@ -88,11 +88,11 @@ export default function Compare() {
         <p className="muted">Search for a company above, or open a company page and use its peer comparison.</p>
       ) : (
         <>
-          <div className="figure" style={{ marginBottom: 24 }}>
+          <div className="card" style={{ marginBottom: 12 }}>
             <BubbleChart data={bubbles} />
             <p className="small muted" style={{ margin: "4px 0 0" }}>Latest fiscal year for each company. Circle area shows revenue in euros.</p>
           </div>
-          <div className="table-scroll">
+          <div className="table-card"><div className="table-scroll">
             <table>
               <thead>
                 <tr>
@@ -109,7 +109,7 @@ export default function Compare() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </div></div>
         </>
       )}
     </>

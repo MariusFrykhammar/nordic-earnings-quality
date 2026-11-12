@@ -26,43 +26,51 @@ export default function Home() {
   const nFlagged = rank.filter((r) => r.n_flags > 0).length;
   const nGap = gapList.length;
 
+  const today = new Date(flags.meta.generated).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  const nReports = index.length;
   return (
     <>
-      <div className="hero">
-        <div>
-          <h1>Where Nordic profits and cash flows part ways</h1>
-          <p className="lede">
-            Profit is an accounting estimate; operating cash flow is what actually came in. This scanner reads the
-            official annual reports of {rank.length} listed Nordic companies and points out where the two diverge.
-          </p>
-          <p>
-            In the latest reported year, {nGap} of them grew net profit while operating cash flow fell, and {nFlagged} trip
-            at least one of seven accounting red flags. Each figure links to the exact line in the company&apos;s annual
-            report.
-          </p>
-          <p className="small muted">
-            Coverage: {Object.values(COUNTRY).join(", ")}, FY2020–FY{flags.meta.generated.slice(0, 4) === "2026" ? "2025" : "latest"}.
-            Data refreshed {flags.meta.generated}. <Link href="/methodology/">How it works</Link>
-          </p>
-        </div>
-        {hero && heroRow && (
-          <figure className="hero-figure" style={{ margin: 0 }}>
-            <div className="key">
+      <p className="eyebrow">Data as of {today}</p>
+      <h1>Earnings quality</h1>
+      <p className="lede">
+        Profit is an accounting estimate; operating cash flow is what actually came in. This scanner reads the official
+        annual reports of listed Nordic companies and points out where the two part ways.
+      </p>
+      <div className="stats">
+        <div className="stat"><div className="k">Listed companies ranked</div><div className="v">{rank.length}</div><div className="s">{Object.values(COUNTRY).join(", ")}</div></div>
+        <div className="stat"><div className="k">Profit up, cash down</div><div className="v down">{nGap}</div><div className="s">latest fiscal year</div></div>
+        <div className="stat"><div className="k">With a red flag</div><div className="v">{nFlagged}</div><div className="s">of seven tests</div></div>
+        <div className="stat"><div className="k">Companies read</div><div className="v">{nReports.toLocaleString("en-GB")}</div><div className="s">FY2020–FY2025 reports</div></div>
+      </div>
+      {hero && heroRow && (
+        <section>
+          <figure className="card hero-figure">
+            <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", alignItems: "baseline" }}>
+              <h2 style={{ margin: 0 }}>
+                <Link className="who" href={`/company/${hero.lei}/`}>{hero.display_name}</Link>
+                <span className="muted" style={{ fontWeight: 400 }}> profit vs cash</span>
+              </h2>
+              <span className="small">
+                FY{hero.latest_year}: net profit <span className="num up">{pct(heroRow.net_profit_growth, true)}</span>, operating cash flow{" "}
+                <span className="num down">{pct(heroRow.ocf_growth, true)}</span>
+              </span>
+            </div>
+            <div className="key" style={{ marginTop: 10 }}>
               <span className="p"><i />Net profit</span>
               <span className="c"><i />Operating cash flow</span>
               <span className="g"><i />Profit ahead of cash</span>
             </div>
-            <DivergenceChart data={series(hero)} currency={hero.years[String(hero.latest_year)].currency} height={280} />
+            <div className="only-wide"><DivergenceChart data={series(hero)} currency={hero.years[String(hero.latest_year)].currency} height={300} width={1100} /></div>
+            <div className="only-narrow"><DivergenceChart data={series(hero)} currency={hero.years[String(hero.latest_year)].currency} height={300} width={560} /></div>
             <figcaption>
-              <Link className="who" href={`/company/${hero.lei}/`}>{hero.display_name}</Link>, {COUNTRY[hero.country]}:
-              in FY{hero.latest_year} net profit {pct(heroRow.net_profit_growth, true)}, operating cash flow{" "}
-              {pct(heroRow.ocf_growth, true)}. {hero.years[String(hero.latest_year)].currency} millions.
+              The largest profit-versus-cash gap among companies with revenue above €250m. {COUNTRY[hero.country]},{" "}
+              {hero.years[String(hero.latest_year)].currency} millions. <Link href="/methodology/">How it works</Link>
             </figcaption>
           </figure>
-        )}
-      </div>
+        </section>
+      )}
       <section aria-labelledby="findings">
-        <h2 id="findings">Findings</h2>
+        <h2 id="findings">Ranked findings</h2>
         <Findings rows={rows} rules={Object.fromEntries(Object.entries(flags.meta.rules).map(([k, v]) => [k, v.title]))} />
       </section>
     </>

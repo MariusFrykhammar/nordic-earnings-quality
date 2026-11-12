@@ -43,19 +43,18 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
   return (
     <>
       <div className="co-head">
-        <p className="small"><Link href="/">Findings</Link></p>
+        <p className="eyebrow"><Link href="/" style={{ textDecoration: "none" }}>Findings</Link> / {c.country} / {c.sector}</p>
         <h1>{c.display_name}</h1>
         <ul className="facts">
-          <li>{COUNTRY[c.country] ?? c.country}</li>
-          <li>{c.equity?.venue ?? c.listing_status.replace(/^listed shares: /, "")}</li>
-          <li>Sector <b>{c.sector}</b></li>
-          <li>Revenue <b>{eurM(c.revenue_eur_m)}</b> (FY{c.latest_year})</li>
-          <li>Reports in {cur}</li>
+          <li><b>{c.equity?.venue ?? c.listing_status.replace(/^listed shares: /, "")}</b></li>
+          {c.tickers.length > 0 && <li>Ticker <b>{c.tickers[0]}</b></li>}
+          <li>Revenue <b className="num">{eurM(c.revenue_eur_m)}</b> FY{c.latest_year}</li>
+          <li>Reports in <b>{cur}</b></li>
         </ul>
-        <p className="small muted" style={{ marginTop: 8 }}>
+        <p className="small muted" style={{ marginTop: 10 }}>
           {c.legal_name ?? c.esef_entity_name}. LEI {c.lei}
           {c.org_number ? `, registration number ${c.org_number}` : ""}
-          {c.tickers.length ? `, ticker ${c.tickers.join(", ")}` : ""}.{" "}
+.{" "}
           Sector source: {c.sector_basis}.
         </p>
         {statusNote && <p className="small">{statusNote}</p>}
@@ -64,8 +63,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
       <section>
         <div className="co-grid">
           <div>
-            <h2>Profit and cash, FY2020–FY{c.latest_year}</h2>
-            <div className="figure">
+            <div className="card">
+              <h2>Profit and cash, FY2020–FY{c.latest_year}</h2>
               <div className="key">
                 <span className="p"><i />Net profit</span>
                 <span className="c"><i />Operating cash flow</span>
@@ -75,10 +74,11 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
               <p className="small muted" style={{ margin: "4px 0 0" }}>{cur} millions. Hover a year for the values.</p>
             </div>
           </div>
-          <aside aria-labelledby="notes">
-            <h2 id="notes">Review notes, FY{c.latest_year}</h2>
+          <aside aria-labelledby="notes" className="card">
+            <h2 id="notes" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>Review notes, FY{c.latest_year}
+              <span className={"badge " + (c.flags.length ? "red" : "green")}>{c.flags.length} / 7</span></h2>
             {c.flags.length ? (
-              <div className="notes">
+              <div>
                 {c.flags.map((f) => (
                   <div className="note" key={f.flag}>
                     <h3><span className="tick" style={{ margin: 0 }} aria-hidden="true" />{f.title}</h3>
@@ -89,7 +89,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
                 ))}
               </div>
             ) : (
-              <div className="clean">
+              <div>
                 <p>{c.in_universe ? "None of the seven red flags is triggered in the latest year." : "Red flags are not computed for this company type."}</p>
                 <p className="small"><Link href="/methodology/">What the flags test</Link></p>
               </div>
@@ -99,14 +99,14 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
         </div>
       </section>
 
-      <section>
+      <section className="card">
         <h2>Financials</h2>
         <p className="small muted">Click a number to open it in the annual report. Values come from each year&apos;s own report, or from the next year&apos;s comparatives when that year has no report.</p>
         <FinTable company={c} />
       </section>
 
       {peers.length > 0 && (
-        <section>
+        <section className="card">
           <h2>Compare with peers</h2>
           <p>
             Closest in size in {c.sector.toLowerCase()}:{" "}
@@ -118,7 +118,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
             ))}
             .
           </p>
-          <p><Link className="btn" style={{ textDecoration: "none", display: "inline-block" }} href={`/compare/?c=${[c.lei, ...peers.map((p) => p.lei)].join(",")}`}>Compare these {peers.length + 1} companies</Link></p>
+          <p><Link className="btn primary" href={`/compare/?c=${[c.lei, ...peers.map((p) => p.lei)].join(",")}`}>Compare these {peers.length + 1} companies</Link></p>
         </section>
       )}
     </>

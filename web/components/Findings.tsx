@@ -86,22 +86,22 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
       </div>
       <p className="explain">{current.explain}</p>
       <div className="filters">
-        <label className="sr">
-          <span className="muted small">Country </span>
+        <label>
+          Country
           <select value={country} onChange={(e) => setCountry(e.target.value)}>
             <option value="">All</option>
             {Object.entries(COUNTRY).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
           </select>
         </label>
         <label>
-          <span className="muted small">Sector </span>
+          Sector
           <select value={sector} onChange={(e) => setSector(e.target.value)}>
             <option value="">All</option>
             {sectors.map((s) => <option key={s}>{s}</option>)}
           </select>
         </label>
         <label>
-          <span className="muted small">Red flag </span>
+          Red flag
           <select value={flag} onChange={(e) => setFlag(e.target.value)}>
             <option value="">Any</option>
             {Object.entries(rules).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
@@ -114,7 +114,7 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
         </span>
       </div>
       <p className="small muted">{list.length} companies</p>
-      <div className="table-scroll">
+      <div className="table-card"><div className="table-scroll">
         <table>
           <thead>
             <tr>
@@ -152,7 +152,7 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
                   </>
                 ) : (
                   <>
-                    <td className="r num">{pct(r.net_profit_growth, true)}</td>
+                    <td className={"r num" + ((r.net_profit_growth ?? 0) > 0 ? " up" : "")}>{pct(r.net_profit_growth, true)}</td>
                     <td className={"r num" + ((r.ocf_growth ?? 0) < 0 ? " neg" : "")}>{pct(r.ocf_growth, true)}</td>
                   </>
                 )}
@@ -162,12 +162,12 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
             ))}
           </tbody>
         </table>
-      </div>
+      </div></div>
       {list.length === 0 && <p className="muted">No companies match these filters. Clear a filter to see more.</p>}
       {list.length > limit && (
-        <p><button className="btn" onClick={() => setLimit(limit + 50)}>Show {Math.min(50, list.length - limit)} more</button></p>
+        <p style={{ marginTop: 12 }}><button className="btn" onClick={() => setLimit(limit + 50)}>Show {Math.min(50, list.length - limit)} more</button></p>
       )}
-      <p className="small muted">Growth rates compare the latest fiscal year with the one before. Lines show net profit (blue) and operating cash flow (ochre) for each year since 2020.</p>
+      <p className="small muted">Growth rates compare the latest fiscal year with the one before. Lines show net profit (blue) and operating cash flow (orange) for each year since 2020.</p>
     </>
   );
 }

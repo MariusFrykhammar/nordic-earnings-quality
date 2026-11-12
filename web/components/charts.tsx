@@ -23,9 +23,9 @@ const axis = (v: number) => {
 };
 
 /** Net profit vs operating cash flow. The gap is shaded where profit runs ahead of cash. */
-export function DivergenceChart({ data, currency, height = 300 }: { data: Pt[]; currency: string; height?: number }) {
+export function DivergenceChart({ data, currency, height = 300, width = 640 }: { data: Pt[]; currency: string; height?: number; width?: number }) {
   const [hover, setHover] = useState<number | null>(null);
-  const W = 640, H = height, L = 56, R = 118, T = 14, B = 30;
+  const W = width, H = height, L = 56, R = 132, T = 14, B = 30;
   const pts = data.filter((d) => d.np !== null || d.ocf !== null);
   if (pts.length < 2) return <p className="muted small">Not enough years reported to draw the chart.</p>;
   const vals = pts.flatMap((d) => [d.np, d.ocf]).filter((v): v is number => v !== null);
@@ -75,23 +75,23 @@ export function DivergenceChart({ data, currency, height = 300 }: { data: Pt[]; 
       >
         {ticks.map((t) => (
           <g key={t}>
-            <line x1={L} x2={W - R} y1={y(t)} y2={y(t)} stroke={t === 0 ? "#9aa59b" : "#e3e7e1"} strokeWidth={1} />
+            <line x1={L} x2={W - R} y1={y(t)} y2={y(t)} className={t === 0 ? "zero" : "grid"} strokeWidth={1} />
             <text x={L - 8} y={y(t) + 4} textAnchor="end">{axis(t)}</text>
           </g>
         ))}
-        {gaps.map((p, i) => <polygon key={i} points={p} fill="#f3dcd5" />)}
-        <path d={`M ${line("ocf")}`} fill="none" stroke="#b07314" strokeWidth={2} strokeLinejoin="round" />
-        <path d={`M ${line("np")}`} fill="none" stroke="#3a5ba0" strokeWidth={2} strokeLinejoin="round" />
+        {gaps.map((p, i) => <polygon key={i} points={p} className="gapfill" />)}
+        <path d={`M ${line("ocf")}`} fill="none" className="l-cash" strokeWidth={2} strokeLinejoin="round" />
+        <path d={`M ${line("np")}`} fill="none" className="l-profit" strokeWidth={2} strokeLinejoin="round" />
         {pts.map((d, i) => (
           <text key={d.year} x={x(i)} y={H - 8} textAnchor="middle">{d.year}</text>
         ))}
-        {last.np !== null && <text className="lab" x={W - R + 8} y={labY(last.np, last.ocf) + 4} style={{ fill: "#18242b" }}>Net profit</text>}
-        {last.ocf !== null && <text className="lab" x={W - R + 8} y={labY(last.ocf, last.np) + 4} style={{ fill: "#18242b" }}>Operating cash flow</text>}
+        {last.np !== null && <text className="lab" x={W - R + 8} y={labY(last.np, last.ocf) + 4} >Net profit</text>}
+        {last.ocf !== null && <text className="lab" x={W - R + 8} y={labY(last.ocf, last.np) + 4} >Operating cash flow</text>}
         {hp && (
           <g>
-            <line x1={x(hover!)} x2={x(hover!)} y1={T} y2={H - B} stroke="#18242b" strokeOpacity={0.35} />
-            {hp.np !== null && <circle cx={x(hover!)} cy={y(hp.np)} r={4.5} fill="#3a5ba0" stroke="#fff" strokeWidth={2} />}
-            {hp.ocf !== null && <circle cx={x(hover!)} cy={y(hp.ocf)} r={4.5} fill="#b07314" stroke="#fff" strokeWidth={2} />}
+            <line x1={x(hover!)} x2={x(hover!)} y1={T} y2={H - B} className="cross" />
+            {hp.np !== null && <circle cx={x(hover!)} cy={y(hp.np)} r={4.5} className="d-profit" strokeWidth={2} />}
+            {hp.ocf !== null && <circle cx={x(hover!)} cy={y(hp.ocf)} r={4.5} className="d-cash" strokeWidth={2} />}
           </g>
         )}
         {pts.map((d, i) => (
@@ -123,9 +123,9 @@ export function Spark({ data }: { data: Pt[] }) {
     "M " + pts.map((d, i) => (d[k] === null ? null : `${x(i)},${y(d[k] as number)}`)).filter(Boolean).join(" L ");
   return (
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} aria-hidden="true" style={{ display: "block" }}>
-      {lo < 0 && hi > 0 && <line x1={0} x2={W} y1={y(0)} y2={y(0)} stroke="#d9ded7" />}
-      <path d={path("ocf")} fill="none" stroke="#b07314" strokeWidth={2} strokeLinejoin="round" />
-      <path d={path("np")} fill="none" stroke="#3a5ba0" strokeWidth={2} strokeLinejoin="round" />
+      {lo < 0 && hi > 0 && <line x1={0} x2={W} y1={y(0)} y2={y(0)} stroke="#1d2938" />}
+      <path d={path("ocf")} fill="none" stroke="#d9690c" strokeWidth={2} strokeLinejoin="round" />
+      <path d={path("np")} fill="none" stroke="#5b8bff" strokeWidth={2} strokeLinejoin="round" />
     </svg>
   );
 }
@@ -174,24 +174,24 @@ export function BubbleChart({ data }: { data: Bubble[] }) {
       <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Revenue growth against EBIT margin; circle area shows revenue">
         {yt.map((t) => (
           <g key={"y" + t}>
-            <line x1={L} x2={W - R} y1={y(t)} y2={y(t)} stroke={t === 0 ? "#9aa59b" : "#e3e7e1"} />
+            <line x1={L} x2={W - R} y1={y(t)} y2={y(t)} className={t === 0 ? "zero" : "grid"} />
             <text x={L - 8} y={y(t) + 4} textAnchor="end">{pctTick(t)}</text>
           </g>
         ))}
         {xt.map((t) => (
           <g key={"x" + t}>
-            <line x1={x(t)} x2={x(t)} y1={T} y2={H - B} stroke={t === 0 ? "#9aa59b" : "#eef1ec"} />
+            <line x1={x(t)} x2={x(t)} y1={T} y2={H - B} className={t === 0 ? "zero" : "grid"} />
             <text x={x(t)} y={H - B + 18} textAnchor="middle">{pctTick(t)}</text>
           </g>
         ))}
         <text x={(L + W - R) / 2} y={H - 4} textAnchor="middle">Revenue growth, latest year</text>
         <text x={14} y={(T + H - B) / 2} textAnchor="middle" transform={`rotate(-90 14 ${(T + H - B) / 2})`}>EBIT margin</text>
         {[...data].sort((a, b) => b.size - a.size).map((d) => (
-          <circle key={d.lei} cx={x(d.x)} cy={y(d.y)} r={r(d.size)} fill="#3a5ba0" fillOpacity={0.22} stroke="#fff" strokeWidth={2}
-            onMouseEnter={() => setHover(d.lei)} onMouseLeave={() => setHover(null)} style={{ stroke: "#3a5ba0" }} />
+          <circle key={d.lei} cx={x(d.x)} cy={y(d.y)} r={r(d.size)} className="bubble" strokeWidth={2}
+            onMouseEnter={() => setHover(d.lei)} onMouseLeave={() => setHover(null)} />
         ))}
         {labels.map((l) => (
-          <text key={"l" + l.lei} className="lab" x={l.x} y={l.y} textAnchor="middle" style={{ fill: "#18242b", pointerEvents: "none" }}>{l.name}</text>
+          <text key={"l" + l.lei} className="lab" x={l.x} y={l.y} textAnchor="middle" style={{ pointerEvents: "none" }}>{l.name}</text>
         ))}
       </svg>
       {h && (
