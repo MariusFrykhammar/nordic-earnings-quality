@@ -47,26 +47,13 @@ export default function About() {
       </div>
 
       <div className="card">
-        <h2>Who built it</h2>
-        <p>
-          Built by <b>Marius Frykhammar</b>, a finance graduate based in Stockholm with a background in fundamental
-          analysis of Nordic listed companies, interested in where finance and data engineering meet. The project is a
-          working example of turning official filings into a research tool: data pipeline, accounting judgement and
-          presentation in one place.
-        </p>
-        <p>
-          Feedback, corrections and ideas are welcome via{" "}
-          <a href="https://github.com/MariusFrykhammar/nordic-earnings-quality/issues">GitHub issues</a>.
-        </p>
-      </div>
-
-      <div className="card">
         <h2>Data, coverage and reproducibility</h2>
         <dl>
           <div><dt>Coverage</dt><dd>{index.length.toLocaleString("en-GB")} companies filing IFRS annual reports in Sweden, Norway, Denmark and Finland, fiscal years 2020 to 2025; {ranked} listed non-financial companies are ranked.</dd></div>
           <div><dt>Refresh</dt><dd>The pipeline runs monthly and after every code change, and the site rebuilds automatically. Last refresh: {meta.generated}.</dd></div>
           <div><dt>Open data and code</dt><dd>Everything is open on <a href="https://github.com/MariusFrykhammar/nordic-earnings-quality">GitHub</a> under the MIT licence: the Python pipeline, the concept mapping and every generated file. Each company&apos;s data can be downloaded as CSV from its page.</dd></div>
           <div><dt>Cost</dt><dd>Built entirely on free, official sources and free hosting.</dd></div>
+          <div><dt>Feedback</dt><dd>Corrections and ideas are welcome via <a href="https://github.com/MariusFrykhammar/nordic-earnings-quality/issues">GitHub issues</a>.</dd></div>
         </dl>
       </div>
 
