@@ -11,7 +11,8 @@ RULES = {
     "profit_without_cash": {
         "title": "Profit without cash",
         "rule": "Net profit up at least 10% while operating cash flow fell at least 10% in the latest year; "
-        "or 3-year operating cash flow / EBIT below 0.6 and in the bottom 10% of peers.",
+        "or 3-year operating cash flow / EBIT below 0.6 and in the bottom 10% of peers "
+        "(only when 3-year EBIT is at least 2% of revenue).",
         "signals": "Earnings are not turning into cash.",
         "innocent": "Fast growth ties up working capital; large one-off tax or pension payments; timing of customer prepayments.",
         "np_growth_min": 0.10, "ocf_growth_max": -0.10, "conv3_abs": 0.6, "conv3_pct": 10,
@@ -40,10 +41,10 @@ RULES = {
     "heavy_capitalisation": {
         "title": "Heavy capitalisation",
         "rule": "Spending on intangible assets (incl. capitalised development) at least 5% of revenue, in the top 10% of peers, "
-        "and higher than two years earlier.",
+        "and at least 1 percentage point higher than two years earlier.",
         "signals": "Costs moved from the income statement to the balance sheet.",
         "innocent": "Software and R&D-heavy business models capitalise development under IAS 38 by design.",
-        "abs_min": 0.05, "pct": 90,
+        "abs_min": 0.05, "pct": 90, "rise_min": 0.01,
     },
     "acquisition_driven": {
         "title": "Acquisition-driven",
@@ -63,7 +64,9 @@ RULES = {
 
 # Property companies report fair-value changes in profit, which distorts profit-vs-cash measures,
 # and run structurally higher leverage.
-EXCLUDE_BY_SECTOR = {"Real estate": {"profit_without_cash", "high_accruals", "leverage_creep"}}
+# Property companies and residential developers hold projects as inventory and receivables by design.
+EXCLUDE_BY_SECTOR = {"Real estate": {"profit_without_cash", "high_accruals", "leverage_creep",
+                                     "inventory_build_up", "receivables_outpace_sales"}}
 
 
 def percentile(values: list[float], pct: int) -> float | None:
@@ -127,7 +130,7 @@ def evaluate(series: dict[int, dict], t: int, sector: str, peers: dict[str, dict
     base = p2["m"].get("intangible_capex_to_revenue")
     if base is None:
         base = p1["m"].get("intangible_capex_to_revenue")
-    if ic is not None and thr is not None and base is not None and ic >= max(thr, r["abs_min"]) and ic > base:
+    if ic is not None and thr is not None and base is not None and ic >= max(thr, r["abs_min"]) and ic - base >= r["rise_min"]:
         add("heavy_capitalisation", {"intangible_capex_to_revenue": ic, "earlier": base, "peer_p90": thr})
 
     # 6 acquisition-driven
@@ -149,6 +152,10 @@ def evaluate(series: dict[int, dict], t: int, sector: str, peers: dict[str, dict
 def cash_conversion_3y(series: dict[int, dict], t: int) -> float | None:
     ocf3 = [series.get(y, {}).get("v", {}).get("ocf") for y in (t - 2, t - 1, t)]
     ebit3 = [series.get(y, {}).get("v", {}).get("ebit") for y in (t - 2, t - 1, t)]
+    rev3 = [series.get(y, {}).get("v", {}).get("revenue") for y in (t - 2, t - 1, t)]
     if all(x is not None for x in ocf3 + ebit3) and sum(ebit3) > 0:
+        # a near-zero EBIT makes the ratio meaningless: require EBIT of at least 2% of revenue over 3 years
+        if all(x is not None for x in rev3) and sum(rev3) > 0 and sum(ebit3) < 0.02 * sum(rev3):
+            return None
         return sum(ocf3) / sum(ebit3)
     return None
