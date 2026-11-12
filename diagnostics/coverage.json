@@ -7,7 +7,7 @@
   "non_financial": 401,
   "excluded_financial_or_untagged": 38,
   "gate_core4_3yrs": 328,
-  "rankable": 273,
+  "rankable": 266,
   "sectors": [
    [
     "Unclassified",
@@ -91,80 +91,40 @@
   "listing": [
    [
     "listed shares",
-    344
+    328
    ],
    [
     "no listed shares (ESMA FIRDS)",
     57
+   ],
+   [
+    "shares traded only outside Nordic exchanges (ESMA FIRDS)",
+    16
    ]
   ],
   "venues": [
    [
-    "DSTO",
-    105
-   ],
-   [
     "Nasdaq Stockholm",
-    89
+    311
    ],
    [
-    "MSTO",
-    66
-   ],
-   [
-    "UBSI",
-    29
-   ],
-   [
-    "FRAB",
-    14
-   ],
-   [
-    "TPIR",
-    8
-   ],
-   [
-    "MUNB",
-    7
+    null,
+    16
    ],
    [
     "NGM Main Regulated",
     6
    ],
    [
-    "MNSE",
-    3
+    "FIRST NORTH SWEDEN - NORDIC@MID",
+    6
+   ],
+   [
+    "NORDIC SME",
+    2
    ],
    [
     "Nasdaq First North Sweden",
-    2
-   ],
-   [
-    "HAMN",
-    2
-   ],
-   [
-    "NSME",
-    2
-   ],
-   [
-    "TWEM",
-    2
-   ],
-   [
-    "DNSE",
-    1
-   ],
-   [
-    "EQTB",
-    1
-   ],
-   [
-    "FRAV",
-    1
-   ],
-   [
-    "STUB",
     1
    ],
    [
@@ -172,19 +132,7 @@
     1
    ],
    [
-    "AQEA",
-    1
-   ],
-   [
-    "TQEA",
-    1
-   ],
-   [
-    "AQEU",
-    1
-   ],
-   [
-    "DHEL",
+    "Nasdaq Helsinki",
     1
    ]
   ],
@@ -311,7 +259,7 @@
   "non_financial": 265,
   "excluded_financial_or_untagged": 37,
   "gate_core4_3yrs": 210,
-  "rankable": 130,
+  "rankable": 126,
   "sectors": [
    [
     "Unclassified",
@@ -399,48 +347,36 @@
   "listing": [
    [
     "listed shares",
-    173
+    163
    ],
    [
     "no listed shares (ESMA FIRDS)",
     92
+   ],
+   [
+    "shares traded only outside Nordic exchanges (ESMA FIRDS)",
+    10
    ]
   ],
   "venues": [
    [
     "Oslo Børs",
-    145
+    155
    ],
    [
-    "Euronext Expand Oslo",
-    9
-   ],
-   [
-    "UBSI",
-    8
+    null,
+    10
    ],
    [
     "Euronext Growth Oslo",
-    3
+    4
    ],
    [
     "Nasdaq Copenhagen",
     3
    ],
    [
-    "SGMU",
-    2
-   ],
-   [
-    "STUB",
-    1
-   ],
-   [
-    "HAMN",
-    1
-   ],
-   [
-    "XPAR",
+    "Nasdaq Helsinki",
     1
    ]
   ],
@@ -567,7 +503,7 @@
   "non_financial": 255,
   "excluded_financial_or_untagged": 46,
   "gate_core4_3yrs": 169,
-  "rankable": 64,
+  "rankable": 60,
   "sectors": [
    [
     "Unclassified",
@@ -655,52 +591,28 @@
    ],
    [
     "listed shares",
-    95
+    87
+   ],
+   [
+    "shares traded only outside Nordic exchanges (ESMA FIRDS)",
+    8
    ]
   ],
   "venues": [
    [
     "Nasdaq Copenhagen",
-    69
+    80
    ],
    [
-    "DCSE",
-    7
+    null,
+    8
    ],
    [
-    "DNDK",
+    "FIRST NORTH DENMARK - NORDIC@MID",
     5
    ],
    [
-    "UBSI",
-    5
-   ],
-   [
-    "STUB",
-    2
-   ],
-   [
-    "STUD",
-    1
-   ],
-   [
-    "FRAV",
-    1
-   ],
-   [
-    "TQEM",
-    1
-   ],
-   [
-    "MSTO",
-    1
-   ],
-   [
-    "TPIR",
-    1
-   ],
-   [
-    "FRAB",
+    "Nasdaq Stockholm",
     1
    ],
    [
@@ -831,7 +743,7 @@
   "non_financial": 137,
   "excluded_financial_or_untagged": 28,
   "gate_core4_3yrs": 121,
-  "rankable": 100,
+  "rankable": 99,
   "sectors": [
    [
     "Industrials",
@@ -907,65 +819,25 @@
   "listing": [
    [
     "listed shares",
-    116
+    111
    ],
    [
     "no listed shares (ESMA FIRDS)",
     21
+   ],
+   [
+    "shares traded only outside Nordic exchanges (ESMA FIRDS)",
+    5
    ]
   ],
   "venues": [
    [
-    "DHEL",
-    63
-   ],
-   [
     "Nasdaq Helsinki",
-    16
+    111
    ],
    [
-    "UBSI",
-    11
-   ],
-   [
-    "MHEL",
-    9
-   ],
-   [
-    "FRAB",
-    4
-   ],
-   [
-    "TPIR",
-    3
-   ],
-   [
-    "FRAV",
-    3
-   ],
-   [
-    "TQEA",
-    2
-   ],
-   [
-    "Nasdaq Stockholm",
-    1
-   ],
-   [
-    "ERFQ",
-    1
-   ],
-   [
-    "XTAL",
-    1
-   ],
-   [
-    "MUNB",
-    1
-   ],
-   [
-    "STUB",
-    1
+    null,
+    5
    ]
   ],
   "company_years_by_metric": {
