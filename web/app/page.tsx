@@ -30,8 +30,7 @@ export default function Home() {
   const nReports = index.length;
   return (
     <>
-      <p className="eyebrow">Data as of {today}</p>
-      <h1>Earnings quality</h1>
+      <h1>Where profits and cash part ways</h1>
       <p className="lede">
         Profit is an accounting estimate; operating cash flow is what actually came in. This scanner reads the official
         annual reports of listed Nordic companies and points out where the two part ways.
@@ -40,7 +39,7 @@ export default function Home() {
         <div className="stat"><div className="k">Listed companies ranked</div><div className="v">{rank.length}</div><div className="s">{Object.values(COUNTRY).join(", ")}</div></div>
         <div className="stat"><div className="k">Profit up, cash down</div><div className="v down">{nGap}</div><div className="s">latest fiscal year</div></div>
         <div className="stat"><div className="k">With a red flag</div><div className="v">{nFlagged}</div><div className="s">of seven tests</div></div>
-        <div className="stat"><div className="k">Companies read</div><div className="v">{nReports.toLocaleString("en-GB")}</div><div className="s">FY2020–FY2025 reports</div></div>
+        <div className="stat"><div className="k">Data as of</div><div className="v" style={{ fontSize: 20, paddingTop: 4, fontFamily: "var(--font)", fontWeight: 600 }}>{today}</div><div className="s">{nReports.toLocaleString("en-GB")} companies, FY2020–FY2025</div></div>
       </div>
       {hero && heroRow && (
         <section>

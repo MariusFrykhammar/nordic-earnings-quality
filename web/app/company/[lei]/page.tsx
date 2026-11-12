@@ -43,7 +43,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
   return (
     <>
       <div className="co-head">
-        <p className="eyebrow"><Link href="/" style={{ textDecoration: "none" }}>Findings</Link> / {c.country} / {c.sector}</p>
+        <p className="eyebrow"><Link href="/">Findings</Link> <span aria-hidden="true">›</span> {COUNTRY[c.country] ?? c.country} <span aria-hidden="true">›</span> {c.sector}</p>
         <h1>{c.display_name}</h1>
         <ul className="facts">
           <li><b>{c.equity?.venue ?? c.listing_status.replace(/^listed shares: /, "")}</b></li>

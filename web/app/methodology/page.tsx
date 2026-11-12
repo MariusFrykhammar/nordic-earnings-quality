@@ -7,7 +7,6 @@ export default function Methodology() {
   const { meta } = getFlags();
   return (
     <section className="prose" style={{ marginTop: 0 }}>
-      <p className="eyebrow">Methodology</p>
       <h1>How the scanner works</h1>
       <p className="lede">
         Every figure comes from a listed company&apos;s official annual report. The scanner computes a few ratios and
