@@ -1,43 +1,6 @@
-22:32:21 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-22:33:01 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-22:33:49 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-22:34:28 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
-22:34:28 unique filings to process: 5552
-22:34:28   facts 0/5552 (0s)
-22:34:28   facts 250/5552 (0s)
-22:34:29   facts 500/5552 (0s)
-22:34:29   facts 750/5552 (0s)
-22:34:29   facts 1000/5552 (0s)
-22:34:29   facts 1250/5552 (1s)
-22:34:29   facts 1500/5552 (1s)
-22:34:29   facts 1750/5552 (1s)
-22:34:29   facts 2000/5552 (1s)
-22:34:29   facts 2250/5552 (1s)
-22:34:29   facts 2500/5552 (1s)
-22:34:30   facts 2750/5552 (1s)
-22:34:30   facts 3000/5552 (2s)
-22:34:30   facts 3250/5552 (2s)
-22:34:30   facts 3500/5552 (2s)
-22:34:30   facts 3750/5552 (2s)
-22:34:30   facts 4000/5552 (2s)
-22:34:30   facts 4250/5552 (2s)
-22:34:31   facts 4500/5552 (2s)
-22:34:31   facts 4750/5552 (3s)
-22:34:31   facts 5000/5552 (3s)
-22:34:31   facts 5250/5552 (3s)
-22:34:31   facts 5500/5552 (3s)
-22:34:31 downloads failed: 0
-22:34:34 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
-22:34:34 wikidata lookup for 1272 LEIs
-22:34:48 wikidata hits: 638
-22:34:51 companies assembled: 1207
-  FIRDS FULINS_E_20261107_01of02.zip: 812 issuers so far
-  FIRDS FULINS_E_20261107_02of02.zip: 813 issuers so far
-22:35:22 reference data: {'gleif': 'ok: 1207 of 1207 LEIs', 'firds': 'ok: 813 issuers with listed equity', 'registries': 'ok: industry codes for 412 companies (NO, FI; SE/DK need credentials)'}
-22:35:23 done
+nq_screener_sto.json ERROR HTTPSConnectionPool(host='api.nasdaq.com', port=443): Read timed out. (read timeout=60)
+nq_screener_all.json ERROR HTTPSConnectionPool(host='api.nasdaq.com', port=443): Read timed out. (read timeout=60)
+nq_instrument.json ERROR HTTPSConnectionPool(host='api.nasdaq.com', port=443): Read timed out. (read timeout=60)
+nq_listed_html.json ERROR HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=60)
+enx_icb.json 200 2881
+enx_list.json 200 15342

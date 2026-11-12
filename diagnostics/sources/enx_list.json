@@ -1,0 +1,212 @@
+{
+ "url": "https://live.euronext.com/en/pd_es/data/stocks?mics=XOSL&display_datapoints=dp_stocks&display_filters=df_stocks",
+ "status": 200,
+ "ctype": "application/json",
+ "len": 15342,
+ "json": {
+  "iTotalRecords": 194,
+  "iTotalDisplayRecords": 194,
+  "aaData": [
+   [
+    "",
+    "<a href=\"/en/product/equities/BMG9156K1018-XOSL\" data-order=\"2020 BULKERS\" data-title-hover=\"2020 BULKERS\">2020 BULKERS</a>",
+    "BMG9156K1018",
+    "2020",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">9.24</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>17.04%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0003021909-XOSL\" data-order=\"ABG SUNDAL COLLIER\" data-title-hover=\"ABG SUNDAL COLLIER HOLDING\">ABG SUNDAL COLLIER</a>",
+    "NO0003021909",
+    "ABG",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">7.20</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>0.98%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0003078107-XOSL\" data-order=\"AF GRUPPEN\" data-title-hover=\"AF GRUPPEN\">AF GRUPPEN</a>",
+    "NO0003078107",
+    "AFG",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">205.00</span></div>",
+    "<div class=\"text-right pd_percent\">-</div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:27 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010872468-XOSL\" data-order=\"AGILYX\" data-title-hover=\"AGILYX ASA\">AGILYX</a>",
+    "NO0010872468",
+    "AGLX",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">13.50</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>1.50%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010215684-XOSL\" data-order=\"AKASTOR\" data-title-hover=\"AKASTOR\">AKASTOR</a>",
+    "NO0010215684",
+    "AKAST",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">12.02</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>1.18%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010234552-XOSL\" data-order=\"AKER\" data-title-hover=\"AKER\">AKER</a>",
+    "NO0010234552",
+    "AKER",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">1,108.00</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-1.95%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:26 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010345853-XOSL\" data-order=\"AKER BP\" data-title-hover=\"AKER BP\">AKER BP</a>",
+    "NO0010345853",
+    "AKRBP",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">326.40</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>1.30%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:26 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010716582-XOSL\" data-order=\"AKER SOLUTIONS\" data-title-hover=\"AKER SOLUTIONS\">AKER SOLUTIONS</a>",
+    "NO0010716582",
+    "AKSO",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">37.76</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>0.21%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0003097503-XOSL\" data-order=\"AKVA GROUP\" data-title-hover=\"AKVA GROUP\">AKVA GROUP</a>",
+    "NO0003097503",
+    "AKVA",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">159.50</span></div>",
+    "<div class=\"text-right pd_percent\">-</div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">15:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0013683821-XOSL\" data-order=\"APPEAR\" data-title-hover=\"APPEAR ASA\">APPEAR</a>",
+    "NO0013683821",
+    "APR",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">33.00</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-1.49%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010715394-XOSL\" data-order=\"AQUALIS\" data-title-hover=\"AQUALIS ASA\">AQUALIS</a>",
+    "NO0010715394",
+    "AQUA",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">8.60</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-0.23%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/BMG0451H2087-XOSL\" data-order=\"ARCHER\" data-title-hover=\"ARCHER\">ARCHER</a>",
+    "BMG0451H2087",
+    "ARCH",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">17.08</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-2.84%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010014632-XOSL\" data-order=\"ARCTICZYMES TECHNO\" data-title-hover=\"ARCTICZYMES TECHNOLOGIES\">ARCTICZYMES TECHNO</a>",
+    "NO0010014632",
+    "AZT",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">22.70</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>1.79%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0003572802-XOSL\" data-order=\"ARENDALS FOSSEKOMP\" data-title-hover=\"ARENDALS FOSSEKOMPANI\">ARENDALS FOSSEKOMP</a>",
+    "NO0003572802",
+    "AFK",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">190.00</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-1.55%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0013682948-XOSL\" data-order=\"ARRIBATEC GROUP\" data-title-hover=\"ARRIBATEC GROUP ASA\">ARRIBATEC GROUP</a>",
+    "NO0013682948",
+    "ARR",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">5.32</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-2.21%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0004822503-XOSL\" data-order=\"ATEA\" data-title-hover=\"ATEA\">ATEA</a>",
+    "NO0004822503",
+    "ATEA",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">168.60</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=text-brand-kelly-green>0.36%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:33 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0006001601-XOSL\" data-order=\"AURSKOG SPAREBANK\" data-title-hover=\"AURSKOG SPAREBANK\">AURSKOG SPAREBANK</a>",
+    "NO0006001601",
+    "AURG",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">260.00</span></div>",
+    "<div class=\"text-right pd_percent\">-</div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">12:10 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010073489-XOSL\" data-order=\"AUSTEVOLL SEAFOOD\" data-title-hover=\"AUSTEVOLL SEAFOOD\">AUSTEVOLL SEAFOOD</a>",
+    "NO0010073489",
+    "AUSS",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">89.50</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-0.67%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:33 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/BMG0670A1099-XOSL\" data-order=\"AUTOSTORE HOLDINGS\" data-title-hover=\"AUTOSTORE HOLDINGS LTD.\">AUTOSTORE HOLDINGS</a>",
+    "BMG0670A1099",
+    "AUTO",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">15.83</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-1.98%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:35 CET</span></div>"
+   ],
+   [
+    "",
+    "<a href=\"/en/product/equities/NO0010840515-XOSL\" data-order=\"AXACTOR\" data-title-hover=\"AXACTOR ASA\">AXACTOR</a>",
+    "NO0010840515",
+    "ACR",
+    "<div class=\"nowrap pointer\" title=\"Oslo Børs\">XOSL</div>",
+    "<div class=\"text-right pd_currency_es\">NOK <span class=\"pd_last_price_es\">4.275</span></div>",
+    "<div class=\"text-right pd_percent\"><span class=red>-1.38%</span></div>",
+    "<div class=\"text-right pointer tooltipDesign\">12 Nov 2026<span class=\"tooltiptext\">16:25 CET</span></div>"
+   ]
+  ]
+ }
+}
