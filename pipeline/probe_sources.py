@@ -35,6 +35,29 @@ def tryget(name, url, **kw):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    # exchange industry classification (ICB) candidates
+    H = {"User-Agent": "Mozilla/5.0 (research project; github.com/MariusFrykhammar/nordic-earnings-quality)", "Accept": "application/json, text/plain, */*"}
+    for name, url in [
+        ("nq_screener_sto.json", "https://api.nasdaq.com/api/nordic/screener/shares?category=MAIN_MARKET&tableonly=false&market=STO"),
+        ("nq_screener_all.json", "https://api.nasdaq.com/api/nordic/screener/shares?tableonly=false"),
+        ("nq_instrument.json", "https://api.nasdaq.com/api/nordic/instruments/SE0017486889/summary?assetClass=SHARES&lang=en"),
+        ("nq_listed_html.json", "https://www.nasdaqomxnordic.com/shares/listed-companies/stockholm"),
+        ("enx_icb.json", "https://live.euronext.com/en/ajax/getFactsheetInfoBlock/STOCK/NO0003733800-XOSL/fs_icb_block"),
+        ("enx_list.json", "https://live.euronext.com/en/pd_es/data/stocks?mics=XOSL&display_datapoints=dp_stocks&display_filters=df_stocks"),
+    ]:
+        try:
+            r = requests.get(url, headers=H, timeout=60)
+            info = {"url": url, "status": r.status_code, "ctype": r.headers.get("content-type"), "len": len(r.content)}
+            try:
+                info["json"] = r.json()
+            except ValueError:
+                info["text"] = r.text[:6000]
+            save(name, info)
+            print(name, r.status_code, len(r.content))
+        except Exception as e:
+            save(name, {"url": url, "error": str(e)})
+            print(name, "ERROR", e)
+    return
     tryget("gleif.json", "https://api.gleif.org/api/v1/lei-records?filter[lei]=" + ",".join(LEIS) + "&page[size]=10")
     tryget("gleif_isins.json", f"https://api.gleif.org/api/v1/lei-records/{LEIS[0]}/isins?page[size]=50")
     tryget("brreg_orkla.json", "https://data.brreg.no/enhetsregisteret/api/enheter/910747711")
