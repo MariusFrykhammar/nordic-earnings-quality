@@ -1,0 +1,1370 @@
+[
+ {
+  "lei": "549300EJ67GY3FS4IN91",
+  "name": "Genova Property Group AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300EJ67GY3FS4IN91/2025-12-31/ESEF/SE/0/genovapropgroupab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300GXIIAUWSV2YS64",
+  "name": "Coeli Fastighet II AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ManagementResult"
+  ],
+  "source": "https://filings.xbrl.org/549300GXIIAUWSV2YS64/2025-12-31/ESEF/SE/0/549300GXIIAUWSV2YS64-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300G3VF7LZQ9IW435",
+  "name": "Diös Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "AdministrativeExpenseClassifiedAsOperatingActivities",
+   "ProfitLossFromPropertyManagement"
+  ],
+  "source": "https://filings.xbrl.org/549300G3VF7LZQ9IW435/2025-12-31/ESEF/SE/0/549300G3VF7LZQ9IW435-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300B1UZTBDU27UJ88",
+  "name": "Heba Fastighets Aktiebolag",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "Driftkostnader",
+   "VaravFoervaltningresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300B1UZTBDU27UJ88/2025-12-31/ESEF/SE/0/heba-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300F01ELNT82H4P50",
+  "name": "Dedicare AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300F01ELNT82H4P50/2025-12-31/ESEF/SE/0/dedi-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300BMCT8IT2CFDH63",
+  "name": "Net Insight AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300BMCT8IT2CFDH63/2025-12-31/ESEF/SE/0/549300BMCT8IT2CFDH63-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300GHKJCEZOAEUU82",
+  "name": "Fastighets AB Balder",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "AndelIResultatFrånIntressebolagJointVenturesVaravFörvaltningsresultat",
+   "AndelIResultatFrånIntressebolagJointVenturesVaravSkatt",
+   "AndelIResultatFrånIntressebolagJointVenturesVaravVärdeförändringar",
+   "AvgårInnehavUtanBestämmandeInflytandesAndelAvFörvaltningsresultat",
+   "Förvaltningsresultat",
+   "FörvaltningsresultatHänförligtTillModerbolagetsAktieägare",
+   "ResultatFöreFinansnetto",
+   "ResultatInklusiveVärdeförändringarOchSkattIIntressebolagJointVentures"
+  ],
+  "source": "https://filings.xbrl.org/549300GHKJCEZOAEUU82/2025-12-31/ESEF/SE/0/bald-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493000E9BUOYMOW2K53",
+  "name": "Medicover AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/5493000E9BUOYMOW2K53/2025-12-31/ESEF/SE/0/MCOVB-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300HT0F6CFLJR3Y69",
+  "name": "Humlegården Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300HT0F6CFLJR3Y69/2025-12-31/ESEF/SE/0/huml-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300ZSB0ZCKM1SL747",
+  "name": "Logistea AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ProfitBeforeChangesOfValue"
+  ],
+  "source": "https://filings.xbrl.org/549300ZSB0ZCKM1SL747/2025-12-31/ESEF/SE/0/logi-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300VT0UXKWES37P59",
+  "name": "K-Fast Holding AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2024,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "DirectOperatingExpenseFromInvestmentPropertyGeneratingRentalIncomeExcludingRepairsAndMaintenanceExpense",
+   "OperatingExpenseFromConstructionContracts",
+   "ProfitLossBeforeTaxAndFairValueAdjustments",
+   "ProfitLossFromPropertyManagement"
+  ],
+  "source": "https://filings.xbrl.org/549300VT0UXKWES37P59/2024-12-31/ESEF/SE/0/549300VT0UXKWES37P59-2024-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300HUR75YN61F4108",
+  "name": "Bulten AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "SummaOEvrigtTotalresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300HUR75YN61F4108/2025-12-31/ESEF/SE/0/bultenab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493006VHH78UQJVF844",
+  "name": "Scandi Standard AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "DerivatinstrumentOperationellaKortfristigt",
+   "DerivatinstrumentOperationellaLångfristigt"
+  ],
+  "source": "https://filings.xbrl.org/5493006VHH78UQJVF844/2025-12-31/ESEF/SE/0/scan-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300EMLM7AH5LDLY65",
+  "name": "Catena AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ProfitFromPropertyManagement"
+  ],
+  "source": "https://filings.xbrl.org/549300EMLM7AH5LDLY65/2025-12-31/ESEF/SE/0/cate-2025-12-31-3-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800CHXQQD7TSS1T59",
+  "name": "Corem Property Group AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/213800CHXQQD7TSS1T59/2025-12-31/ESEF/SE/0/core-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300IULC8F8IGXKI15",
+  "name": "Orrön Energy AB",
+  "country": "SE",
+  "sector": "Energy",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "AdministrativeExpenseExcludingDepreciationExpenseAndOperatingExpense",
+   "DividendsPaidToNonControllingInterestsClassifiedAsOperatingActivities",
+   "ProceedsFromSalesOfDevelopmentProjects"
+  ],
+  "source": "https://filings.xbrl.org/549300IULC8F8IGXKI15/2025-12-31/ESEF/SE/0/549300IULC8F8IGXKI15-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300Q62J8QZJ5TGJ71",
+  "name": "K2A Knaust & Andersson Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "VaravFoervaltningsresultat",
+   "VaravRealisationsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300Q62J8QZJ5TGJ71/2025-12-31/ESEF/SE/0/k2a-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300G9NPD8LSJLMP91",
+  "name": "Fagerhult Group AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300G9NPD8LSJLMP91/2025-12-31/ESEF/SE/0/fag-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300COLY053IGTLD63",
+  "name": "BONESUPPORT HOLDING AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300COLY053IGTLD63/2025-12-31/ESEF/SE/0/549300COLY053IGTLD63-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493002JE0BBAIJ06O61",
+  "name": "Brinova Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/5493002JE0BBAIJ06O61/2025-12-31/ESEF/SE/0/brin-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300F7ULEE3V59UW34",
+  "name": "Mangold AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatFoereKreditfoerluster"
+  ],
+  "source": "https://filings.xbrl.org/549300F7ULEE3V59UW34/2025-12-31/ESEF/SE/0/mangold-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "2138009N2FO2BZTVYS76",
+  "name": "EASTNINE AB (PUBL)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/2138009N2FO2BZTVYS76/2025-12-31/ESEF/SE/0/east-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "254900KI62Q46ZWD8084",
+  "name": "Electrolux Professional AB (publ)",
+  "country": "SE",
+  "sector": "Industrials",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "CashowFromOperationsAndInvestments",
+   "ChangeInOtherOperatingAssetsLiabilitiesAndProvisions"
+  ],
+  "source": "https://filings.xbrl.org/254900KI62Q46ZWD8084/2025-12-31/ESEF/SE/0/EPRO-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "54930038JVQ3CMTEO084",
+  "name": "NOTE AB (publ)",
+  "country": "SE",
+  "sector": "Technology",
+  "year": 2025,
+  "missing": [
+   "net_profit"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/54930038JVQ3CMTEO084/2025-12-31/ESEF/SE/0/noteabpubl-2025-12-31-4-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "529900MZ8Y3QGPDF6815",
+  "name": "Nobia AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "OmsättningstillgångarFöreLikvidaMedel",
+   "OperativtKassafloedeEfterFoervaervFoersaeljningAvDotterFoeretagRaentaOEkningMinskningAvRaentebaerandeTillgangar",
+   "OperativtKassafloedeFoereFoervaervFoersaeljningAvDotterFoeretagRaentaOEkningMinskningAvRaentebaerandeTillgangar",
+   "RoerelseresultatFoerAvveckladVerksamhet"
+  ],
+  "source": "https://filings.xbrl.org/529900MZ8Y3QGPDF6815/2025-12-31/ESEF/SE/0/529900MZ8Y3QGPDF6815-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300IHU2ZPY10PVD11",
+  "name": "NAXS AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "FinanceIncomeAndInterestRevenueCalculatedUsingEffectiveInterestMethod",
+   "NonCurrentFinancialAssetsAtFairValueThroughProfitOrLossFunds",
+   "ProceedsFromSalesOfOtherNonCurrentFinancialAssetsClassifiedAsInvestingActivities"
+  ],
+  "source": "https://filings.xbrl.org/549300IHU2ZPY10PVD11/2025-12-31/ESEF/SE/0/549300IHU2ZPY10PVD11-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300W61XW8OFGBG077",
+  "name": "Betsson AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "CashFlowsUsedInObtainingControlOfSubsidiariesClassifiedAsInvestingActivities"
+  ],
+  "source": "https://filings.xbrl.org/549300W61XW8OFGBG077/2025-12-31/ESEF/SE/0/549300W61XW8OFGBG077-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300UFJU04UGB49K16",
+  "name": "Linc AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatFranFoervaltningsverksamheten"
+  ],
+  "source": "https://filings.xbrl.org/549300UFJU04UGB49K16/2025-12-31/ESEF/SE/0/linc-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300D6WW5ZTWLZ4C08",
+  "name": "Nordnet AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "NetResultOfFinancialTransactions1",
+   "ProfitBeforeCreditLosses"
+  ],
+  "source": "https://filings.xbrl.org/549300D6WW5ZTWLZ4C08/2025-12-31/ESEF/SE/0/nord-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493006E0IJD0DHJSR89",
+  "name": "Viaplay Group AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "CurrencyEffectsRecycledInOperatingIncome"
+  ],
+  "source": "https://filings.xbrl.org/5493006E0IJD0DHJSR89/2025-12-31/ESEF/SE/0/viap-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "21380081R2P9MKFQBD25",
+  "name": "WALLENSTAM AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ImmateriellaOmsattningstillgangar",
+   "Resultatforevardeforandringarochnedskrivningar"
+  ],
+  "source": "https://filings.xbrl.org/21380081R2P9MKFQBD25/2025-12-31/ESEF/SE/0/wallenstam-2025-12-31-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "1FOLRR5RWTWWI397R131",
+  "name": "Aktiebolaget Svensk Exportkredit",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "OperatingProfitBeforeNetCreditLosses"
+  ],
+  "source": "https://filings.xbrl.org/1FOLRR5RWTWWI397R131/2025-12-31/ESEF/SE/0/sek-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493001NNP6HM67OVU09",
+  "name": "Atrium Ljungberg AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "BruttoreslutatVaravbruttoresultatfastighetsforvaltning",
+   "BruttoresultatVaravbruttoresultatprojektochentreprenadverksamhet",
+   "Resultatforevardeforandringar"
+  ],
+  "source": "https://filings.xbrl.org/5493001NNP6HM67OVU09/2025-12-31/ESEF/SE/0/atri-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300Z7DLN54J8M4J79",
+  "name": "OEM International Aktiebolag",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300Z7DLN54J8M4J79/2025-12-31/ESEF/SE/0/oemi-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300PW36MFK96GCR23",
+  "name": "Cibus Nordic Real Estate AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300PW36MFK96GCR23/2025-12-31/ESEF/SE/0/Cibus-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300LJX28T6OM8DT95",
+  "name": "AB Sagax",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "AOfWhichProfitFromPropertyManagementFromJointVentures",
+   "EOfWhichProfitFromPropertyManagement",
+   "OperatingCostsExcludingRepairsAndMaintenence",
+   "ResultatInklusiveResultatFranJointVentureOchIntressefoeretag"
+  ],
+  "source": "https://filings.xbrl.org/549300LJX28T6OM8DT95/2025-12-31/ESEF/SE/0/saga-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300QIXCZWZLHE8L05",
+  "name": "Axfood AB",
+  "country": "SE",
+  "sector": "Consumer",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300QIXCZWZLHE8L05/2025-12-31/ESEF/SE/0/axfo-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300ZOV16K515FC525",
+  "name": "Lundin Gold Inc.",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300ZOV16K515FC525/2025-12-31/ESEF/SE/0/549300ZOV16K515FC525-2025-12-31-1-en/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300K4HA8EBLSL3B97",
+  "name": "Pandox Aktiebolag",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "GrossProfitFromHotelOperations",
+   "GrossProfitFromInvestmentProperty",
+   "InterestPaidOnLeaseLiabilitiesClassifiedAsOperatingActivities",
+   "InterestPaidOtherThanLeaseLiabilitiesClassifiedAsOperatingActivities",
+   "ProceedsFromSalesOfHotelPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+   "ProfitLossBeforeTaxAndFairValueAdjustments"
+  ],
+  "source": "https://filings.xbrl.org/549300K4HA8EBLSL3B97/2025-12-31/ESEF/SE/0/549300K4HA8EBLSL3B97-2025-12-31-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493001IZXU12M8NYV95",
+  "name": "Annehem Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/5493001IZXU12M8NYV95/2025-12-31/ESEF/SE/0/anne-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800WRGLW3CY4MHW53",
+  "name": "NCC AKTIEBOLAG",
+  "country": "SE",
+  "sector": "Industrials",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "CashFlowBeforeFinancing",
+   "FairValueChangesForTheYearInCashFlowHedges",
+   "FairValueChangesInCashFlowHedgesTransferredToNetProfitForTheYear",
+   "OperatingProfitBeforeItemsAffectingComparability",
+   "SalesOfPropertyProjects"
+  ],
+  "source": "https://filings.xbrl.org/213800WRGLW3CY4MHW53/2025-12-31/ESEF/SE/0/ncc-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300BG6SL5QQ7LQW56",
+  "name": "Fastpartner AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300BG6SL5QQ7LQW56/2025-12-31/ESEF/SE/0/fast-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300VVUFZYP5IR2K09",
+  "name": "Coeli Fastighet I AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ManagementResult"
+  ],
+  "source": "https://filings.xbrl.org/549300VVUFZYP5IR2K09/2025-12-31/ESEF/SE/0/549300VVUFZYP5IR2K09-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300FQDIM6C8HTN269",
+  "name": "Lundin Mining Corporation",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ProfitLossFromContinuingOperationsAttributableToOwnersOfParent"
+  ],
+  "source": "https://filings.xbrl.org/549300FQDIM6C8HTN269/2025-12-31/ESEF/SE/0/lun-2025-12-31-1-en/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300S56SRW0QDZD626",
+  "name": "Havsfrun Investment AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300S56SRW0QDZD626/2025-12-31/ESEF/SE/0/havsfruninvestmentab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493009KPII4BZE70820",
+  "name": "Platzer Fastigheter Holding AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "AndelarIIntressefoeretagOchJointVenturesResultatVaravFoervaltningsresultat",
+   "AndelarIIntressefoeretagOchJointVenturesResultatVaravSkatt",
+   "AndelarIIntressefoeretagOchJointVenturesResultatVaravVaerdefoeraendringar",
+   "ResultatInklusiveAndelAvResultatIJointVenturesOchIntressefoeretagVaravTotaltFoervaltningsresultat",
+   "ResultatInklusiveResultatFrånJointVenturesOchIntresseföretag"
+  ],
+  "source": "https://filings.xbrl.org/5493009KPII4BZE70820/2025-12-31/ESEF/SE/0/platzer-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493005TH00ELG4UVM36",
+  "name": "SBF Bostad AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2024,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat",
+   "Forvaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/5493005TH00ELG4UVM36/2024-12-31/ESEF/SE/0/sbfbostadab-2024-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300RKWROUEEV6VP74",
+  "name": "GARO Aktiebolag",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "net_profit"
+  ],
+  "candidate_extension_concepts": [
+   "LiabilitiesDirectlyAttributableToSales"
+  ],
+  "source": "https://filings.xbrl.org/549300RKWROUEEV6VP74/2025-12-31/ESEF/SE/0/garo-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300U82F1HQRSTYZ66",
+  "name": "Ovzon AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "Rörelseresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300U82F1HQRSTYZ66/2025-12-31/ESEF/SE/0/ovzonab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300Y0OI2WVUNHLC33",
+  "name": "BioArctic AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300Y0OI2WVUNHLC33/2025-12-31/ESEF/SE/0/bioa-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300GYQIIJ3UXB7655",
+  "name": "Husqvarna AB",
+  "country": "SE",
+  "sector": "Industrials",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300GYQIIJ3UXB7655/2025-12-31/ESEF/SE/0/husq-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300MOY2FDUUDIQ179",
+  "name": "HMS Networks AB",
+  "country": "SE",
+  "sector": "Technology",
+  "year": 2024,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300MOY2FDUUDIQ179/2024-12-31/ESEF/SE/0/hmsnetworksab-2024-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800SWOEKEF29R3C35",
+  "name": "FASTIGHETS AKTIEBOLAGET TRIANON",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatInklusiveVaerdefoeraendringarOchSkattIIntressefoeretag",
+   "VaravFoervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/213800SWOEKEF29R3C35/2025-12-31/ESEF/SE/0/tria-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300XHHOGBOERKU333",
+  "name": "Thule Group AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300XHHOGBOERKU333/2025-12-31/ESEF/SE/0/thule-2025-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493000YR2B83SILCJ50",
+  "name": "Altra Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "GainsLossesOnFairValueAdjustmentCooperationAgreements",
+   "InterestPaidOnBondsClassifiedAsOperatingActivities",
+   "InterestPaidOtherThanInterestPaidOnBondsClassifiedAsOperatingActivities",
+   "ProfitLossBeforeTaxAndGainsLossesOnFairValueAdjustments",
+   "ProfitLossFromPropertyManagement",
+   "ShareOfProfitLossOfJointVenturesAccountedForUsingEquityMethodChangeInValue",
+   "ShareOfProfitLossOfJointVenturesAccountedForUsingEquityMethodOther",
+   "ShareOfProfitLossOfJointVenturesAccountedForUsingEquityMethodPropertyManagement",
+   "ShareOfProfitLossOfJointVenturesAccountedForUsingEquityMethodTax"
+  ],
+  "source": "https://filings.xbrl.org/5493000YR2B83SILCJ50/2025-12-31/ESEF/SE/0/5493000YR2B83SILCJ50-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "54930085MH6IRQ1JP227",
+  "name": "Lindab International AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/54930085MH6IRQ1JP227/2025-12-31/ESEF/SE/0/lindab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300MGVITW8GYJHZ50",
+  "name": "NP3 Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Forvaltningsresultat",
+   "ForvaltningsresultatFranIntresseforetagOchJointVenture",
+   "ResultatEfterFinansiellaKostnader",
+   "VaravFoervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300MGVITW8GYJHZ50/2025-12-31/ESEF/SE/0/np3fastigheterab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493001FIOIXOKMHG857",
+  "name": "KlaraBo Sverige AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat",
+   "Roerelseresultat"
+  ],
+  "source": "https://filings.xbrl.org/5493001FIOIXOKMHG857/2025-12-31/ESEF/SE/0/KlaraBo-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800USNX47LQFQQN20",
+  "name": "KEO CAPITAL AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ProceedsFromSalesOfFinancialAssetsClassifiedAsInvestingActivities",
+   "RevenueFromSaleOfOilAndGasProductsAndRoyaltyExpense"
+  ],
+  "source": "https://filings.xbrl.org/213800USNX47LQFQQN20/2025-12-31/ESEF/SE/0/213800USNX47LQFQQN20-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493003YS3NSPZJ5WU39",
+  "name": "Stendörren Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "NetOperatingIncome"
+  ],
+  "source": "https://filings.xbrl.org/5493003YS3NSPZJ5WU39/2025-12-31/ESEF/SE/0/sten-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300LJ5CCWDPTK9Z08",
+  "name": "Orexo AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "OmklassificeringAvAckumuleradeOmräkningsdifferenserTillResultaträkningenVidAvyttringAvUtländskVerksamhet",
+   "TotaltResultatSomRedovisasIEgetKapitalInklusiveOmklassificeringsjusteringar"
+  ],
+  "source": "https://filings.xbrl.org/549300LJ5CCWDPTK9Z08/2025-12-31/ESEF/SE/0/orexoab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300HXIG611R7YBT33",
+  "name": "Nivika Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Driftnetto",
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300HXIG611R7YBT33/2025-12-31/ESEF/SE/0/Årsredovisning 2025 ESEF -2025-12-31-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300ZOWFLNDFSHNB56",
+  "name": "Midsummer AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300ZOWFLNDFSHNB56/2025-12-31/ESEF/SE/0/midsummerab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493004EO7GR5U8PRK21",
+  "name": "Fastighetsbolaget Emilshus AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/5493004EO7GR5U8PRK21/2025-12-31/ESEF/SE/0/fastighetsemilshusab-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300TEYF1FA5G5GK26",
+  "name": "Truecaller AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "net_profit"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300TEYF1FA5G5GK26/2025-12-31/ESEF/SE/0/true-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300GLLHHE80RQ2Y24",
+  "name": "VEF AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2024,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "AdministrationsOchDriftkostnader"
+  ],
+  "source": "https://filings.xbrl.org/549300GLLHHE80RQ2Y24/2024-12-31/ESEF/SE/0/vefab-2024-12-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300RC1YDJPITF8X06",
+  "name": "Wihlborgs Fastigheter AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300RC1YDJPITF8X06/2025-12-31/ESEF/SE/0/wihl-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800T7T7I7WAOX8Y72",
+  "name": "Nolato Aktiebolag",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "net_profit"
+  ],
+  "candidate_extension_concepts": [
+   "CashFlowBeforeFinancingActivities"
+  ],
+  "source": "https://filings.xbrl.org/213800T7T7I7WAOX8Y72/2025-12-31/ESEF/SE/0/nola-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "254900AWRHP1QNE6OQ19",
+  "name": "Swedish Logistic Property AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ManagementResult"
+  ],
+  "source": "https://filings.xbrl.org/254900AWRHP1QNE6OQ19/2025-12-31/ESEF/SE/0/254900AWRHP1QNE6OQ19-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300O897ZC5H7CY412",
+  "name": "Nordic Legal Entity Identifier AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300O897ZC5H7CY412/2025-12-31/ESEF/SE/0/biog-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300RFXXKT652HB549",
+  "name": "Embracer Group AB",
+  "country": "SE",
+  "sector": "Technology",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "CashFlowsFromUsedInOperationsBeforeChangesInWorkingCapitalContinuingOperations",
+   "IncreaseDecreaseInCashAndCashEquivalentsContinuingOperations",
+   "ReceivedPaymentFromLoansToDiscontinuedOperations"
+  ],
+  "source": "https://filings.xbrl.org/549300RFXXKT652HB549/2025-03-31/ESEF/SE/0/embrac-2025-03-31-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300WMZQS7HLNYQB09",
+  "name": "Wall To Wall Group AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300WMZQS7HLNYQB09/2025-12-31/ESEF/SE/0/walltowall-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5299004NWV90GIWSWQ04",
+  "name": "Gruvaktiebolaget Viscaria",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/5299004NWV90GIWSWQ04/2025-12-31/ESEF/SE/0/5299004NWV90GIWSWQ04-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300IDXCK67VMBRX06",
+  "name": "SBB i Norden AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "Driftskostnader",
+   "ProfitLossBeforeFinancingChangesInFairValueAndGoodwill",
+   "ResultFromProductionOfResidentials",
+   "ResultatFoereSkattAvveckladVerksamhet",
+   "ResultatFoereSkattKvarvarandeOchAvvecklad",
+   "ResultatFoereSkattKvarvarandeVerksamhet",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichFinancialItems",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichGainsLossesFinancialInstruments",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichGainsLossesInvestmentProperties",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichGainsLossesOnDivestments",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichImpairmentAndRevaluation",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichProfitBeforeFinancialItemsGainsLossesAndTax",
+   "ShareOfProfitLossFromInvestmentsAccountedForUsingEquityMethodOfWhichTaxExpense"
+  ],
+  "source": "https://filings.xbrl.org/549300IDXCK67VMBRX06/2025-12-31/ESEF/SE/0/samh-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300TJBPSNZ3DO6B42",
+  "name": "Cinclus Pharma Holding AB",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300TJBPSNZ3DO6B42/2025-12-31/ESEF/SE/0/cinc-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300MH8OETHBBKJU80",
+  "name": "Clas Ohlson Aktiebolag",
+  "country": "SE",
+  "sector": "Consumer",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300MH8OETHBBKJU80/2025-04-30/ESEF/SE/0/clas-2025-04-30-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300KD3XGX3754UW61",
+  "name": "Intea Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/549300KD3XGX3754UW61/2025-12-31/ESEF/SE/0/intea-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "213800QBPS3L89U9TZ44",
+  "name": "Neobo Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Driftskostnader",
+   "Förvaltningsresultat",
+   "Kassaflödefrånlöpandeverksamhetföreräntorochskatt"
+  ],
+  "source": "https://filings.xbrl.org/213800QBPS3L89U9TZ44/2025-12-31/ESEF/SE/0/neob-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493006RHHJRIC7ITL87",
+  "name": "Stenhus Fastigheter i Norden AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatFronIntresseforetagVaravForvaltningsresultat",
+   "ResultatInklusiveVaerdefoeraendringarIIntressefoeretag",
+   "ResultatInklusiveVardeforandringarIIntresseforetagVaravFoervaltningsresultat"
+  ],
+  "source": "https://filings.xbrl.org/5493006RHHJRIC7ITL87/2025-12-31/ESEF/SE/0/sten-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300V512S3QMRNO618",
+  "name": "Rusta AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300V512S3QMRNO618/2025-04-30/ESEF/SE/0/Rusta-2025-04-30-0-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "636700IALCXDTVXING25",
+  "name": "Prisma Properties AB",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "Foervaltningsresultat",
+   "ResultatPerAktieFoereOchEfterUtspaedningKr"
+  ],
+  "source": "https://filings.xbrl.org/636700IALCXDTVXING25/2025-12-31/ESEF/SE/0/pris-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "636700W1VM86O2G2AA36",
+  "name": "Sveafastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatFoereFinansiellaPosterOchVaerdefoeraendringar"
+  ],
+  "source": "https://filings.xbrl.org/636700W1VM86O2G2AA36/2025-12-31/ESEF/SE/0/svea-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "1595UU5YMU4S61M2UO26",
+  "name": "Ellos Holding AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/1595UU5YMU4S61M2UO26/2025-12-31/ESEF/SE/0/ello-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "5493004UROJFQSP6RC85",
+  "name": "Acast AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/5493004UROJFQSP6RC85/2025-12-31/ESEF/SE/0/acast-2025-12-31-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300H8ZDTNCZ8PPJ25",
+  "name": "Fortinova Fastigheter AB (publ)",
+  "country": "SE",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit"
+  ],
+  "candidate_extension_concepts": [
+   "ProfitLossFromPropertyManagement"
+  ],
+  "source": "https://filings.xbrl.org/549300H8ZDTNCZ8PPJ25/2025-12-31/ESEF/SE/0/549300H8ZDTNCZ8PPJ25-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "64884XU1OA337HY7A137",
+  "name": "Desenio Group AB (publ)",
+  "country": "SE",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "ResultatEfterFinansiellaPoster"
+  ],
+  "source": "https://filings.xbrl.org/64884XU1OA337HY7A137/2025-12-31/ESEF/SE/0/deseniogroupabpubl-2025-12-31-1-sv/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "743700AL68PUX6JMS644",
+  "name": "Digitalist Group Oyj",
+  "country": "FI",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ebit",
+   "net_profit",
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/743700AL68PUX6JMS644/2025-12-31/ESEF/FI/0/743700AL68PUX6JMS644-2025-12-31-1-fi/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "743700JIW1LAUZDH9012",
+  "name": "Gofore Oyj",
+  "country": "FI",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "FinanceCostPaidAndFinanceIncomeReceivedExcludingInterestReceivedAndPaidClassifiedAsOperatingActivities"
+  ],
+  "source": "https://filings.xbrl.org/743700JIW1LAUZDH9012/2025-12-31/ESEF/FI/0/743700JIW1LAUZDH9012-2025-12-31-fi/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "549300P8N0P6KDGTJ206",
+  "name": "Citycon Oyj",
+  "country": "FI",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/549300P8N0P6KDGTJ206/2025-12-31/ESEF/FI/1/549300P8N0P6KDGTJ206-2025-12-31-1-en/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "529900C4P88APHFZ5H47",
+  "name": "Ovaro Kiinteistösijoitus Oyj",
+  "country": "FI",
+  "sector": "Real estate",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "InterestPaidAndFinanceCostsPaidClassifiedAsOperatingActivities",
+   "InterestReceivedAndFinanceIncomeReceivedClassifiedAsOperatingActivities",
+   "ProfitLossFromOperatingActivitiesBeforeGainsLossesOnDisposalsOfInvestmentPropertiesAndGainsLossesOnFairValueAdjustmentInvestmentProperty"
+  ],
+  "source": "https://filings.xbrl.org/529900C4P88APHFZ5H47/2025-12-31/ESEF/FI/0/529900C4P88APHFZ5H47-2025-12-31-1-fi/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "7437002EEG3FV9F3S117",
+  "name": "Sunborn London Oyj",
+  "country": "FI",
+  "sector": "Real estate",
+  "year": 2024,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [],
+  "source": "https://filings.xbrl.org/7437002EEG3FV9F3S117/2024-12-31/ESEF/FI/0/7437002EEG3FV9F3S117-2024-12-31-fi/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "74370016PW2V4W02LX91",
+  "name": "Wulff-Yhtiöt Oyj",
+  "country": "FI",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "EBITDA"
+  ],
+  "source": "https://filings.xbrl.org/74370016PW2V4W02LX91/2025-12-31/ESEF/FI/0/74370016PW2V4W02LX91-2025-12-31-0-en/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "635400IUIZZIUJSAMF76",
+  "name": "Fortum Oyj",
+  "country": "FI",
+  "sector": "Energy",
+  "year": 2025,
+  "missing": [
+   "ocf"
+  ],
+  "candidate_extension_concepts": [
+   "CashFlowsFromDecreaseIncreaseInMarginReceivables",
+   "CashFlowsFromOperatingAndInvestingActivitiesFromContinuingOperations",
+   "CashFlowsUsedInAcquisitionOfSharesInSubsidiariesJointVenturesAssociatedCompaniesAndOtherInvestments",
+   "ChangesInFairValuesOfDerivativesHedgingFutureCashFlow",
+   "ComparableEbitda",
+   "ComparableOperatingProfit",
+   "IncreaseDecreaseInCashAndCashEquivalentsFromContinuingOperationsBeforeEffectOfExchangeRateChanges",
+   "OperatingProfitBeforeDepreciationsEBITDA",
+   "OtherComprehensiveIncomeFromContinuingOperationsAfterDeferredTax",
+   "OtherComprehensiveIncomeFromContinuingOperationsEquity"
+  ],
+  "source": "https://filings.xbrl.org/635400IUIZZIUJSAMF76/2025-12-31/ESEF/FI/0/635400IUIZZIUJSAMF76-2025-12-31-fi/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "7437003B5WFBOIEFY714",
+  "name": "OP Osuuskunta",
+  "country": "FI",
+  "sector": "Unclassified",
+  "year": 2025,
+  "missing": [
+   "revenue"
+  ],
+  "candidate_extension_concepts": [
+   "AdjustmentsForDecreaseIncreaseInInvestmentPropertyInvestmentAccountedForUsingEquityMethodFinancialAssetsAtThroughProfitOrLossFinancialAssetsThroughOtherComprehensiveIncome",
+   "AmountsRemovedFromOperatingExpensesAndAdjustedInsuranceServiceResult",
+   "DecreaseInCooperativeAndProfitShareCapitalClassifiedAsFinancingActivities",
+   "FinanceIncomeExpensesFromInsuranceAndReinsuranceContractsHeldRecognisedInProfitOrLoss",
+   "GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTradingAndGainsLossesOnFinancialLiabilitiesAtFairValueThroughProfitOrLoss",
+   "IncreaseDecreaseThroughChangesInCooperativeAndProfitShares",
+   "IncreaseInCooperativeAndProfitShareCapitalClassifiedAsFinancingActivities",
+   "InterestPaidClassifiedAsCashFlow",
+   "InterestReceivedClassifiedAsCashFlow",
+   "InvestmentPropertyInvestmentAccountedForUsingEquityMethodFinancialAssetsAtFairValueThroughProfitOrLossFinancialAssetsThroughOtherComprehensiveIncomeAndFinancialAssets",
+   "IssuedCapitalCooperativeShares",
+   "IssuedCapitalProfitShares"
+  ],
+  "source": "https://filings.xbrl.org/7437003B5WFBOIEFY714/2025-12-31/ESEF/FI/2/7437003B5WFBOIEFY714-2025-12-31-fi/reports/ixbrlviewer.html"
+ }
+]

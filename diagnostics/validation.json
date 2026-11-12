@@ -1,0 +1,297 @@
+{
+ "balance: assets != equity + liabilities": {
+  "count": 19,
+  "examples": [
+   {
+    "lei": "5493006EIYZZYQILKS31",
+    "name": "New Wave Group AB",
+    "year": 2022
+   },
+   {
+    "lei": "5493000MATG2DYK19F35",
+    "name": "Pricer Aktiebolag",
+    "year": 2022
+   },
+   {
+    "lei": "529900SR87NBUKX74L58",
+    "name": "Biotage AB",
+    "year": 2020
+   },
+   {
+    "lei": "529900SR87NBUKX74L58",
+    "name": "Biotage AB",
+    "year": 2021
+   },
+   {
+    "lei": "549300WMZQS7HLNYQB09",
+    "name": "Wall To Wall Group AB",
+    "year": 2022
+   },
+   {
+    "lei": "549300WMZQS7HLNYQB09",
+    "name": "Wall To Wall Group AB",
+    "year": 2023
+   },
+   {
+    "lei": "549300WMZQS7HLNYQB09",
+    "name": "Wall To Wall Group AB",
+    "year": 2024
+   },
+   {
+    "lei": "743700TSB08BO83SJR33",
+    "name": "Reka Industrial Oyj",
+    "year": 2022
+   },
+   {
+    "lei": "743700G7A9J1PHM3X223",
+    "name": "Wärtsilä Oyj Abp",
+    "year": 2020
+   },
+   {
+    "lei": "743700G7A9J1PHM3X223",
+    "name": "Wärtsilä Oyj Abp",
+    "year": 2024
+   },
+   {
+    "lei": "74370031Y7RK5H88CQ48",
+    "name": "Kemira Oyj",
+    "year": 2023
+   },
+   {
+    "lei": "7437005RN1C2L4VRU511",
+    "name": "Delete Group Oyj",
+    "year": 2020
+   },
+   {
+    "lei": "743700JHE9365SIHRE72",
+    "name": "Purmo Group Oyj",
+    "year": 2022
+   },
+   {
+    "lei": "743700JHE9365SIHRE72",
+    "name": "Purmo Group Oyj",
+    "year": 2023
+   },
+   {
+    "lei": "743700TDB62DGAFROB24",
+    "name": "Wetteri Oyj",
+    "year": 2024
+   },
+   {
+    "lei": "5493009ZDBVG2CO1O689",
+    "name": "Suomen Hypoteekkiyhdistys",
+    "year": 2022
+   },
+   {
+    "lei": "5493009ZDBVG2CO1O689",
+    "name": "Suomen Hypoteekkiyhdistys",
+    "year": 2023
+   },
+   {
+    "lei": "743700XSMVPR48XIML56",
+    "name": "Enersense International Oyj",
+    "year": 2024
+   },
+   {
+    "lei": "743700ZGH7GD27UOQO12",
+    "name": "Panostaja Oyj",
+    "year": 2021
+   }
+  ]
+ },
+ "balance: assets != equity and liabilities": {
+  "count": 2,
+  "examples": [
+   {
+    "lei": "5493000MATG2DYK19F35",
+    "name": "Pricer Aktiebolag",
+    "year": 2022
+   },
+   {
+    "lei": "5493001IZXU12M8NYV95",
+    "name": "Annehem Fastigheter AB (publ)",
+    "year": 2023
+   }
+  ]
+ },
+ "implausible: equity ratio > 100%": {
+  "count": 1,
+  "examples": [
+   {
+    "lei": "743700AL68PUX6JMS644",
+    "name": "Digitalist Group Oyj",
+    "year": 2021
+   }
+  ]
+ },
+ "implausible: |EBIT margin| > 100%": {
+  "count": 168,
+  "examples": [
+   {
+    "lei": "5493004YF5D7Z612Z822",
+    "name": "Fingerprint Cards AB",
+    "year": 2024
+   },
+   {
+    "lei": "549300GXIIAUWSV2YS64",
+    "name": "Coeli Fastighet II AB",
+    "year": 2021
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2020
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2021
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2022
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2023
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2024
+   },
+   {
+    "lei": "549300LLEO25ZJJ3NT91",
+    "name": "Hansa Biopharma AB",
+    "year": 2025
+   },
+   {
+    "lei": "549300XO4L9XNOCFCZ84",
+    "name": "Saniona AB",
+    "year": 2020
+   },
+   {
+    "lei": "549300XO4L9XNOCFCZ84",
+    "name": "Saniona AB",
+    "year": 2021
+   },
+   {
+    "lei": "549300XO4L9XNOCFCZ84",
+    "name": "Saniona AB",
+    "year": 2022
+   },
+   {
+    "lei": "549300XO4L9XNOCFCZ84",
+    "name": "Saniona AB",
+    "year": 2023
+   },
+   {
+    "lei": "549300HT0F6CFLJR3Y69",
+    "name": "Humlegården Fastigheter AB",
+    "year": 2020
+   },
+   {
+    "lei": "549300MYLGD0VKNGTJ47",
+    "name": "Creades AB (publ)",
+    "year": 2023
+   },
+   {
+    "lei": "549300KSY3P5G8XC0A34",
+    "name": "Cint Group AB (publ)",
+    "year": 2022
+   },
+   {
+    "lei": "549300KSY3P5G8XC0A34",
+    "name": "Cint Group AB (publ)",
+    "year": 2023
+   },
+   {
+    "lei": "549300KSY3P5G8XC0A34",
+    "name": "Cint Group AB (publ)",
+    "year": 2025
+   },
+   {
+    "lei": "5493005YV22OTMUHZ183",
+    "name": "Abliva AB",
+    "year": 2020
+   },
+   {
+    "lei": "5493005YV22OTMUHZ183",
+    "name": "Abliva AB",
+    "year": 2021
+   },
+   {
+    "lei": "5493005YV22OTMUHZ183",
+    "name": "Abliva AB",
+    "year": 2022
+   },
+   {
+    "lei": "5493005YV22OTMUHZ183",
+    "name": "Abliva AB",
+    "year": 2023
+   },
+   {
+    "lei": "549300H1D6B81XZGWQ06",
+    "name": "mySafety Group AB",
+    "year": 2020
+   },
+   {
+    "lei": "549300H1D6B81XZGWQ06",
+    "name": "mySafety Group AB",
+    "year": 2021
+   },
+   {
+    "lei": "549300H1D6B81XZGWQ06",
+    "name": "mySafety Group AB",
+    "year": 2022
+   },
+   {
+    "lei": "213800T68IVZFR868L42",
+    "name": "Starbreeze AB",
+    "year": 2024
+   }
+  ]
+ },
+ "sign: negative revenue": {
+  "count": 5,
+  "examples": [
+   {
+    "lei": "549300TTX4HXDRDKMV93",
+    "name": "AB Traction",
+    "year": 2020
+   },
+   {
+    "lei": "549300TTX4HXDRDKMV93",
+    "name": "AB Traction",
+    "year": 2022
+   },
+   {
+    "lei": "5493006ZVS6SHCKH6I37",
+    "name": "Svolder Aktiebolag",
+    "year": 2022
+   },
+   {
+    "lei": "5493006ZVS6SHCKH6I37",
+    "name": "Svolder Aktiebolag",
+    "year": 2023
+   },
+   {
+    "lei": "5493001BIDO3E2AOA590",
+    "name": "Investment Aktiebolaget Spiltan",
+    "year": 2025
+   }
+  ]
+ },
+ "sign: non-positive total assets": {
+  "count": 1,
+  "examples": [
+   {
+    "lei": "636700YQKGLXCPPUYE74",
+    "name": "SGL Group ApS",
+    "year": 2022
+   }
+  ]
+ }
+}

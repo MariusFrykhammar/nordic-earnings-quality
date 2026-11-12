@@ -1,0 +1,162 @@
+[
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2020,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2021,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2022,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2023,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2024,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300YJUYJ9A24RXL71",
+  "name": "Billerud Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2025,
+  "metric": "revenue",
+  "concept": "bill:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2020,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2021,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2022,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2023,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2024,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "549300CM6KSG2GY3HV62",
+  "name": "Knowit Aktiebolag (publ)",
+  "country": "SE",
+  "year": 2025,
+  "metric": "revenue",
+  "concept": "know:NetSales"
+ },
+ {
+  "lei": "213800UEV5ZAFFVQ4J85",
+  "name": "HUFVUDSTADEN AB",
+  "country": "SE",
+  "year": 2020,
+  "metric": "ebit",
+  "concept": "hufv:Rörelseresultat"
+ },
+ {
+  "lei": "213800UEV5ZAFFVQ4J85",
+  "name": "HUFVUDSTADEN AB",
+  "country": "SE",
+  "year": 2021,
+  "metric": "ebit",
+  "concept": "hufv:Rörelseresultat"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2020,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2021,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2022,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2023,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2024,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ },
+ {
+  "lei": "743700NC0V49AJSQKW42",
+  "name": "Trainers' House Oyj",
+  "country": "FI",
+  "year": 2025,
+  "metric": "ebit",
+  "concept": "trai:OperatingResult"
+ }
+]

@@ -1,0 +1,305 @@
+{
+ "atlas copco": {
+  "name": "ATLAS COPCO AKTIEBOLAG",
+  "lei": "213800T8PC8Q4FYJZR07",
+  "sector": "Industrials",
+  "years": {
+   "2023": {
+    "currency": "SEK",
+    "revenue": 172664.0,
+    "ebit": 37091.0,
+    "net_profit": 28052.0,
+    "ocf": 28084.0,
+    "total_assets": 182684.0,
+    "equity": 91500.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "SEK",
+    "revenue": 176771.0,
+    "ebit": 38166.0,
+    "net_profit": 29794.0,
+    "ocf": 36887.0,
+    "total_assets": 208538.0,
+    "equity": 113760.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "SEK",
+    "revenue": 168343.0,
+    "ebit": 34114.0,
+    "net_profit": 26425.0,
+    "ocf": 32566.0,
+    "total_assets": 202454.0,
+    "equity": 110383.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "sandvik": {
+  "name": "Sandvik Aktiebolag",
+  "lei": "5299008ZUAXN43LVZF54",
+  "sector": "Materials",
+  "years": {
+   "2023": {
+    "currency": "SEK",
+    "revenue": 126503.0,
+    "ebit": 22418.0,
+    "net_profit": 15301.0,
+    "ocf": 18797.0,
+    "total_assets": 174210.0,
+    "equity": 87697.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "SEK",
+    "revenue": 122878.0,
+    "ebit": 18420.0,
+    "net_profit": 12245.0,
+    "ocf": 20607.0,
+    "total_assets": 184384.0,
+    "equity": 96999.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "SEK",
+    "revenue": 120680.0,
+    "ebit": 20809.0,
+    "net_profit": 14691.0,
+    "ocf": 19189.0,
+    "total_assets": 169860.0,
+    "equity": 93237.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "electrolux": {
+  "name": "Aktiebolaget Electrolux",
+  "lei": "549300Y3HHZB1ZGFPJ93",
+  "sector": "Consumer",
+  "years": {
+   "2023": {
+    "currency": "SEK",
+    "revenue": 134451.0,
+    "ebit": -2988.0,
+    "net_profit": -5227.0,
+    "ocf": 4003.0,
+    "total_assets": 120053.0,
+    "equity": 11274.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "SEK",
+    "revenue": 136150.0,
+    "ebit": 1100.0,
+    "net_profit": -1394.0,
+    "ocf": 4197.0,
+    "total_assets": 125388.0,
+    "equity": 9723.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "SEK",
+    "revenue": 131282.0,
+    "ebit": 3657.0,
+    "net_profit": 878.0,
+    "ocf": 1177.0,
+    "total_assets": 114626.0,
+    "equity": 8706.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "orkla": "not found",
+ "kongsberg gruppen": "not found",
+ "telenor": "not found",
+ "carlsberg": "not found",
+ "dsv": "not found",
+ "novo nordisk": "not found",
+ "kone": {
+  "name": "KONE OYJ",
+  "lei": "2138001CNF45JP5XZK38",
+  "sector": "Industrials",
+  "years": {
+   "2023": {
+    "currency": "EUR",
+    "revenue": 10952.3,
+    "ebit": 1200.1,
+    "net_profit": 931.6,
+    "ocf": 1127.9,
+    "total_assets": 8730.8,
+    "equity": 2786.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "EUR",
+    "revenue": 11098.4,
+    "ebit": 1249.0,
+    "net_profit": 961.0,
+    "ocf": 1249.3,
+    "total_assets": 9284.3,
+    "equity": 2893.1,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "EUR",
+    "revenue": 11245.2,
+    "ebit": 1336.2,
+    "net_profit": 991.9,
+    "ocf": 1316.0,
+    "total_assets": 9052.0,
+    "equity": 2826.8,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "upm": {
+  "name": "UPM-KYMMENE OYJ",
+  "lei": "213800EC6PW5VU4J9U64",
+  "sector": "Materials",
+  "years": {
+   "2023": {
+    "currency": "EUR",
+    "revenue": 10460.0,
+    "ebit": 608.0,
+    "net_profit": 394.0,
+    "ocf": 2269.0,
+    "total_assets": 18473.0,
+    "equity": 11531.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "EUR",
+    "revenue": 10339.0,
+    "ebit": 604.0,
+    "net_profit": 463.0,
+    "ocf": 1352.0,
+    "total_assets": 19096.0,
+    "equity": 11540.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "EUR",
+    "revenue": 9656.0,
+    "ebit": 749.0,
+    "net_profit": 491.0,
+    "ocf": 1405.0,
+    "total_assets": 17532.0,
+    "equity": 10335.0,
+    "concepts": {
+     "revenue": "RevenueFromContractsWithCustomers",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "wärtsilä": {
+  "name": "Wärtsilä Oyj Abp",
+  "lei": "743700G7A9J1PHM3X223",
+  "sector": "Unclassified",
+  "years": {
+   "2023": {
+    "currency": "EUR",
+    "revenue": 6015.0,
+    "ebit": 402.0,
+    "net_profit": 269.0,
+    "ocf": 822.0,
+    "total_assets": 6803.0,
+    "equity": 2232.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "EUR",
+    "revenue": 6449.0,
+    "ebit": 716.0,
+    "net_profit": 507.0,
+    "ocf": 1208.0,
+    "total_assets": 7694.0,
+    "equity": 2531.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ }
+}
