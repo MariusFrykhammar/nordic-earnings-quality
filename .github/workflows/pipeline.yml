@@ -1,0 +1,58 @@
+name: pipeline
+
+# Runs the data pipeline on GitHub's servers and commits the results to data/
+# and diagnostics/. The mode (probe | full) is read from pipeline/MODE.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/**"
+      - "mapping/**"
+      - ".github/workflows/pipeline.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 3 * *" # monthly refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore download cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: xbrl-${{ github.run_id }}
+          restore-keys: xbrl-
+
+      - run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline
+        run: |
+          mkdir -p diagnostics data
+          set -o pipefail
+          python -m pipeline.run "$(cat pipeline/MODE)" 2>&1 | tee diagnostics/run.log
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data diagnostics
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "data: pipeline output ($(cat pipeline/MODE), run ${{ github.run_number }})"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
