@@ -65,7 +65,7 @@ RULES = {
 # Property companies report fair-value changes in profit, which distorts profit-vs-cash measures,
 # and run structurally higher leverage.
 # Property companies and residential developers hold projects as inventory and receivables by design.
-EXCLUDE_BY_SECTOR = {"Real estate": {"profit_without_cash", "high_accruals", "leverage_creep",
+EXCLUDE_BY_SECTOR = {"Real Estate": {"profit_without_cash", "high_accruals", "leverage_creep",
                                      "inventory_build_up", "receivables_outpace_sales"}}
 
 

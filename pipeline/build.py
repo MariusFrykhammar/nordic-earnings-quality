@@ -129,6 +129,11 @@ def company_years(filings: list[dict], facts_by_url: dict[str, list]) -> dict:
     return {"years": years, "restated": restated}
 
 
+def icb_industry(ss: str) -> str | None:
+    from .icb import SUPERSECTORS
+    return SUPERSECTORS.get(ss)
+
+
 def fact_concept(prov: str) -> str | None:
     """Full concept name behind a provenance string; None for sums."""
     if "+" in prov:
@@ -269,16 +274,18 @@ def main() -> None:
         c["registry"] = reg
         eq = (fr or {}).get(lei)
         c["equity"] = eq
-        sector, basis = sectors.classify(c["name"], wd.get(lei), c["series"][c["latest_year"]]["v"], reg)
-        c["sector"], c["sector_basis"] = sector, basis
+        exch = None
+        if eq and eq.get("venue_mic") and sources.NORDIC_OPERATING_OSLO(eq):
+            exch = sources.euronext_icb(eq["isins"], ["XOSL", "XOAS", "MERK"])
+        c["icb_exchange"] = exch
+        industry, supersector, basis = sectors.classify(c["name"], wd.get(lei), c["series"][c["latest_year"]]["v"], reg, exch)
+        c["sector"], c["supersector"], c["sector_basis"] = industry, supersector, basis
     ref_status["registries"] = f"ok: industry codes for {n_reg} companies (NO, FI; SE/DK need credentials)"
     log("reference data:", ref_status)
 
     # ---------------- universe + peers
-    nonfin_excl = sectors.FINANCIAL_SECTORS | {"Financial / other (no revenue or EBIT tag)"}
-
     def in_universe(c):
-        return c["sector"] not in nonfin_excl
+        return c["sector"] not in sectors.FINANCIAL_INDUSTRIES
 
     def size_eur(c):
         s = c["series"][c["latest_year"]]
@@ -312,7 +319,7 @@ def main() -> None:
     for c in companies.values():
         c["listing_status"] = listing_status(c)
 
-    peer_pool = [c for c in companies.values() if rankable(c) and c["sector"] != "Real estate"]
+    peer_pool = [c for c in companies.values() if rankable(c) and c["sector"] != "Real Estate"]
     peer_keys = ["cash_conversion_3y", "accruals_ratio", "intangible_capex_to_revenue"]
 
     def thresholds(group):
@@ -325,15 +332,23 @@ def main() -> None:
         }
 
     all_thr = thresholds(peer_pool)
-    by_sector = defaultdict(list)
+    by_ss, by_ind = defaultdict(list), defaultdict(list)
     for c in peer_pool:
-        by_sector[c["sector"]].append(c)
+        by_ss[c["supersector"]].append(c)
+        by_ind[c["sector"]].append(c)
     sector_thr = {}
-    for s, g in by_sector.items():
-        th = thresholds(g) if len(g) >= 10 else {}
-        sector_thr[s] = {k: (th.get(k) if th.get(k) is not None else all_thr.get(k)) for k in all_thr}
-        sector_thr[s]["peer_group"] = s if len(g) >= 10 else "all non-financial (sector too small)"
-        sector_thr[s]["n"] = len(g)
+    for ss in {c["supersector"] for c in companies.values()}:
+        ind = icb_industry(ss)
+        if ss != "Unclassified" and len(by_ss.get(ss, [])) >= 10:
+            g, label = by_ss[ss], ss
+        elif ind and ind != "Unclassified" and len(by_ind.get(ind, [])) >= 10:
+            g, label = by_ind[ind], ind
+        else:
+            g, label = None, "all non-financial companies"
+        th = thresholds(g) if g else {}
+        sector_thr[ss] = {k: (th.get(k) if th.get(k) is not None else all_thr.get(k)) for k in all_thr}
+        sector_thr[ss]["peer_group"] = label
+        sector_thr[ss]["n"] = len(g) if g else all_thr["n"]
 
     for c in companies.values():
         c["in_universe"] = in_universe(c)
@@ -342,7 +357,7 @@ def main() -> None:
         if not c["in_universe"]:
             c["flags"] = []
             continue
-        thr = sector_thr.get(c["sector"]) or dict(all_thr, peer_group="all non-financial")
+        thr = sector_thr.get(c["supersector"]) or dict(all_thr, peer_group="all non-financial companies")
         c["peer_group"] = thr.get("peer_group", "all non-financial")
         c["flags"] = flags.evaluate(c["series"], c["latest_year"], c["sector"], thr)
 
@@ -363,7 +378,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
         lat = c["series"][c["latest_year"]]
         index.append({
             "lei": c["lei"], "name": c["display_name"], "legal_name": c["legal_name"] or c["name"],
-            "country": c["country"], "sector": c["sector"], "market": (c["equity"] or {}).get("venue"),
+            "country": c["country"], "sector": c["sector"], "supersector": c["supersector"], "market": (c["equity"] or {}).get("venue"),
             "currency": lat["currency"], "latest_year": c["latest_year"], "in_universe": c["in_universe"],
             "listing_status": c["listing_status"],
             "rankable": c["rankable"], "revenue_eur_m": c["revenue_eur_m"],
@@ -375,7 +390,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             "ebit_margin": rnd(lat["m"].get("ebit_margin")), "cash_conversion_3y": rnd(lat["m"].get("cash_conversion_3y")),
         })
         detail = {
-            k: c[k] for k in ("lei", "display_name", "legal_name", "country", "sector", "sector_basis", "org_number",
+            k: c[k] for k in ("lei", "display_name", "legal_name", "country", "sector", "supersector", "icb_exchange", "sector_basis", "org_number",
                               "legal_form_elf", "registry", "equity", "tickers", "wikidata", "exchanges", "latest_year",
                               "in_universe", "rankable", "listing_status", "revenue_eur_m", "flags")
         }
@@ -408,12 +423,12 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
         # profit up, cash flow down; ranked by (change in net profit - change in OCF) / prior-year revenue,
         # which avoids the base effects of growth rates on small numbers
         "widest_profit_cash_gap": sorted(
-            [r for r in ranked if r["profit_cash_gap_scaled"] is not None and r["sector"] != "Real estate"
+            [r for r in ranked if r["profit_cash_gap_scaled"] is not None and r["sector"] != "Real Estate"
              and (r["net_profit_growth"] or 0) > 0 and (r["ocf_growth"] or 0) < 0],
             key=lambda r: -r["profit_cash_gap_scaled"])[:50],
         "fastest_receivables_build_up": sorted(
             [r for r in ranked if r["receivables_growth"] is not None and r["revenue_growth"] is not None
-             and r["sector"] != "Real estate"],
+             and r["sector"] != "Real Estate"],
             key=lambda r: -(r["receivables_growth"] - r["revenue_growth"]))[:50],
     }
     meta = {
@@ -448,6 +463,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             "excluded_financial_or_untagged": len(cs) - len(uni),
             "gate_core4_3yrs": gate, "rankable": sum(1 for c in uni if c["rankable"]),
             "sectors": Counter(c["sector"] for c in cs).most_common(),
+            "supersectors": Counter(c["supersector"] for c in uni).most_common(),
             "sector_source": Counter((c["sector_basis"] or "").split(":")[0] for c in uni).most_common(),
             "listing": Counter(c["listing_status"].split(":")[0] for c in uni).most_common(),
             "venues": Counter((c["equity"] or {}).get("venue") for c in uni if c["equity"]).most_common(),

@@ -15,7 +15,7 @@ import requests
 WD = "https://query.wikidata.org/sparql"
 UA = {"User-Agent": "nordic-earnings-quality/0.1 (https://github.com/MariusFrykhammar/nordic-earnings-quality)"}
 
-FINANCIAL_SECTORS = {"Banks & financial services", "Insurance", "Investment companies"}
+FINANCIAL_INDUSTRIES = {"Financials"}
 
 # checked in order; first keyword hit wins
 KEYWORDS = [
@@ -81,45 +81,53 @@ def from_industries(industries: list[str]) -> str | None:
     return None
 
 
-def classify(name: str, wd: dict | None, latest: dict, registry: dict | None = None) -> tuple[str, str]:
-    """Return (sector, basis). Order: manual list, statement-based rules, official registry (NACE),
-    name rules for investment vehicles, Wikidata, name keywords."""
-    from .sources import nace_sector
+def classify(name: str, wd: dict | None, latest: dict, registry: dict | None = None,
+             exchange: dict | None = None) -> tuple[str, str, str]:
+    """Return (industry, supersector, basis), using ICB. Order: statement-based rules for financials and
+    property, exchange ICB (Euronext), official registry NACE, name rules, Wikidata, name keywords."""
+    from . import icb
+
+    def out(ss: str, basis: str):
+        return icb.SUPERSECTORS[ss], ss, basis
 
     n = (name or "").lower()
     if any(k in n for k in INVESTMENT_COMPANY_NAMES):
-        return "Investment companies", "manual list"
+        return out("Financial Services", "investment company (manual list)")
     rev, np_ = latest.get("revenue"), latest.get("net_profit")
     if np_ is not None and np_ > 0 and rev is not None and np_ > 2 * max(rev, 0):
-        return "Investment companies", "data: net profit > 2x revenue (investment gains)"
+        return out("Financial Services", "investment company (data: net profit > 2x revenue)")
     has_rev = latest.get("revenue") is not None
     has_ebit = latest.get("ebit") is not None
     if latest.get("insurance_revenue") is not None and not has_ebit:
-        return "Insurance", "data: insurance revenue"
+        return out("Insurance", "data: insurance revenue")
     ii, ta0 = latest.get("interest_income"), latest.get("total_assets")
     if not has_rev and (latest.get("fee_commission_income") is not None or (ii and ta0 and ii / ta0 >= 0.02)):
-        return "Banks & financial services", "data: commission or material interest income, no revenue tag"
+        return out("Banks", "data: commission or material interest income, no revenue tag")
     lc = latest.get("loans_to_customers")
     if lc and latest.get("total_assets") and lc / latest["total_assets"] > 0.3:
-        return "Banks & financial services", "data: loans to customers > 30% of assets"
+        return out("Banks", "data: loans to customers > 30% of assets")
     ta, ip = latest.get("total_assets"), latest.get("investment_property")
     if ta and ip and ip / ta > 0.4:
-        return "Real estate", "data: investment property > 40% of assets"
+        return out("Real Estate", "data: investment property > 40% of assets")
+    if exchange and exchange.get("supersector") in icb.SUPERSECTORS:
+        return out(exchange["supersector"], f"{exchange['source']}: ICB {exchange.get('sector') or exchange['supersector']}")
     if registry and registry.get("nace"):
-        s = nace_sector(registry["nace"])
-        if s:
-            return s, f"{registry['register']}: NACE {registry['nace']} {registry.get('nace_text') or ''}".strip()
+        ss = icb.nace_supersector(registry["nace"])
+        if ss:
+            return out(ss, f"{registry['register']}: NACE {registry['nace']} {registry.get('nace_text') or ''}".strip())
     if re.search(r"\binvest(ment|ering|eringar)?\b", n):
-        return "Investment companies", "name"
+        return out("Financial Services", "investment company (name)")
     if wd and wd.get("industries"):
-        s = from_industries(wd["industries"])
-        if s:
-            return s, "wikidata: " + "; ".join(wd["industries"][:3])
-    if any(k in n for k in ("bank", "sparebank", "sparbank", "pankki", "kredit", "kreditt", "försäkring", "forsikring", "vakuutus", "insurance")):
-        return ("Insurance" if any(k in n for k in ("försäkring", "forsikring", "vakuutus", "insurance")) else "Banks & financial services"), "name"
+        ss = icb.from_wikidata(wd["industries"])
+        if ss:
+            return out(ss, "Wikidata: " + "; ".join(wd["industries"][:3]))
+    if any(k in n for k in ("försäkring", "forsikring", "vakuutus", "insurance")):
+        return out("Insurance", "name")
+    if any(k in n for k in ("bank", "sparebank", "sparbank", "pankki", "kredit", "kreditt")):
+        return out("Banks", "name")
     if any(k in n for k in ("fastighet", "eiendom", "ejendom", "kiinteistö", "property", "properties", "real estate",
                             "bostad", "bostäder", "bolig", "boliger")):
-        return "Real estate", "name"
+        return out("Real Estate", "name")
     if not has_rev and not has_ebit:
-        return "Financial / other (no revenue or EBIT tag)", "data: no revenue or EBIT"
-    return "Unclassified", "none"
+        return "Financials", "Financial / other", "data: no revenue or EBIT tag"
+    return "Unclassified", "Unclassified", "none"

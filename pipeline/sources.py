@@ -117,6 +117,10 @@ def iso_mic() -> dict[str, dict]:
     return out
 
 
+def NORDIC_OPERATING_OSLO(eq: dict) -> bool:
+    return any(v in ("XOSL", "XOAS", "MERK") for v in eq.get("venues", [])) or (eq.get("venue") or "").startswith(("Oslo", "Euronext"))
+
+
 def firds_equities(leis: set[str]) -> dict[str, dict]:
     """{lei: {'isins': [...], 'venue_mic': 'XSTO', 'venue': 'Nasdaq Stockholm', 'regulated': bool, 'name': ...}}"""
     files = None
@@ -293,4 +297,35 @@ def nace_sector(code: str) -> str | None:
     for (lo, hi), s in table:
         if lo <= d <= hi:
             return s
+    return None
+
+
+# ------------------------------------------------------------------ exchange ICB (Euronext: Oslo markets)
+
+def euronext_icb(isins: list[str], mics: list[str]) -> dict | None:
+    """ICB classification from Euronext's public instrument page for Oslo-listed shares."""
+    from .icb import CODE_TO_SUPERSECTOR
+
+    for isin in isins[:4]:
+        for mic in mics:
+            url = f"https://live.euronext.com/en/ajax/getFactsheetInfoBlock/STOCK/{isin}-{mic}/fs_icb_block"
+            p = CACHE / ("enx_" + hashlib.sha1(url.encode()).hexdigest() + ".html")
+            if p.exists() and time.time() - p.stat().st_mtime < 30 * 86400:
+                html = p.read_text()
+            else:
+                try:
+                    r = S.get(url, timeout=30)
+                except requests.RequestException:
+                    continue
+                html = r.text if r.status_code == 200 else ""
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(html)
+                time.sleep(0.3)
+            rows = dict(re.findall(r"<td>\s*([A-Za-z]+)\s*</td>\s*<td><strong>\s*([^<]+?)\s*</strong>", html))
+            ss = rows.get("SuperSector", "")
+            code = ss.split(",")[0].strip()
+            if code in CODE_TO_SUPERSECTOR:
+                sec = rows.get("Sector", "")
+                return {"supersector": CODE_TO_SUPERSECTOR[code], "sector": sec.split(",", 1)[-1].strip() if sec else None,
+                        "subsector": (rows.get("Subsector", "").split(",", 1)[-1].strip() or None), "source": "Euronext"}
     return None
