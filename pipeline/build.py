@@ -19,6 +19,7 @@ REPORT_METRICS = [
     "inventories", "goodwill_measure", "capex", "capex_intangible", "da",
 ]
 MIN_REVENUE_EUR_M = 25  # rankings only include companies at least this size (latest year)
+RAW_PROBE = ["axfood", "lindab", "clas ohlson", "ncc aktiebolag", "flsmidth"]
 IFRS_CAND = re.compile(r"Revenue|Sales|Income|Operating|ProfitLoss|CashFlows", re.I)
 DATA = Path("data")
 CAND = re.compile(r"revenue|sales|turnover|omsättning|omsattning|inntekt|omsætning|liikevaihto|operat|rörelse|drift|liike|ebit|"
@@ -268,6 +269,22 @@ def main() -> None:
         thr = sector_thr.get(c["sector"]) or dict(all_thr, peer_group="all non-financial")
         c["peer_group"] = thr.get("peer_group", "all non-financial")
         c["flags"] = flags.evaluate(c["series"], c["latest_year"], c["sector"], thr)
+
+    # ---------------- raw probe for companies with no revenue concept at all (dimension-tagged?)
+    raw_probe = {}
+    for c in companies.values():
+        if c["name"] and any(k in c["name"].lower() for k in RAW_PROBE):
+            s = c["series"][c["latest_year"]]
+            src = next((f for f in by_lei[c["lei"]] if f["period_end"] == s["source_period_end"]), None)
+            rep = fetch.get_json(fetch.BASE + src["json_url"], use_cache=False, store=False) if src else None
+            if rep:
+                raw_probe[c["name"]] = [
+                    {"c": f["dimensions"].get("concept"), "p": f["dimensions"].get("period"), "v": f.get("value"),
+                     "dims": {k: x for k, x in f["dimensions"].items() if k not in extract.CORE_DIMS}}
+                    for f in rep.get("facts", {}).values()
+                    if re.search(r"revenue|sales|omsättning|omsattning|intäkt", f["dimensions"].get("concept", ""), re.I)
+                ][:40]
+    (DIAG / "raw_revenue_probe.json").write_text(json.dumps(raw_probe, ensure_ascii=False, indent=1))
 
     # ---------------- outputs
     write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, restatements, failed, all_thr, sector_thr)

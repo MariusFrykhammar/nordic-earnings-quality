@@ -19,7 +19,7 @@ I = "ifrs-full:"
 CONCEPTS: dict[str, tuple[str, list[str], list[list[str]]]] = {
     "revenue": ("D", ["Revenue", "RevenueFromContractsWithCustomers", "RevenueAndOperatingIncome"], []),
     "ebit": ("D", ["ProfitLossFromOperatingActivities"], []),
-    "net_profit": ("D", ["ProfitLoss"], []),
+    "net_profit": ("D", ["ProfitLoss"], [["ProfitLossAttributableToOwnersOfParent", "ProfitLossAttributableToNoncontrollingInterests"]]),
     "net_profit_owners": ("D", ["ProfitLossAttributableToOwnersOfParent"], []),
     "total_assets": ("I", ["Assets", "EquityAndLiabilities"], []),
     "equity": ("I", ["Equity"], []),
@@ -38,7 +38,7 @@ CONCEPTS: dict[str, tuple[str, list[str], list[list[str]]]] = {
     "intangibles_ex_goodwill": ("I", ["IntangibleAssetsOtherThanGoodwill"], []),
     "intangibles_incl_goodwill": ("I", ["IntangibleAssetsAndGoodwill"], [["Goodwill", "IntangibleAssetsOtherThanGoodwill"]]),
     "investment_property": ("I", ["InvestmentProperty"], []),
-    "ocf": ("D", ["CashFlowsFromUsedInOperatingActivities"], []),
+    "ocf": ("D", ["CashFlowsFromUsedInOperatingActivities", "CashFlowsFromUsedInOperatingActivitiesContinuingOperations"], []),
     "capex_ppe": (
         "D",
         [
@@ -72,6 +72,18 @@ CONCEPTS: dict[str, tuple[str, list[str], list[list[str]]]] = {
     "fee_commission_income": ("D", ["FeeAndCommissionIncome", "RevenueFromFeeAndCommissionIncome"], []),
     "loans_to_customers": ("I", ["LoansAndAdvancesToCustomers"], []),
 }
+
+# Labelled last-resort fallbacks (tried after extension matching). Shown with a "fallback:" prefix.
+FALLBACKS: dict[str, list[str]] = {
+    # owners' share only when the total and the minority share are not tagged
+    "net_profit": ["ProfitLossAttributableToOwnersOfParent"],
+    # many filers tag the operating cash-flow total as 'cash generated from operations'
+    "ocf": ["CashFlowsFromUsedInOperations"],
+    # property companies: rental income is the revenue line
+    "revenue": ["RentalIncomeFromInvestmentProperty", "RentalIncome"],
+}
+# A single specific revenue line (e.g. RevenueFromSaleOfGoods) counts as revenue when no total is tagged.
+SPECIFIC_REVENUE = re.compile(r"^(RevenueFrom(SaleOf|RenderingOf)\w+|RevenueFromRoyalties|RevenueFromConstructionContracts)$")
 
 # D&A concepts that include impairment: noted in provenance, EBITDA labelled accordingly.
 DA_INCLUDES_IMPAIRMENT = {
@@ -143,10 +155,17 @@ def map_year(lei: str, dur: dict[str, float], inst: dict[str, float]) -> tuple[d
                     prov[metric] = "+".join(parts)
                     break
             else:
-                if metric in EXT_PATTERNS:
-                    hit = ext_match(metric, facts)
-                    if hit:
-                        vals[metric], prov[metric] = facts[hit], "extension-auto:" + hit
+                hit = ext_match(metric, facts) if metric in EXT_PATTERNS else None
+                if hit:
+                    vals[metric], prov[metric] = facts[hit], "extension-auto:" + hit
+                elif metric == "revenue" and (spec := [c for c in facts if c.startswith(I) and SPECIFIC_REVENUE.match(c[len(I):])]):
+                    if len(spec) == 1:
+                        vals[metric], prov[metric] = facts[spec[0]], "specific-line:" + spec[0][len(I):]
+                else:
+                    for c in FALLBACKS.get(metric, []):
+                        if I + c in facts:
+                            vals[metric], prov[metric] = facts[I + c], "fallback:" + c
+                            break
     return vals, prov
 
 
