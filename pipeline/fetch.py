@@ -22,20 +22,21 @@ def _cache_path(url: str) -> Path:
     return CACHE / "http" / (hashlib.sha1(url.encode()).hexdigest() + ".json")
 
 
-def get_json(url: str, use_cache: bool = True) -> dict | None:
+def get_json(url: str, use_cache: bool = True, store: bool = True) -> dict | None:
     """GET a JSON document; cached on disk. Returns None on 404 / persistent failure."""
     p = _cache_path(url)
     if use_cache and p.exists():
         return json.loads(p.read_text())
     for attempt in range(4):
         try:
-            r = _session.get(url, timeout=60)
+            r = _session.get(url, timeout=90)
             if r.status_code == 404:
                 return None
             r.raise_for_status()
             data = r.json()
-            p.parent.mkdir(parents=True, exist_ok=True)
-            p.write_text(json.dumps(data))
+            if store:
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(json.dumps(data))
             return data
         except (requests.RequestException, ValueError) as e:
             if attempt == 3:
