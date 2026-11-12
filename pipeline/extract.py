@@ -14,14 +14,14 @@ from pathlib import Path
 from . import fetch
 
 CORE_DIMS = {"concept", "entity", "period", "unit", "language"}
-FACT_CACHE = fetch.CACHE / "facts"
+FACT_CACHE = fetch.CACHE / "facts_v2"  # v2: includes fact ids
 
 
 def consolidated_facts(report: dict) -> list[list]:
-    """Return [[concept, period, unit, value], ...] for numeric monetary consolidated facts."""
+    """Return [[concept, period, unit, value, fact_id], ...] for numeric monetary consolidated facts."""
     out = []
     seen = set()
-    for f in (report.get("facts") or {}).values():
+    for fid, f in (report.get("facts") or {}).items():
         d = f.get("dimensions") or {}
         if set(d) - CORE_DIMS:
             continue
@@ -36,7 +36,7 @@ def consolidated_facts(report: dict) -> list[list]:
         if key in seen:  # duplicate facts (same value, different decimals/ids)
             continue
         seen.add(key)
-        out.append([d.get("concept"), d.get("period"), unit, v])
+        out.append([d.get("concept"), d.get("period"), unit, v, fid])
     return out
 
 

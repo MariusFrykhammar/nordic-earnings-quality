@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from pathlib import Path
 
-from . import extract, fetch, flags, fx, mapping, metrics, sectors, validate
+from . import extract, fetch, flags, fx, mapping, metrics, names, sectors, sources, validate
 
 YEARS = list(range(2020, 2026))
 FIRST_YEAR_KEPT = 2019  # base year for 2020 growth (from FY2020 comparatives)
@@ -85,11 +85,11 @@ def company_years(filings: list[dict], facts_by_url: dict[str, list]) -> dict:
         facts = facts_by_url.get(f["json_url"]) or []
         if not facts:
             continue
-        units = Counter(u for _, _, u, _ in facts)
+        units = Counter(x[2] for x in facts)
         cur = units.most_common(1)[0][0]
         own_b = date.fromisoformat(f["period_end"]) + timedelta(days=1)
         parsed = []
-        for c, p, u, v in facts:
+        for c, p, u, v, fid in facts:
             if u != cur:
                 continue
             pp = extract.parse_period(p)
@@ -98,23 +98,24 @@ def company_years(filings: list[dict], facts_by_url: dict[str, list]) -> dict:
             kind, s, b = pp
             if kind == "D" and not extract.annual(s, b):
                 continue
-            parsed.append((kind, b, c, v))
+            parsed.append((kind, b, c, v, fid))
         per_filing.append((f, cur, own_b, parsed))
 
     def slot(b, cur, f, own):
-        y = years.setdefault(b, {"D": {}, "I": {}, "cur": cur, "src": f, "own": own})
+        y = years.setdefault(b, {"D": {}, "I": {}, "ids": {}, "cur": cur, "src": f, "own": own})
         return y
 
     # pass 1: own-year facts
     for f, cur, own_b, parsed in per_filing:
-        for kind, b, c, v in parsed:
+        for kind, b, c, v, fid in parsed:
             if b == own_b:
                 y = slot(b, cur, f, True)
                 y["own"], y["src"], y["cur"] = True, f, cur
                 y[kind][c] = v
+                y["ids"][(kind, c)] = (fid, f)
     # pass 2: comparatives, nearest later report first
     for f, cur, own_b, parsed in per_filing:
-        for kind, b, c, v in parsed:
+        for kind, b, c, v, fid in parsed:
             if b == own_b:
                 continue
             y = slot(b, cur, f, False)
@@ -122,9 +123,23 @@ def company_years(filings: list[dict], facts_by_url: dict[str, list]) -> dict:
                 continue
             if c not in y[kind]:
                 y[kind][c] = v
+                y["ids"][(kind, c)] = (fid, f)
             elif c == "ifrs-full:Revenue" and kind == "D" and y["own"] and v and abs(y[kind][c] / v - 1) > 0.02:
                 restated.append({"fy_end": str(b - timedelta(days=1)), "own": y[kind][c], "later_comparative": v})
     return {"years": years, "restated": restated}
+
+
+def fact_concept(prov: str) -> str | None:
+    """Full concept name behind a provenance string; None for sums."""
+    if "+" in prov:
+        return None
+    for pre in ("override:", "extension-auto:"):
+        if prov.startswith(pre):
+            return prov[len(pre):]
+    for pre in ("specific-line:", "fallback:"):
+        if prov.startswith(pre):
+            return mapping.I + prov[len(pre):]
+    return mapping.I + prov
 
 
 # ------------------------------------------------------------------ 3. build
@@ -189,7 +204,14 @@ def main() -> None:
             v = {k: x / 1e6 for k, x in vals.items()}  # millions, reporting currency
             v.update(metrics.derived(v))
             src = y["src"]
+            refs = {}
+            for metric, pv in prov.items():
+                concept = fact_concept(pv)
+                hit = y["ids"].get((mapping.CONCEPTS[metric][0], concept)) if concept else None
+                if hit and hit[1].get("viewer_url"):
+                    refs[metric] = (fetch.BASE + hit[1]["viewer_url"], hit[0])
             series[label] = {
+                "refs": refs,
                 "raw": vals, "prov": prov,
                 "ifrs_d": sorted(k.split(":", 1)[1] for k in y["D"] if k.startswith("ifrs-full:")),
                 "ext": sorted({k.split(":", 1)[1] for k in list(y["D"]) + list(y["I"]) if not k.startswith("ifrs-full:")}), "v": v, "fy_end": str(fy_end), "currency": cur,
@@ -215,13 +237,42 @@ def main() -> None:
                 if t >= 2020:
                     validation[iss].append({"lei": lei, "name": name, "year": t})
         latest_t = max(t for t in years_sorted)
-        sector, basis = sectors.classify(name, wd.get(lei), series[latest_t]["v"])
         companies[lei] = {
-            "lei": lei, "name": name, "country": country, "sector": sector, "sector_basis": basis,
+            "lei": lei, "name": name, "country": country,
             "wikidata": (wd.get(lei) or {}).get("wikidata"), "exchanges": (wd.get(lei) or {}).get("exchanges", []),
+            "tickers": (wd.get(lei) or {}).get("tickers", []),
             "series": series, "latest_year": latest_t,
         }
     log("companies assembled:", len(companies))
+
+    # ---------------- official reference data: GLEIF, ESMA FIRDS, national registers
+    ref_status = {}
+    try:
+        gl = sources.gleif(sorted(companies))
+        ref_status["gleif"] = f"ok: {len(gl)} of {len(companies)} LEIs"
+    except Exception as e:
+        gl, ref_status["gleif"] = {}, f"failed: {e}"
+    try:
+        fr = sources.firds_equities(set(companies))
+        ref_status["firds"] = f"ok: {len(fr)} issuers with listed equity"
+    except Exception as e:
+        fr, ref_status["firds"] = None, f"failed: {e}"
+    n_reg = 0
+    for lei, c in companies.items():
+        g = gl.get(lei, {})
+        c.update(legal_name=g.get("legal_name"), legal_form_elf=g.get("legal_form_elf"),
+                 org_number=g.get("registered_as"), jurisdiction=g.get("jurisdiction"))
+        c["display_name"] = names.display_name(lei, g.get("legal_name") or c["name"])
+        reg = sources.registry_lookup(g.get("jurisdiction") or c["country"], g.get("registered_as"))
+        if reg:
+            n_reg += 1
+        c["registry"] = reg
+        eq = (fr or {}).get(lei)
+        c["equity"] = eq
+        sector, basis = sectors.classify(c["name"], wd.get(lei), c["series"][c["latest_year"]]["v"], reg)
+        c["sector"], c["sector_basis"] = sector, basis
+    ref_status["registries"] = f"ok: industry codes for {n_reg} companies (NO, FI; SE/DK need credentials)"
+    log("reference data:", ref_status)
 
     # ---------------- universe + peers
     nonfin_excl = sectors.FINANCIAL_SECTORS | {"Financial / other (no revenue or EBIT tag)"}
@@ -234,17 +285,23 @@ def main() -> None:
         rev, r = s["v"].get("revenue"), s.get("fx_avg")
         return rev / r if rev is not None and r else None
 
+    excluded = names.manual_exclusions()
+
     def listing_status(c):
+        if fr is not None:  # ESMA FIRDS available: authoritative
+            if c["equity"]:
+                return "listed shares: " + (c["equity"]["venue"] or "unknown venue")
+            return "no listed shares (ESMA FIRDS)"
         if c["exchanges"]:
-            return "equity-listed (Wikidata)"
+            return "listed shares (Wikidata)"
         if PRIVATE_FORM.search(c["name"] or ""):
-            return "private legal form (likely bond issuer)"
+            return "no listed shares (private legal form)"
         return "unknown"
 
     def rankable(c):
         se = size_eur(c)
         return (in_universe(c) and c["latest_year"] >= 2024 and se is not None and se >= MIN_REVENUE_EUR_M
-                and c["listing_status"] != "private legal form (likely bond issuer)")
+                and not c["listing_status"].startswith("no listed shares") and c["lei"] not in excluded)
 
     for c in companies.values():
         c["listing_status"] = listing_status(c)
@@ -283,24 +340,8 @@ def main() -> None:
         c["peer_group"] = thr.get("peer_group", "all non-financial")
         c["flags"] = flags.evaluate(c["series"], c["latest_year"], c["sector"], thr)
 
-    # ---------------- raw probe for companies with no revenue concept at all (dimension-tagged?)
-    raw_probe = {}
-    for c in companies.values():
-        if c["name"] and any(k in c["name"].lower() for k in RAW_PROBE):
-            s = c["series"][c["latest_year"]]
-            src = next((f for f in by_lei[c["lei"]] if f["period_end"] == s["source_period_end"]), None)
-            rep = fetch.get_json(fetch.BASE + src["json_url"], use_cache=False, store=False) if src else None
-            if rep:
-                raw_probe[c["name"]] = [
-                    {"c": f["dimensions"].get("concept"), "p": f["dimensions"].get("period"), "v": f.get("value"),
-                     "dims": {k: x for k, x in f["dimensions"].items() if k not in extract.CORE_DIMS}}
-                    for f in rep.get("facts", {}).values()
-                    if re.search(r"revenue|sales|omsättning|omsattning|intäkt", f["dimensions"].get("concept", ""), re.I)
-                ][:40]
-    (DIAG / "raw_revenue_probe.json").write_text(json.dumps(raw_probe, ensure_ascii=False, indent=1))
-
     # ---------------- outputs
-    write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, restatements, failed, all_thr, sector_thr)
+    write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, restatements, failed, all_thr, sector_thr, ref_status)
     log("done")
 
 
@@ -310,12 +351,13 @@ def _clean(d: dict, n=4):
     return {k: (rnd(v, n) if isinstance(v, float) else v) for k, v in d.items() if v is not None}
 
 
-def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, restatements, failed, all_thr, sector_thr):
+def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, restatements, failed, all_thr, sector_thr, ref_status):
     index = []
     for c in companies.values():
         lat = c["series"][c["latest_year"]]
         index.append({
-            "lei": c["lei"], "name": c["name"], "country": c["country"], "sector": c["sector"],
+            "lei": c["lei"], "name": c["display_name"], "legal_name": c["legal_name"] or c["name"],
+            "country": c["country"], "sector": c["sector"], "market": (c["equity"] or {}).get("venue"),
             "currency": lat["currency"], "latest_year": c["latest_year"], "in_universe": c["in_universe"],
             "listing_status": c["listing_status"],
             "rankable": c["rankable"], "revenue_eur_m": c["revenue_eur_m"],
@@ -327,13 +369,20 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             "ebit_margin": rnd(lat["m"].get("ebit_margin")), "cash_conversion_3y": rnd(lat["m"].get("cash_conversion_3y")),
         })
         detail = {
-            k: c[k] for k in ("lei", "name", "country", "sector", "sector_basis", "wikidata", "exchanges", "latest_year",
+            k: c[k] for k in ("lei", "display_name", "legal_name", "country", "sector", "sector_basis", "org_number",
+                              "legal_form_elf", "registry", "equity", "tickers", "wikidata", "exchanges", "latest_year",
                               "in_universe", "rankable", "listing_status", "revenue_eur_m", "flags")
         }
+        detail["esef_entity_name"] = c["name"]
         detail["peer_group"] = c.get("peer_group")
+        # report viewers referenced by this company's figures; refs point into this list
+        reports = sorted({u for s in c["series"].values() for u, _ in s["refs"].values()} | {s["source"] for s in c["series"].values()})
+        detail["reports"] = reports
+        ridx = {u: i for i, u in enumerate(reports)}
         detail["years"] = {
             str(t): {
-                "fy_end": s["fy_end"], "currency": s["currency"], "own_report": s["own_report"], "source": s["source"],
+                "fy_end": s["fy_end"], "currency": s["currency"], "own_report": s["own_report"], "report": ridx[s["source"]],
+                "refs": {m: [ridx[u], fid] for m, (u, fid) in s["refs"].items()},
                 "fx_eur_avg": rnd(s["fx_avg"], 6), "fx_eur_end": rnd(s["fx_end"], 6),
                 "values": _clean({k: x for k, x in s["v"].items() if not isinstance(x, str)}, 3),
                 "bases": {k: x for k, x in s["v"].items() if isinstance(x, str)},
@@ -357,11 +406,19 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
              and (r["net_profit_growth"] or 0) > 0 and (r["ocf_growth"] or 0) < 0],
             key=lambda r: -r["profit_cash_gap_scaled"])[:50],
         "fastest_receivables_build_up": sorted(
-            [r for r in ranked if r["receivables_growth"] is not None and r["revenue_growth"] is not None],
+            [r for r in ranked if r["receivables_growth"] is not None and r["revenue_growth"] is not None
+             and r["sector"] != "Real estate"],
             key=lambda r: -(r["receivables_growth"] - r["revenue_growth"]))[:50],
     }
     meta = {
         "generated": time.strftime("%Y-%m-%d"), "source": "Company annual reports (ESEF) via filings.xbrl.org",
+        "reference_sources": {
+            "GLEIF": "legal names, legal form, registration numbers (CC0)",
+            "ESMA FIRDS": "shares admitted to trading and primary venue",
+            "Brønnøysundregistrene / PRH": "official industry codes (NACE), Norway and Finland",
+            "ECB": "euro reference exchange rates", "Wikidata": "industry where no registry code (CC0)",
+        },
+        "reference_status": ref_status,
         "min_revenue_eur_m_for_rankings": MIN_REVENUE_EUR_M, "rules": flags.RULES,
         "sector_exclusions": {k: sorted(v) for k, v in flags.EXCLUDE_BY_SECTOR.items()},
         "peer_thresholds": {"all": all_thr, **{k: v for k, v in sector_thr.items()}},
@@ -385,10 +442,15 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
             "excluded_financial_or_untagged": len(cs) - len(uni),
             "gate_core4_3yrs": gate, "rankable": sum(1 for c in uni if c["rankable"]),
             "sectors": Counter(c["sector"] for c in cs).most_common(),
+            "sector_source": Counter((c["sector_basis"] or "").split(":")[0] for c in uni).most_common(),
+            "listing": Counter(c["listing_status"].split(":")[0] for c in uni).most_common(),
+            "venues": Counter((c["equity"] or {}).get("venue") for c in uni if c["equity"]).most_common(),
             "company_years_by_metric": per_metric,
         }
     cov["total_gate_core4_3yrs"] = sum(cov[c]["gate_core4_3yrs"] for c in fetch.COUNTRIES)
     cov["downloads_failed"] = len(failed)
+    cov["reference_status"] = ref_status
+    cov["fact_level_links"] = sum(len(s["refs"]) for c in companies.values() for s in c["series"].values())
     cov["revenue_restatements_over_2pct"] = restatements
     (DIAG / "coverage.json").write_text(json.dumps(cov, ensure_ascii=False, indent=1))
 
