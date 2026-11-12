@@ -92,6 +92,31 @@ REGULATED = {"XSTO", "XHEL", "XCSE", "XICE", "XOSL", "XOAS", "XNGM"}
 _NS = "{urn:iso:std:iso:20022:tech:xsd:auth.017.001.02}"
 
 
+# Operating MICs of Nordic exchange groups (regulated markets and their growth markets)
+NORDIC_OPERATING = {"XSTO", "XHEL", "XCSE", "XICE", "XOSL", "XNGM", "XSAT", "XOAS"}
+
+
+def iso_mic() -> dict[str, dict]:
+    """ISO 10383 market identifier codes (official registry, maintained by SWIFT as registration authority)."""
+    import csv
+
+    p = CACHE / "iso10383.csv"
+    if not (p.exists() and time.time() - p.stat().st_mtime < 30 * 86400):
+        r = S.get("https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv", timeout=120)
+        r.raise_for_status()
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(r.content)
+    text = p.read_bytes().decode("utf-8-sig", "replace")
+    out = {}
+    for row in csv.DictReader(io.StringIO(text)):
+        row = {k.strip().upper(): (v or "").strip() for k, v in row.items() if k}
+        mic = row.get("MIC")
+        if mic:
+            out[mic] = {"operating": row.get("OPERATING MIC") or mic, "name": row.get("MARKET NAME-INSTITUTION DESCRIPTION"),
+                        "category": row.get("MARKET CATEGORY CODE"), "country": row.get("ISO COUNTRY CODE (ISO 3166)")}
+    return out
+
+
 def firds_equities(leis: set[str]) -> dict[str, dict]:
     """{lei: {'isins': [...], 'venue_mic': 'XSTO', 'venue': 'Nasdaq Stockholm', 'regulated': bool, 'name': ...}}"""
     files = None
@@ -122,19 +147,42 @@ def firds_equities(leis: set[str]) -> dict[str, dict]:
                     if cfi.startswith("E"):
                         isin = g.findtext(_NS + "Id")
                         rel = el.find(_NS + "TechAttrbts").findtext(_NS + "RlvntTradgVn")
+                        tv = el.find(_NS + "TradgVnRltdAttrbts")
+                        ven = tv.findtext(_NS + "Id") if tv is not None else None
                         rec = out.setdefault(issr, {"isins": [], "venues": [], "name": g.findtext(_NS + "FullNm")})
                         if isin not in rec["isins"]:
                             rec["isins"].append(isin)
-                        if rel and rel not in rec["venues"]:
-                            rec["venues"].append(rel)
+                        for v in (rel, ven):
+                            if v and v not in rec["venues"]:
+                                rec["venues"].append(v)
                 el.clear()
         print(f"  FIRDS {f['file_name']}: {len(out)} issuers so far")
+    try:
+        mics = iso_mic()
+    except Exception as e:
+        print("  ! ISO 10383 MIC list:", e)
+        mics = {}
+
+    def op(v):
+        return (mics.get(v) or {}).get("operating") or v
+
     for rec in out.values():
-        nordic = [v for v in rec["venues"] if v in NORDIC_VENUES]
-        mic = (sorted(nordic, key=lambda v: (v not in REGULATED, v)) or rec["venues"] or [None])[0]
+        home = [v for v in rec["venues"] if op(v) in NORDIC_OPERATING or v in NORDIC_VENUES]
+        # prefer regulated-market segments, then growth markets
+        def rank(v):
+            cat = (mics.get(v) or {}).get("category")
+            return (0 if cat == "RMKT" or v in REGULATED else 1, v)
+        mic = sorted(home, key=rank)[0] if home else None
         rec["venue_mic"] = mic
-        rec["venue"] = NORDIC_VENUES.get(mic, mic)
-        rec["regulated_market"] = mic in REGULATED
+        rec["home_market"] = bool(mic)
+        if mic:
+            o = op(mic)
+            rec["venue"] = NORDIC_VENUES.get(o) if (mics.get(mic) or {}).get("category") == "RMKT" or mic in REGULATED else \
+                NORDIC_VENUES.get(mic) or (mics.get(mic) or {}).get("name") or NORDIC_VENUES.get(o) or mic
+            rec["regulated_market"] = (mics.get(mic) or {}).get("category") == "RMKT" or mic in REGULATED
+        else:
+            rec["venue"] = None
+            rec["regulated_market"] = False
     return out
 
 

@@ -289,8 +289,11 @@ def main() -> None:
 
     def listing_status(c):
         if fr is not None:  # ESMA FIRDS available: authoritative
-            if c["equity"]:
-                return "listed shares: " + (c["equity"]["venue"] or "unknown venue")
+            eq = c["equity"]
+            if eq and eq.get("home_market"):
+                return "listed shares: " + (eq["venue"] or eq["venue_mic"])
+            if eq:
+                return "shares traded only outside Nordic exchanges (ESMA FIRDS)"
             return "no listed shares (ESMA FIRDS)"
         if c["exchanges"]:
             return "listed shares (Wikidata)"
@@ -301,7 +304,7 @@ def main() -> None:
     def rankable(c):
         se = size_eur(c)
         return (in_universe(c) and c["latest_year"] >= 2024 and se is not None and se >= MIN_REVENUE_EUR_M
-                and not c["listing_status"].startswith("no listed shares") and c["lei"] not in excluded)
+                and c["listing_status"].startswith(("listed shares", "unknown")) and c["lei"] not in excluded)
 
     for c in companies.values():
         c["listing_status"] = listing_status(c)
