@@ -202,3 +202,5 @@ tbody tr:hover { background: #ffffff05; }
 .prose li { margin-bottom: 6px; }
 details summary { color: var(--muted); }
 details summary:hover { color: var(--text); }
+
+.linkbtn { font: inherit; background: none; border: 0; padding: 0; color: var(--profit); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

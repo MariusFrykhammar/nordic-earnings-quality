@@ -8,6 +8,9 @@ import { downloadCsv, ShareButton } from "./tools";
 
 export type Row = IndexRow & { spark: Pt[] };
 
+const marketType = (m: string | null) => (m && /first north|growth|spotlight|sme/i.test(m) ? "growth" : "main");
+const sizeBand = (v: number | null) => (v === null ? "" : v > 2000 ? "large" : v >= 250 ? "mid" : "small");
+
 const TABS = [
   { id: "gap", label: "Profit up, cash down", explain: "Companies whose net profit grew while operating cash flow fell in the latest year, ranked by the size of the gap relative to the previous year's revenue (so small bases don't dominate). Property companies are left out because revaluations run through their profit." },
   { id: "flags", label: "Most red flags", explain: "Companies tripping the most of the seven accounting red flags in their latest year. Ties are ordered by the profit-versus-cash gap." },
@@ -19,7 +22,10 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
   const [tab, setTab] = useState<Tab>("gap");
   const [country, setCountry] = useState("");
   const [sector, setSector] = useState("");
+  const [sub, setSub] = useState("");
   const [flag, setFlag] = useState("");
+  const [market, setMarket] = useState("");
+  const [size, setSize] = useState("");
   const [q, setQ] = useState("");
   const [limit, setLimit] = useState(25);
 
@@ -30,7 +36,10 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
     if (t && TABS.some((x) => x.id === t)) setTab(t as Tab);
     setCountry(p.get("country") ?? "");
     setSector(p.get("sector") ?? "");
+    setSub(p.get("supersector") ?? "");
     setFlag(p.get("flag") ?? "");
+    setMarket(p.get("market") ?? "");
+    setSize(p.get("size") ?? "");
     setQ(p.get("q") ?? "");
   }, []);
   useEffect(() => {
@@ -38,40 +47,49 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
     if (tab !== "gap") p.set("list", tab);
     if (country) p.set("country", country);
     if (sector) p.set("sector", sector);
+    if (sub) p.set("supersector", sub);
     if (flag) p.set("flag", flag);
+    if (market) p.set("market", market);
+    if (size) p.set("size", size);
     if (q) p.set("q", q);
     const s = p.toString();
     window.history.replaceState(null, "", s ? `?${s}` : window.location.pathname);
-  }, [tab, country, sector, flag, q]);
+  }, [tab, country, sector, sub, flag, q, market, size]);
 
-  const sectors = useMemo(() => [...new Set(rows.map((r) => r.sector))].sort(), [rows]);
+  const sectors = useMemo(() => [...new Set(rows.map((r) => r.sector))].sort((a, b) => (a === "Unclassified" ? 1 : b === "Unclassified" ? -1 : a.localeCompare(b))), [rows]);
+  const subs = useMemo(() => [...new Set(rows.filter((r) => !sector || r.sector === sector).map((r) => r.supersector))].filter((x) => x !== "Unclassified").sort(), [rows, sector]);
+  const clear = () => { setSub(""); setCountry(""); setSector(""); setFlag(""); setMarket(""); setSize(""); setQ(""); };
+  const anyFilter = sub || country || sector || flag || market || size || q;
 
   const list = useMemo(() => {
     let out = rows.filter(
       (r) =>
         (!country || r.country === country) &&
         (!sector || r.sector === sector) &&
+        (!sub || r.supersector === sub) &&
         (!flag || r.flags.includes(flag)) &&
+        (!market || marketType(r.market) === market) &&
+        (!size || sizeBand(r.revenue_eur_m) === size) &&
         (!q || (r.name + " " + r.legal_name).toLowerCase().includes(q.toLowerCase())),
     );
     if (tab === "gap") {
       out = out
-        .filter((r) => r.sector !== "Real estate" && (r.net_profit_growth ?? 0) > 0 && (r.ocf_growth ?? 0) < 0 && r.profit_cash_gap_scaled !== null)
+        .filter((r) => r.sector !== "Real Estate" && (r.net_profit_growth ?? 0) > 0 && (r.ocf_growth ?? 0) < 0 && r.profit_cash_gap_scaled !== null)
         .sort((a, b) => (b.profit_cash_gap_scaled ?? 0) - (a.profit_cash_gap_scaled ?? 0));
     } else if (tab === "flags") {
       out = out.filter((r) => r.n_flags > 0).sort((a, b) => b.n_flags - a.n_flags || (b.profit_cash_gap_scaled ?? -9) - (a.profit_cash_gap_scaled ?? -9));
     } else {
       out = out
-        .filter((r) => r.sector !== "Real estate" && r.receivables_growth !== null && r.revenue_growth !== null && r.receivables_growth > r.revenue_growth)
+        .filter((r) => r.sector !== "Real Estate" && r.receivables_growth !== null && r.revenue_growth !== null && r.receivables_growth > r.revenue_growth)
         .sort((a, b) => (b.receivables_growth! - b.revenue_growth!) - (a.receivables_growth! - a.revenue_growth!));
     }
     return out;
-  }, [rows, tab, country, sector, flag, q]);
+  }, [rows, tab, country, sector, sub, flag, q, market, size]);
 
   const exportCsv = () =>
     downloadCsv(`nordic-earnings-quality-${tab}.csv`, [
-      ["Company", "Legal name", "LEI", "Country", "Sector", "Market", "Fiscal year", "Revenue (EUR m)", "Net profit growth", "OCF growth", "Revenue growth", "Receivables growth", "Red flags"],
-      ...list.map((r) => [r.name, r.legal_name, r.lei, r.country, r.sector, r.market ?? "", r.latest_year, r.revenue_eur_m ?? "", r.net_profit_growth ?? "", r.ocf_growth ?? "", r.revenue_growth ?? "", r.receivables_growth ?? "", r.flags.map((f) => rules[f]).join("; ")]),
+      ["Company", "Legal name", "LEI", "Country", "Industry", "Supersector", "Market", "Fiscal year", "Revenue (EUR m)", "Net profit growth", "OCF growth", "Revenue growth", "Receivables growth", "Red flags"],
+      ...list.map((r) => [r.name, r.legal_name, r.lei, r.country, r.sector, r.supersector, r.market ?? "", r.latest_year, r.revenue_eur_m ?? "", r.net_profit_growth ?? "", r.ocf_growth ?? "", r.revenue_growth ?? "", r.receivables_growth ?? "", r.flags.map((f) => rules[f]).join("; ")]),
     ]);
 
   const current = TABS.find((t) => t.id === tab)!;
@@ -94,10 +112,17 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
           </select>
         </label>
         <label>
-          Sector
-          <select value={sector} onChange={(e) => setSector(e.target.value)}>
+          Industry
+          <select value={sector} onChange={(e) => { setSector(e.target.value); setSub(""); }}>
             <option value="">All</option>
             {sectors.map((s) => <option key={s}>{s}</option>)}
+          </select>
+        </label>
+        <label>
+          Supersector
+          <select value={sub} onChange={(e) => setSub(e.target.value)}>
+            <option value="">All</option>
+            {subs.map((s) => <option key={s}>{s}</option>)}
           </select>
         </label>
         <label>
@@ -107,13 +132,30 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
             {Object.entries(rules).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
           </select>
         </label>
+        <label>
+          Market
+          <select value={market} onChange={(e) => setMarket(e.target.value)}>
+            <option value="">All</option>
+            <option value="main">Main market</option>
+            <option value="growth">Growth market</option>
+          </select>
+        </label>
+        <label>
+          Size
+          <select value={size} onChange={(e) => setSize(e.target.value)}>
+            <option value="">All</option>
+            <option value="large">Large, revenue over €2bn</option>
+            <option value="mid">Mid, €250m to €2bn</option>
+            <option value="small">Small, under €250m</option>
+          </select>
+        </label>
         <input type="search" placeholder="Find a company" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Find a company" />
         <span className="tools">
           <button className="btn" onClick={exportCsv}>Download CSV</button>
           <ShareButton />
         </span>
       </div>
-      <p className="small muted">{list.length} companies</p>
+      <p className="small muted">{list.length} companies{anyFilter && <> · <button className="linkbtn" onClick={clear}>Clear filters</button></>}</p>
       <div className="table-card"><div className="table-scroll">
         <table>
           <thead>
@@ -142,7 +184,7 @@ export default function Findings({ rows, rules }: { rows: Row[]; rules: Record<s
                 <td className="rank num">{i + 1}</td>
                 <td className="co">
                   <Link href={`/company/${r.lei}/`}>{r.name}</Link>
-                  <span className="sub">{COUNTRY[r.country]}, {r.market ?? "listed"}, FY{r.latest_year}</span>
+                  <span className="sub">{COUNTRY[r.country]}, {r.supersector !== "Unclassified" ? r.supersector : r.market ?? "listed"}, FY{r.latest_year}</span>
                 </td>
                 <td><Spark data={r.spark} /></td>
                 {tab === "recv" ? (

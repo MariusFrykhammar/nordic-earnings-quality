@@ -26,9 +26,9 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
   // peers: same sector (when classified), listed, closest in size
   const index = getIndex();
   const peers =
-    c.sector !== "Unclassified"
+    c.supersector !== "Unclassified"
       ? index
-          .filter((r) => r.rankable && r.sector === c.sector && r.lei !== c.lei && r.revenue_eur_m)
+          .filter((r) => r.rankable && r.supersector === c.supersector && r.lei !== c.lei && r.revenue_eur_m)
           .sort((a, b) => Math.abs(Math.log((a.revenue_eur_m ?? 1) / (c.revenue_eur_m ?? 1))) - Math.abs(Math.log((b.revenue_eur_m ?? 1) / (c.revenue_eur_m ?? 1))))
           .slice(0, 5)
       : [];
@@ -44,7 +44,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
   return (
     <>
       <div className="co-head">
-        <p className="eyebrow"><Link href="/">Findings</Link> <span aria-hidden="true">›</span> {COUNTRY[c.country] ?? c.country} <span aria-hidden="true">›</span> {c.sector}</p>
+        <p className="eyebrow"><Link href="/">Findings</Link> <span aria-hidden="true">›</span> {COUNTRY[c.country] ?? c.country} <span aria-hidden="true">›</span> <Link href={`/sectors/#${encodeURIComponent(c.sector)}`}>{c.sector}</Link>{c.supersector !== c.sector && c.supersector !== "Unclassified" ? <> <span aria-hidden="true">›</span> {c.supersector}</> : null}</p>
         <h1>{c.display_name}</h1>
         <ul className="facts">
           <li><b>{c.equity?.venue ?? c.listing_status.replace(/^listed shares: /, "")}</b></li>
@@ -56,7 +56,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
           {c.legal_name ?? c.esef_entity_name}. LEI {c.lei}
           {c.org_number ? `, registration number ${c.org_number}` : ""}
 .{" "}
-          Sector source: {c.sector_basis}.
+          Industry classification (ICB): {c.sector}{c.supersector !== c.sector ? `, ${c.supersector}` : ""}; source: {c.sector_basis}.
         </p>
         {statusNote && <p className="small">{statusNote}</p>}
       </div>
@@ -118,7 +118,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ lei: s
         <section className="card">
           <h2>Compare with peers</h2>
           <p>
-            Closest in size in {c.sector.toLowerCase()}:{" "}
+            Closest in size in {c.supersector}:{" "}
             {peers.map((p, i) => (
               <span key={p.lei}>
                 <Link href={`/company/${p.lei}/`}>{p.name}</Link>

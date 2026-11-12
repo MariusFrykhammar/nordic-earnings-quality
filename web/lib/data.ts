@@ -27,6 +27,7 @@ export type Company = {
   esef_entity_name: string;
   country: string;
   sector: string;
+  supersector: string;
   sector_basis: string;
   org_number: string | null;
   registry: { nace: string; nace_text: string | null; register: string } | null;
@@ -49,6 +50,7 @@ export type IndexRow = {
   legal_name: string;
   country: string;
   sector: string;
+  supersector: string;
   market: string | null;
   currency: string;
   latest_year: number;

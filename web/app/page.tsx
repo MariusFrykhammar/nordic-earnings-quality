@@ -12,7 +12,7 @@ export default function Home() {
 
   // Hero: the widest profit-vs-cash gap among companies with revenue of at least €250m
   const gapList = rank
-    .filter((r) => r.sector !== "Real estate" && (r.net_profit_growth ?? 0) > 0 && (r.ocf_growth ?? 0) < 0 && r.profit_cash_gap_scaled !== null)
+    .filter((r) => r.sector !== "Real Estate" && (r.net_profit_growth ?? 0) > 0 && (r.ocf_growth ?? 0) < 0 && r.profit_cash_gap_scaled !== null)
     .sort((a, b) => (b.profit_cash_gap_scaled ?? 0) - (a.profit_cash_gap_scaled ?? 0));
   // a clear case: sizeable company, profit growth not a base effect, and profit now above cash
   const sizeable = gapList.filter((r) => (r.revenue_eur_m ?? 0) >= 250 && (r.net_profit_growth ?? 9) <= 1);
