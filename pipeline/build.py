@@ -19,6 +19,8 @@ REPORT_METRICS = [
     "inventories", "goodwill_measure", "capex", "capex_intangible", "da",
 ]
 MIN_REVENUE_EUR_M = 25  # rankings only include companies at least this size (latest year)
+# Danish ApS and Norwegian AS (not ASA) are private company forms; HoldCo/BidCo/TopCo are financing vehicles.
+PRIVATE_FORM = re.compile(r"\bApS\b|\sAS$|\bA\.S\.$|holdco|bidco|topco|midco", re.I)
 RAW_PROBE = ["axfood", "lindab", "clas ohlson", "ncc aktiebolag", "flsmidth"]
 IFRS_CAND = re.compile(r"Revenue|Sales|Income|Operating|ProfitLoss|CashFlows", re.I)
 DATA = Path("data")
@@ -28,7 +30,7 @@ DIAG = Path("diagnostics")
 SPOTCHECK = {
     "SE": ["atlas copco", "sandvik", "electrolux"],
     "NO": ["orkla", "kongsberg gruppen", "telenor"],
-    "DK": ["carlsberg", "dsv", "novo nordisk"],
+    "DK": ["carlsberg a/s", "dsv a/s", "novo nordisk a/s"],
     "FI": ["kone", "upm", "wärtsilä"],
 }
 
@@ -232,9 +234,20 @@ def main() -> None:
         rev, r = s["v"].get("revenue"), s.get("fx_avg")
         return rev / r if rev is not None and r else None
 
+    def listing_status(c):
+        if c["exchanges"]:
+            return "equity-listed (Wikidata)"
+        if PRIVATE_FORM.search(c["name"] or ""):
+            return "private legal form (likely bond issuer)"
+        return "unknown"
+
     def rankable(c):
         se = size_eur(c)
-        return in_universe(c) and c["latest_year"] >= 2024 and se is not None and se >= MIN_REVENUE_EUR_M
+        return (in_universe(c) and c["latest_year"] >= 2024 and se is not None and se >= MIN_REVENUE_EUR_M
+                and c["listing_status"] != "private legal form (likely bond issuer)")
+
+    for c in companies.values():
+        c["listing_status"] = listing_status(c)
 
     peer_pool = [c for c in companies.values() if rankable(c) and c["sector"] != "Real estate"]
     peer_keys = ["cash_conversion_3y", "accruals_ratio", "intangible_capex_to_revenue"]
@@ -304,6 +317,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
         index.append({
             "lei": c["lei"], "name": c["name"], "country": c["country"], "sector": c["sector"],
             "currency": lat["currency"], "latest_year": c["latest_year"], "in_universe": c["in_universe"],
+            "listing_status": c["listing_status"],
             "rankable": c["rankable"], "revenue_eur_m": c["revenue_eur_m"],
             "n_flags": len(c["flags"]), "flags": [f["flag"] for f in c["flags"]],
             "profit_cash_gap": rnd(lat["m"].get("profit_cash_gap")),
@@ -314,7 +328,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
         })
         detail = {
             k: c[k] for k in ("lei", "name", "country", "sector", "sector_basis", "wikidata", "exchanges", "latest_year",
-                              "in_universe", "rankable", "revenue_eur_m", "flags")
+                              "in_universe", "rankable", "listing_status", "revenue_eur_m", "flags")
         }
         detail["peer_group"] = c.get("peer_group")
         detail["years"] = {
@@ -402,7 +416,7 @@ def write_outputs(companies, list_stats, mapping_prov, ext_auto, validation, res
     spot = {}
     for ctry, names in SPOTCHECK.items():
         for nm in names:
-            hits = [c for c in companies.values() if c["country"] == ctry and nm in (c["name"] or "").lower()]
+            hits = [c for c in companies.values() if c["country"] == ctry and (c["name"] or "").lower().startswith(nm)]
             hits.sort(key=lambda c: -(c["revenue_eur_m"] or 0))
             if not hits:
                 spot[nm] = "not found"
