@@ -4,7 +4,11 @@ import sys
 
 def main() -> None:
     mode = (sys.argv[1] if len(sys.argv) > 1 else "full").strip()
-    if mode == "probe":
+    if mode == "sources":
+        from . import probe_sources
+
+        probe_sources.main()
+    elif mode == "probe":
         from . import probe
 
         probe.main()
