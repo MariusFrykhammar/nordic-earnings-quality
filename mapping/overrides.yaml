@@ -1,0 +1,10 @@
+# Per-company concept overrides, keyed by LEI. Only confirmed matches go here.
+# Set a metric to null to force "not reported".
+#
+# Example:
+# 213800T8PC8Q4FYJZR07:          # Atlas Copco
+#   name: Atlas Copco
+#   concepts:
+#     ebit: ifrs-full:ProfitLossFromOperatingActivities
+#   note: why this override is correct
+{}
