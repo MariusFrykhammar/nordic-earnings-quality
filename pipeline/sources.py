@@ -183,6 +183,12 @@ def firds_equities(leis: set[str]) -> dict[str, dict]:
         else:
             rec["venue"] = None
             rec["regulated_market"] = False
+        v = (rec["venue"] or "").upper()
+        if "FIRST NORTH" in v:
+            ctry = next((x for x in ("SWEDEN", "DENMARK", "FINLAND", "ICELAND") if x in v), "")
+            rec["venue"] = "Nasdaq First North " + ctry.title()
+        elif v == "NORDIC SME":
+            rec["venue"] = "NGM Nordic SME"
     return out
 
 

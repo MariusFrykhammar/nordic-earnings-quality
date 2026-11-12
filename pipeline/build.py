@@ -292,6 +292,9 @@ def main() -> None:
             eq = c["equity"]
             if eq and eq.get("home_market"):
                 return "listed shares: " + (eq["venue"] or eq["venue_mic"])
+            if eq and c["latest_year"] >= 2025:
+                # shares on EU venues and a current annual report: listed, home venue not in FIRDS data
+                return "listed shares: home venue not identified (ESMA FIRDS)"
             if eq:
                 return "shares traded only outside Nordic exchanges (ESMA FIRDS)"
             return "no listed shares (ESMA FIRDS)"

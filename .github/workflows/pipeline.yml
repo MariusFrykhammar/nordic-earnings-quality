@@ -41,6 +41,10 @@ jobs:
       - run: pip install -r pipeline/requirements.txt
 
       - name: Run pipeline
+        env:
+          # optional, for official Swedish industry codes (free Bolagsverket API account); empty if not set
+          BOLAGSVERKET_CLIENT_ID: ${{ secrets.BOLAGSVERKET_CLIENT_ID }}
+          BOLAGSVERKET_CLIENT_SECRET: ${{ secrets.BOLAGSVERKET_CLIENT_SECRET }}
         run: |
           mkdir -p diagnostics data
           set -o pipefail
