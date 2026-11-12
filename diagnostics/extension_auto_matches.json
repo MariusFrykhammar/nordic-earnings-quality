@@ -112,6 +112,54 @@
   "concept": "hufv:Rörelseresultat"
  },
  {
+  "lei": "5967007LIEEXZXGHY826",
+  "name": "NORGESGRUPPEN ASA",
+  "country": "NO",
+  "year": 2025,
+  "metric": "ebit",
+  "concept": "ng:OperatingProfit"
+ },
+ {
+  "lei": "5967007LIEEXZXGWM030",
+  "name": "PANORO ENERGY ASA",
+  "country": "NO",
+  "year": 2020,
+  "metric": "revenue",
+  "concept": "panoro:TotalRevenues"
+ },
+ {
+  "lei": "5967007LIEEXZXFFDC03",
+  "name": "AUSTEVOLL SEAFOOD ASA",
+  "country": "NO",
+  "year": 2024,
+  "metric": "ebit",
+  "concept": "austevollseafood:Ebit"
+ },
+ {
+  "lei": "5967007LIEEXZXFFDC03",
+  "name": "AUSTEVOLL SEAFOOD ASA",
+  "country": "NO",
+  "year": 2025,
+  "metric": "ebit",
+  "concept": "austevollseafood:Ebit"
+ },
+ {
+  "lei": "213800DAZ89VABJPBD93",
+  "name": "BRØNDBYERNES I.F. FODBOLD A/S",
+  "country": "DK",
+  "year": 2025,
+  "metric": "revenue",
+  "concept": "ifrs_full:Revenue"
+ },
+ {
+  "lei": "213800DAZ89VABJPBD93",
+  "name": "BRØNDBYERNES I.F. FODBOLD A/S",
+  "country": "DK",
+  "year": 2025,
+  "metric": "ocf",
+  "concept": "ifrs_full:CashFlowsFromUsedInOperatingActivities"
+ },
+ {
   "lei": "743700NC0V49AJSQKW42",
   "name": "Trainers' House Oyj",
   "country": "FI",

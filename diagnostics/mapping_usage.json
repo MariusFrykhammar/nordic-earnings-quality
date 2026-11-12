@@ -2,229 +2,245 @@
  "borrowings_current": [
   [
    "CurrentBorrowingsAndCurrentPortionOfNoncurrentBorrowings",
-   408
+   691
   ],
   [
    "CurrentLoansReceivedAndCurrentPortionOfNoncurrentLoansReceived",
-   171
+   346
   ],
   [
    "ShorttermBorrowings+CurrentPortionOfLongtermBorrowings",
-   33
+   107
   ]
  ],
  "borrowings_noncurrent": [
   [
    "LongtermBorrowings",
-   1493
+   2958
   ],
   [
    "NoncurrentPortionOfNoncurrentLoansReceived",
-   207
+   366
   ]
  ],
  "borrowings_total": [
   [
    "Borrowings",
-   11
+   31
   ]
  ],
  "capex_combined": [
   [
    "PurchaseOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets",
-   688
+   905
   ]
  ],
  "capex_intangible": [
   [
    "PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
-   1546
+   2665
   ]
  ],
  "capex_ppe": [
   [
    "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
-   1949
+   3725
   ]
  ],
  "cash": [
   [
    "CashAndCashEquivalents",
-   3566
+   6646
   ]
  ],
  "da": [
   [
    "DepreciationAndAmortisationExpense",
-   839
+   1724
   ],
   [
    "DepreciationAmortisationAndImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss",
-   635
+   1128
   ],
   [
    "AdjustmentsForDepreciationAndAmortisationExpense",
-   552
+   893
   ],
   [
    "AdjustmentsForDepreciationAndAmortisationExpenseAndImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss",
-   280
-  ],
-  [
-   "AdjustmentsForDepreciationExpense+AdjustmentsForAmortisationExpense",
-   9
+   549
   ],
   [
    "DepreciationExpense+AmortisationExpense",
-   9
+   38
+  ],
+  [
+   "AdjustmentsForDepreciationExpense+AdjustmentsForAmortisationExpense",
+   35
   ]
  ],
  "ebit": [
   [
    "ProfitLossFromOperatingActivities",
-   2858
+   5243
   ],
   [
    "extension-auto:",
-   8
+   11
   ]
  ],
  "equity": [
   [
    "Equity",
-   3497
+   6680
   ]
  ],
  "equity_and_liabilities": [
   [
    "EquityAndLiabilities",
-   3125
+   5815
+  ]
+ ],
+ "fee_commission_income": [
+  [
+   "FeeAndCommissionIncome",
+   289
   ]
  ],
  "goodwill": [
   [
    "Goodwill",
-   1698
+   2770
   ]
  ],
  "insurance_revenue": [
   [
    "InsuranceRevenue",
-   19
+   37
   ]
  ],
  "intangibles_ex_goodwill": [
   [
    "IntangibleAssetsOtherThanGoodwill",
-   1539
+   2456
   ]
  ],
  "intangibles_incl_goodwill": [
   [
    "IntangibleAssetsAndGoodwill",
-   1163
+   2403
   ],
   [
    "Goodwill+IntangibleAssetsOtherThanGoodwill",
-   892
+   1249
   ]
  ],
  "interest_income": [
   [
    "RevenueFromInterest",
-   306
+   614
   ],
   [
    "InterestRevenueCalculatedUsingEffectiveInterestMethod",
-   40
+   99
   ]
  ],
  "inventories": [
   [
    "Inventories",
-   1877
+   3632
   ]
  ],
  "investment_property": [
   [
    "InvestmentProperty",
-   433
+   670
   ]
  ],
  "lease_liabilities": [
   [
    "NoncurrentLeaseLiabilities+CurrentLeaseLiabilities",
-   1915
+   3666
   ],
   [
    "LeaseLiabilities",
-   41
+   78
   ]
  ],
  "liabilities": [
   [
    "Liabilities",
-   1812
+   4087
+  ]
+ ],
+ "loans_to_customers": [
+  [
+   "LoansAndAdvancesToCustomers",
+   229
   ]
  ],
  "net_profit": [
   [
    "ProfitLoss",
-   3097
+   5721
   ]
  ],
  "net_profit_owners": [
   [
    "ProfitLossAttributableToOwnersOfParent",
-   2441
+   4112
   ]
  ],
  "ocf": [
   [
    "CashFlowsFromUsedInOperatingActivities",
-   2985
+   5540
+  ],
+  [
+   "extension-auto:",
+   1
   ]
  ],
  "receivables": [
   [
    "CurrentTradeReceivables",
-   1707
+   3294
   ],
   [
    "TradeAndOtherCurrentReceivables",
-   795
+   1452
   ],
   [
    "TradeReceivables",
-   161
+   265
   ],
   [
    "TradeAndOtherReceivables",
-   92
+   117
   ]
  ],
  "revenue": [
   [
    "Revenue",
-   2020
+   4014
   ],
   [
    "RevenueFromContractsWithCustomers",
-   417
+   605
   ],
   [
    "RevenueAndOperatingIncome",
-   226
+   411
   ],
   [
    "extension-auto:",
-   14
+   16
   ]
  ],
  "total_assets": [
   [
    "Assets",
-   3136
+   5845
   ]
  ]
 }

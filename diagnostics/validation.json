@@ -1,6 +1,6 @@
 {
  "balance: assets != equity + liabilities": {
-  "count": 19,
+  "count": 50,
   "examples": [
    {
     "lei": "5493006EIYZZYQILKS31",
@@ -38,69 +38,99 @@
     "year": 2024
    },
    {
-    "lei": "743700TSB08BO83SJR33",
-    "name": "Reka Industrial Oyj",
-    "year": 2022
-   },
-   {
-    "lei": "743700G7A9J1PHM3X223",
-    "name": "Wärtsilä Oyj Abp",
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
     "year": 2020
    },
    {
-    "lei": "743700G7A9J1PHM3X223",
-    "name": "Wärtsilä Oyj Abp",
-    "year": 2024
-   },
-   {
-    "lei": "74370031Y7RK5H88CQ48",
-    "name": "Kemira Oyj",
-    "year": 2023
-   },
-   {
-    "lei": "7437005RN1C2L4VRU511",
-    "name": "Delete Group Oyj",
-    "year": 2020
-   },
-   {
-    "lei": "743700JHE9365SIHRE72",
-    "name": "Purmo Group Oyj",
-    "year": 2022
-   },
-   {
-    "lei": "743700JHE9365SIHRE72",
-    "name": "Purmo Group Oyj",
-    "year": 2023
-   },
-   {
-    "lei": "743700TDB62DGAFROB24",
-    "name": "Wetteri Oyj",
-    "year": 2024
-   },
-   {
-    "lei": "5493009ZDBVG2CO1O689",
-    "name": "Suomen Hypoteekkiyhdistys",
-    "year": 2022
-   },
-   {
-    "lei": "5493009ZDBVG2CO1O689",
-    "name": "Suomen Hypoteekkiyhdistys",
-    "year": 2023
-   },
-   {
-    "lei": "743700XSMVPR48XIML56",
-    "name": "Enersense International Oyj",
-    "year": 2024
-   },
-   {
-    "lei": "743700ZGH7GD27UOQO12",
-    "name": "Panostaja Oyj",
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
     "year": 2021
+   },
+   {
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
+    "year": 2022
+   },
+   {
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
+    "year": 2023
+   },
+   {
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
+    "year": 2024
+   },
+   {
+    "lei": "5967007LIEEXZX9TZC13",
+    "name": "STOREBRAND LIVSFORSIKRING AS",
+    "year": 2025
+   },
+   {
+    "lei": "5967007LIEEXZXG1QW12",
+    "name": "GC RIEBER SHIPPING ASA",
+    "year": 2021
+   },
+   {
+    "lei": "5967007LIEEXZXFGWW36",
+    "name": "GOODTECH ASA",
+    "year": 2022
+   },
+   {
+    "lei": "5967007LIEEXZXFGWW36",
+    "name": "GOODTECH ASA",
+    "year": 2023
+   },
+   {
+    "lei": "5967007LIEEXZXGR7K47",
+    "name": "ARCTICZYMES TECHNOLOGIES ASA",
+    "year": 2022
+   },
+   {
+    "lei": "5967007LIEEXZXHCTC69",
+    "name": "XXL ASA",
+    "year": 2022
+   },
+   {
+    "lei": "5967007LIEEXZX89NK89",
+    "name": "TRØNDELAG SPAREBANK",
+    "year": 2025
+   },
+   {
+    "lei": "549300KM8QVF7WR40664",
+    "name": "NNIT A/S",
+    "year": 2024
+   },
+   {
+    "lei": "W9NG6WMZIYEU8VEDOG48",
+    "name": "ØRSTED A/S",
+    "year": 2025
+   },
+   {
+    "lei": "529900OD0S4ABJLE8K13",
+    "name": "FAST EJENDOM DANMARK A/S",
+    "year": 2024
+   },
+   {
+    "lei": "5299007DB25VT6SHIH34",
+    "name": "BRØDRENE HARTMANN A/S",
+    "year": 2022
+   },
+   {
+    "lei": "213800WP2W676G7HLJ94",
+    "name": "COLUMBUS A/S",
+    "year": 2020
+   },
+   {
+    "lei": "5493004IM45YLQPU2R19",
+    "name": "ResoTher Pharma A/S",
+    "year": 2022
    }
   ]
  },
  "balance: assets != equity and liabilities": {
-  "count": 2,
+  "count": 5,
   "examples": [
    {
     "lei": "5493000MATG2DYK19F35",
@@ -111,12 +141,32 @@
     "lei": "5493001IZXU12M8NYV95",
     "name": "Annehem Fastigheter AB (publ)",
     "year": 2023
+   },
+   {
+    "lei": "5967007LIEEXZX89NK89",
+    "name": "TRØNDELAG SPAREBANK",
+    "year": 2025
+   },
+   {
+    "lei": "5493004IM45YLQPU2R19",
+    "name": "ResoTher Pharma A/S",
+    "year": 2022
+   },
+   {
+    "lei": "529900232CL0UH672W09",
+    "name": "SATAIR A/S",
+    "year": 2024
    }
   ]
  },
  "implausible: equity ratio > 100%": {
-  "count": 1,
+  "count": 2,
   "examples": [
+   {
+    "lei": "5493004IM45YLQPU2R19",
+    "name": "ResoTher Pharma A/S",
+    "year": 2022
+   },
    {
     "lei": "743700AL68PUX6JMS644",
     "name": "Digitalist Group Oyj",
@@ -124,8 +174,18 @@
    }
   ]
  },
+ "implausible: revenue > 20x total assets (scale error?)": {
+  "count": 1,
+  "examples": [
+   {
+    "lei": "213800SJHIABLO5U1413",
+    "name": "NEWCAP HOLDING A/S",
+    "year": 2024
+   }
+  ]
+ },
  "implausible: |EBIT margin| > 100%": {
-  "count": 168,
+  "count": 380,
   "examples": [
    {
     "lei": "5493004YF5D7Z612Z822",
@@ -254,8 +314,93 @@
    }
   ]
  },
+ "sign: negative cash": {
+  "count": 16,
+  "examples": [
+   {
+    "lei": "549300L2VDVI7KPEL330",
+    "name": "Frontmatec Group ApS",
+    "year": 2020
+   },
+   {
+    "lei": "549300L2VDVI7KPEL330",
+    "name": "Frontmatec Group ApS",
+    "year": 2021
+   },
+   {
+    "lei": "549300W2PCC9TKJTB657",
+    "name": "BI Erhvervsejendomme A/S",
+    "year": 2025
+   },
+   {
+    "lei": "213800RBGXH4RKC5NF02",
+    "name": "DANTAX A/S",
+    "year": 2021
+   },
+   {
+    "lei": "549300SC8KWO7JFWLN17",
+    "name": "CS MEDICA a/s",
+    "year": 2023
+   },
+   {
+    "lei": "549300JN1F17UXJMM315",
+    "name": "Mind Energy A/S",
+    "year": 2020
+   },
+   {
+    "lei": "549300JN1F17UXJMM315",
+    "name": "Mind Energy A/S",
+    "year": 2021
+   },
+   {
+    "lei": "213800NSPC7WF9KB8G54",
+    "name": "3C RETAIL A/S",
+    "year": 2020
+   },
+   {
+    "lei": "213800NSPC7WF9KB8G54",
+    "name": "3C RETAIL A/S",
+    "year": 2021
+   },
+   {
+    "lei": "52990081KJN8Y0JHKO62",
+    "name": "Faerch A/S",
+    "year": 2021
+   },
+   {
+    "lei": "529900EY84NM8T22TH74",
+    "name": "JOE & THE JUICE HOLDING A/S",
+    "year": 2025
+   },
+   {
+    "lei": "9845006781C6457FC548",
+    "name": "EG Group A/S",
+    "year": 2021
+   },
+   {
+    "lei": "254900R1WWLUYMX68N77",
+    "name": "DSVM Invest A/S",
+    "year": 2024
+   },
+   {
+    "lei": "529900CTAS69XCH60W94",
+    "name": "WHITEAWAY A/S",
+    "year": 2023
+   },
+   {
+    "lei": "529900CTAS69XCH60W94",
+    "name": "WHITEAWAY A/S",
+    "year": 2024
+   },
+   {
+    "lei": "529900CTAS69XCH60W94",
+    "name": "WHITEAWAY A/S",
+    "year": 2025
+   }
+  ]
+ },
  "sign: negative revenue": {
-  "count": 5,
+  "count": 9,
   "examples": [
    {
     "lei": "549300TTX4HXDRDKMV93",
@@ -281,16 +426,51 @@
     "lei": "5493001BIDO3E2AOA590",
     "name": "Investment Aktiebolaget Spiltan",
     "year": 2025
+   },
+   {
+    "lei": "5967007LIEEXZXHLAW34",
+    "name": "HUNTER GROUP ASA",
+    "year": 2024
+   },
+   {
+    "lei": "549300OAMMTB47X7K088",
+    "name": "CI Artemis II K/S",
+    "year": 2023
+   },
+   {
+    "lei": "9845007FA3NE4F5ZBA25",
+    "name": "Copenhagen Infrastructure V USD Feeder SCSp",
+    "year": 2024
+   },
+   {
+    "lei": "9845004C5FC7038D0E36",
+    "name": "Dansk Ejerkapital VI K/S",
+    "year": 2024
    }
   ]
  },
  "sign: non-positive total assets": {
-  "count": 1,
+  "count": 4,
   "examples": [
    {
     "lei": "636700YQKGLXCPPUYE74",
     "name": "SGL Group ApS",
     "year": 2022
+   },
+   {
+    "lei": "2549005RGU6BUYK07L22",
+    "name": "HERMANA HOLDING ASA",
+    "year": 2023
+   },
+   {
+    "lei": "894500HY2CI6QZICGC33",
+    "name": "CoreCapital I K/S",
+    "year": 2022
+   },
+   {
+    "lei": "984500483B3E8404D913",
+    "name": "Axcel Elevate I K/S",
+    "year": 2025
    }
   ]
  }

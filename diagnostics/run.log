@@ -1,23 +1,40 @@
-21:11:25 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
-  ! failed https://filings.xbrl.org/api/filings?filter%5Bcountry%5D=NO&include=entity&page%5Bsize%5D=200: 429 Client Error: Too Many Requests for url: https://filings.xbrl.org/api/filings?filter%5Bcountry%5D=NO&include=entity&page%5Bsize%5D=200
-21:11:38 NO {'filings_listed': 0, 'filings_fy2020_2025': 0}
-  ! failed https://filings.xbrl.org/api/filings?filter%5Bcountry%5D=DK&include=entity&page%5Bsize%5D=200: 429 Client Error: Too Many Requests for url: https://filings.xbrl.org/api/filings?filter%5Bcountry%5D=DK&include=entity&page%5Bsize%5D=200
-21:11:51 DK {'filings_listed': 0, 'filings_fy2020_2025': 0}
-21:11:56 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
-21:11:56 unique filings to process: 2477
-21:11:56   facts 0/2477 (0s)
-21:12:08   facts 250/2477 (13s)
-21:12:20   facts 500/2477 (24s)
-21:12:33   facts 750/2477 (37s)
-21:12:47   facts 1000/2477 (52s)
-21:13:00   facts 1250/2477 (64s)
-21:13:17   facts 1500/2477 (81s)
-21:13:35   facts 1750/2477 (99s)
-21:13:50   facts 2000/2477 (114s)
-21:14:04   facts 2250/2477 (128s)
-21:14:18 downloads failed: 0
-21:14:26 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
-21:14:26 wikidata lookup for 610 LEIs
-21:14:34 wikidata hits: 248
-21:14:35 companies assembled: 607
-21:14:35 done
+21:16:38 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
+  .. 429, waiting 10s
+  .. 429, waiting 20s
+21:17:17 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
+  .. 429, waiting 10s
+  .. 429, waiting 20s
+21:18:04 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
+  .. 429, waiting 10s
+  .. 429, waiting 20s
+21:18:43 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
+21:18:43 unique filings to process: 5552
+21:18:43   facts 0/5552 (0s)
+21:18:48   facts 250/5552 (5s)
+21:18:52   facts 500/5552 (9s)
+21:18:56   facts 750/5552 (12s)
+21:19:00   facts 1000/5552 (17s)
+21:19:05   facts 1250/5552 (22s)
+21:19:09   facts 1500/5552 (26s)
+21:19:13   facts 1750/5552 (30s)
+21:19:15   facts 2000/5552 (31s)
+21:19:18   facts 2250/5552 (35s)
+21:19:21   facts 2500/5552 (37s)
+21:19:23   facts 2750/5552 (40s)
+21:19:25   facts 3000/5552 (42s)
+21:19:28   facts 3250/5552 (45s)
+21:19:33   facts 3500/5552 (50s)
+21:19:35   facts 3750/5552 (52s)
+21:19:38   facts 4000/5552 (54s)
+21:19:45   facts 4250/5552 (62s)
+21:19:50   facts 4500/5552 (67s)
+21:19:53   facts 4750/5552 (70s)
+21:19:53   facts 5000/5552 (70s)
+21:19:53   facts 5250/5552 (70s)
+21:19:57   facts 5500/5552 (74s)
+21:19:58 downloads failed: 0
+21:20:04 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
+21:20:04 wikidata lookup for 1272 LEIs
+21:20:24 wikidata hits: 638
+21:20:26 companies assembled: 1207
+21:20:26 done

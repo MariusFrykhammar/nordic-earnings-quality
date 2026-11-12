@@ -155,12 +155,318 @@
    }
   }
  },
- "orkla": "not found",
- "kongsberg gruppen": "not found",
- "telenor": "not found",
- "carlsberg": "not found",
- "dsv": "not found",
- "novo nordisk": "not found",
+ "orkla": {
+  "name": "ORKLA ASA",
+  "lei": "549300PZS8G8RG6RVZ52",
+  "sector": "Banks & financial services",
+  "years": {
+   "2023": {
+    "currency": "NOK",
+    "revenue": 67215.0,
+    "ebit": 6234.0,
+    "net_profit": 5421.0,
+    "ocf": 7249.0,
+    "total_assets": 86592.0,
+    "equity": 46748.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "NOK",
+    "revenue": 69960.0,
+    "ebit": 7351.0,
+    "net_profit": 6399.0,
+    "ocf": 9650.0,
+    "total_assets": 89966.0,
+    "equity": 51372.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "NOK",
+    "revenue": 71044.0,
+    "ebit": 7086.0,
+    "net_profit": 12057.0,
+    "ocf": 9271.0,
+    "total_assets": 88698.0,
+    "equity": 52147.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "kongsberg gruppen": {
+  "name": "KONGSBERG GRUPPEN ASA",
+  "lei": "5967007LIEEXZXJ9HK73",
+  "sector": "Technology",
+  "years": {
+   "2023": {
+    "currency": "NOK",
+    "revenue": 40617.0,
+    "ebit": 4600.0,
+    "net_profit": 3715.0,
+    "ocf": 5827.0,
+    "total_assets": 53222.0,
+    "equity": 16465.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "NOK",
+    "revenue": 48872.0,
+    "ebit": 6507.0,
+    "net_profit": 5144.0,
+    "ocf": 13744.0,
+    "total_assets": 69414.0,
+    "equity": 19269.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "NOK",
+    "revenue": 31562.0,
+    "ebit": 4694.0,
+    "net_profit": 7922.0,
+    "ocf": 12732.0,
+    "total_assets": 82527.0,
+    "equity": 23212.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "telenor": {
+  "name": "TELENOR ASA",
+  "lei": "549300IM1QSBY4SLPM26",
+  "sector": "Telecom & media",
+  "years": {
+   "2023": {
+    "currency": "NOK",
+    "revenue": 80452.0,
+    "ebit": 16964.0,
+    "net_profit": 15380.0,
+    "ocf": 29120.0,
+    "total_assets": 218376.0,
+    "equity": 70434.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "NOK",
+    "revenue": 79928.0,
+    "ebit": 18623.0,
+    "net_profit": 20109.0,
+    "ocf": 31481.0,
+    "total_assets": 228808.0,
+    "equity": 81772.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "NOK",
+    "revenue": 76548.0,
+    "ebit": 17978.0,
+    "net_profit": 8363.0,
+    "ocf": 31222.0,
+    "total_assets": 221651.0,
+    "equity": 75629.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "carlsberg": {
+  "name": "CARLSBERG A/S",
+  "lei": "5299001O0WJQYB5GYZ19",
+  "sector": "Consumer",
+  "years": {
+   "2023": {
+    "currency": "DKK",
+    "revenue": 73585.0,
+    "ebit": null,
+    "net_profit": -39777.0,
+    "ocf": 11607.0,
+    "total_assets": 111831.0,
+    "equity": 25749.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "DKK",
+    "revenue": 75011.0,
+    "ebit": null,
+    "net_profit": 10263.0,
+    "ocf": 11312.0,
+    "total_assets": 113328.0,
+    "equity": 30612.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "DKK",
+    "revenue": 89095.0,
+    "ebit": null,
+    "net_profit": 6978.0,
+    "ocf": 12431.0,
+    "total_assets": 153955.0,
+    "equity": 30676.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "dsv": {
+  "name": "DSV A/S",
+  "lei": "529900X41C0BSLK67H70",
+  "sector": "Transport & shipping",
+  "years": {
+   "2023": {
+    "currency": "DKK",
+    "revenue": 150785.0,
+    "ebit": null,
+    "net_profit": 12407.0,
+    "ocf": 16458.0,
+    "total_assets": 147110.0,
+    "equity": 68966.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "DKK",
+    "revenue": 167106.0,
+    "ebit": null,
+    "net_profit": 10175.0,
+    "ocf": 11651.0,
+    "total_assets": 236545.0,
+    "equity": 114503.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "DKK",
+    "revenue": 247331.0,
+    "ebit": null,
+    "net_profit": 8172.0,
+    "ocf": 21481.0,
+    "total_assets": 290373.0,
+    "equity": 117690.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": null,
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
+ "novo nordisk": {
+  "name": "Novo Nordisk Fonden",
+  "lei": "529900UTAHSVRYZL0380",
+  "sector": "Unclassified",
+  "years": {
+   "2023": {
+    "currency": "DKK",
+    "revenue": 269066.0,
+    "ebit": 113784.0,
+    "net_profit": 93345.0,
+    "ocf": 113653.0,
+    "total_assets": 572744.0,
+    "equity": 283233.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2024": {
+    "currency": "DKK",
+    "revenue": 342798.0,
+    "ebit": 146270.0,
+    "net_profit": 126171.0,
+    "ocf": 130812.0,
+    "total_assets": 883419.0,
+    "equity": 411227.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   },
+   "2025": {
+    "currency": "DKK",
+    "revenue": 384724.0,
+    "ebit": 132580.0,
+    "net_profit": 104320.0,
+    "ocf": 120884.0,
+    "total_assets": 955474.0,
+    "equity": 458578.0,
+    "concepts": {
+     "revenue": "Revenue",
+     "ebit": "ProfitLossFromOperatingActivities",
+     "net_profit": "ProfitLoss",
+     "ocf": "CashFlowsFromUsedInOperatingActivities"
+    }
+   }
+  }
+ },
  "kone": {
   "name": "KONE OYJ",
   "lei": "2138001CNF45JP5XZK38",
