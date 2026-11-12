@@ -158,7 +158,7 @@
  "orkla": {
   "name": "ORKLA ASA",
   "lei": "549300PZS8G8RG6RVZ52",
-  "sector": "Banks & financial services",
+  "sector": "Consumer",
   "years": {
    "2023": {
     "currency": "NOK",
@@ -574,7 +574,7 @@
  "wärtsilä": {
   "name": "Wärtsilä Oyj Abp",
   "lei": "743700G7A9J1PHM3X223",
-  "sector": "Unclassified",
+  "sector": "Industrials",
   "years": {
    "2023": {
     "currency": "EUR",

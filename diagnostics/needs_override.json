@@ -706,37 +706,6 @@
   "source": "https://filings.xbrl.org/549300FQDIM6C8HTN269/2025-12-31/ESEF/SE/0/lun-2025-12-31-1-en/reports/ixbrlviewer.html"
  },
  {
-  "lei": "549300S56SRW0QDZD626",
-  "name": "Havsfrun Investment AB",
-  "country": "SE",
-  "sector": "Unclassified",
-  "year": 2025,
-  "missing": [
-   "revenue"
-  ],
-  "candidate_extension_concepts": [],
-  "ifrs_duration_concepts": [
-   "CashFlowsFromUsedInFinancingActivities",
-   "CashFlowsFromUsedInInvestingActivities",
-   "CashFlowsFromUsedInOperatingActivities",
-   "CashFlowsFromUsedInOperations",
-   "CashFlowsFromUsedInOperationsBeforeChangesInWorkingCapital",
-   "ComprehensiveIncome",
-   "ComprehensiveIncomeAttributableToOwnersOfParent",
-   "IncomeTaxExpenseContinuingOperations",
-   "IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
-   "InterestPaidClassifiedAsOperatingActivities",
-   "InterestReceivedClassifiedAsOperatingActivities",
-   "InterestRevenueExpense",
-   "OtherComprehensiveIncome",
-   "ProfitLoss",
-   "ProfitLossBeforeTax",
-   "ProfitLossFromOperatingActivities",
-   "RevenueFromInterest"
-  ],
-  "source": "https://filings.xbrl.org/549300S56SRW0QDZD626/2025-12-31/ESEF/SE/0/havsfruninvestmentab-2025-12-31-1-sv/reports/ixbrlviewer.html"
- },
- {
   "lei": "5493009KPII4BZE70820",
   "name": "Platzer Fastigheter Holding AB (publ)",
   "country": "SE",
@@ -1443,7 +1412,7 @@
   "lei": "5967007LIEEXZXFNUW59",
   "name": "TREASURE AS",
   "country": "NO",
-  "sector": "Unclassified",
+  "sector": "Real estate",
   "year": 2024,
   "missing": [
    "revenue"
@@ -1477,7 +1446,7 @@
   "lei": "5967007LIEEXZX8NJK85",
   "name": "KMC PROPERTIES ASA",
   "country": "NO",
-  "sector": "Real estate",
+  "sector": "Industrials",
   "year": 2024,
   "missing": [
    "revenue",
@@ -1497,7 +1466,7 @@
   "lei": "5967007LIEEXZXFIGG77",
   "name": "PCI BIOTECH HOLDING ASA",
   "country": "NO",
-  "sector": "Unclassified",
+  "sector": "Health care",
   "year": 2024,
   "missing": [
    "revenue"
@@ -1530,7 +1499,7 @@
   "lei": "549300W1OGQF5LZIH349",
   "name": "MOWI ASA",
   "country": "NO",
-  "sector": "Unclassified",
+  "sector": "Consumer",
   "year": 2025,
   "missing": [
    "ebit"
@@ -1569,7 +1538,7 @@
   "lei": "5967007LIEEXZXH5VC37",
   "name": "GRIEG SEAFOOD ASA",
   "country": "NO",
-  "sector": "Unclassified",
+  "sector": "Consumer",
   "year": 2024,
   "missing": [
    "ebit"
@@ -1650,7 +1619,7 @@
   "lei": "5967007LIEEXZXFGWW36",
   "name": "GOODTECH ASA",
   "country": "NO",
-  "sector": "Unclassified",
+  "sector": "Industrials",
   "year": 2025,
   "missing": [
    "ocf"
@@ -1789,6 +1758,22 @@
    "Revenue"
   ],
   "source": "https://filings.xbrl.org/529900GBI88JKWXLGI05/2025-12-31/ESEF/NO/0/529900GBI88JKWXLGI05-2025-12-31-1-en/reports/ixbrlviewer.html"
+ },
+ {
+  "lei": "636700D5WZQEPW7CBS09",
+  "name": "AX INV1 HOLDING AS",
+  "country": "NO",
+  "sector": "Technology",
+  "year": 2025,
+  "missing": [
+   "revenue",
+   "ebit",
+   "net_profit",
+   "ocf"
+  ],
+  "candidate_extension_concepts": [],
+  "ifrs_duration_concepts": [],
+  "source": "https://filings.xbrl.org/636700D5WZQEPW7CBS09/2025-12-31/ESEF/NO/0/Ax_INV1_Holding_AS-2025-12-31-1-en/reports/ixbrlviewer.html"
  },
  {
   "lei": "2138008YD1QPCDECIJ70",
@@ -2818,7 +2803,7 @@
   "lei": "743700AL68PUX6JMS644",
   "name": "Digitalist Group Oyj",
   "country": "FI",
-  "sector": "Unclassified",
+  "sector": "Technology",
   "year": 2025,
   "missing": [
    "ebit",
