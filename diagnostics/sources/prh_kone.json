@@ -1,0 +1,287 @@
+{
+ "url": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?businessId=1927400-1",
+ "status": 200,
+ "ctype": "application/json",
+ "len": 3885,
+ "json": {
+  "totalResults": 1,
+  "companies": [
+   {
+    "businessId": {
+     "value": "1927400-1",
+     "registrationDate": "2004-11-01",
+     "source": "3"
+    },
+    "euId": {
+     "value": "FIFPRO.1927400-1",
+     "source": "1"
+    },
+    "names": [
+     {
+      "name": "KONE Oyj",
+      "type": "1",
+      "registrationDate": "2005-06-01",
+      "version": 1,
+      "source": "1"
+     },
+     {
+      "name": "Kone Engineering",
+      "type": "3",
+      "registrationDate": "2005-06-01",
+      "version": 1,
+      "source": "1"
+     },
+     {
+      "name": "KONE Corporation",
+      "type": "2",
+      "registrationDate": "2005-06-01",
+      "version": 1,
+      "source": "1"
+     }
+    ],
+    "mainBusinessLine": {
+     "type": "28220",
+     "descriptions": [
+      {
+       "languageCode": "3",
+       "description": "Manufacture of lifting and handling equipment"
+      },
+      {
+       "languageCode": "1",
+       "description": "Nosto- ja siirtolaitteiden valmistus"
+      },
+      {
+       "languageCode": "2",
+       "description": "Tillverkning av lyft- och godshanteringsanordningar"
+      }
+     ],
+     "typeCodeSet": "TOIMI4",
+     "registrationDate": "2026-01-01",
+     "source": "2"
+    },
+    "companyForms": [
+     {
+      "type": "17",
+      "descriptions": [
+       {
+        "languageCode": "1",
+        "description": "Julkinen osakeyhtiö"
+       },
+       {
+        "languageCode": "3",
+        "description": "Public limited company"
+       },
+       {
+        "languageCode": "2",
+        "description": "Publikt aktiebolag"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "version": 1,
+      "source": "1"
+     }
+    ],
+    "companySituations": [],
+    "registeredEntries": [
+     {
+      "type": "0",
+      "descriptions": [
+       {
+        "languageCode": "2",
+        "description": "Oregistrerad"
+       },
+       {
+        "languageCode": "1",
+        "description": "Rekisteröimätön"
+       },
+       {
+        "languageCode": "3",
+        "description": "Unregistered"
+       }
+      ],
+      "registrationDate": "2004-11-01",
+      "endDate": "2005-05-31",
+      "register": "1",
+      "authority": "2"
+     },
+     {
+      "type": "1",
+      "descriptions": [
+       {
+        "languageCode": "3",
+        "description": "Registered"
+       },
+       {
+        "languageCode": "2",
+        "description": "Registrerad"
+       },
+       {
+        "languageCode": "1",
+        "description": "Rekisterissä"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "register": "1",
+      "authority": "2"
+     },
+     {
+      "type": "1",
+      "descriptions": [
+       {
+        "languageCode": "3",
+        "description": "Registered"
+       },
+       {
+        "languageCode": "2",
+        "description": "Registrerad"
+       },
+       {
+        "languageCode": "1",
+        "description": "Rekisterissä"
+       }
+      ],
+      "registrationDate": "2005-06-02",
+      "register": "4",
+      "authority": "1"
+     },
+     {
+      "type": "55",
+      "descriptions": [
+       {
+        "languageCode": "3",
+        "description": "Registered"
+       },
+       {
+        "languageCode": "2",
+        "description": "Registrerad"
+       },
+       {
+        "languageCode": "1",
+        "description": "Rekisterissä"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "register": "5",
+      "authority": "1"
+     },
+     {
+      "type": "80",
+      "descriptions": [
+       {
+        "languageCode": "1",
+        "description": "Liiketoiminnasta arvonlisäverovelvollinen"
+       },
+       {
+        "languageCode": "2",
+        "description": "Momsskyldig för rörelseverksamhet"
+       },
+       {
+        "languageCode": "3",
+        "description": "VAT-liable for business activity"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "register": "6",
+      "authority": "1"
+     },
+     {
+      "type": "82",
+      "descriptions": [
+       {
+        "languageCode": "2",
+        "description": "För överlåtelse av nyttjanderätten till en fastighet"
+       },
+       {
+        "languageCode": "1",
+        "description": "Kiinteistön käyttöoikeuden luovuttamisesta"
+       },
+       {
+        "languageCode": "3",
+        "description": "VAT-obliged for the transfer of rights to use immovable property"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "register": "6",
+      "authority": "1"
+     },
+     {
+      "type": "41",
+      "descriptions": [
+       {
+        "languageCode": "3",
+        "description": "Registered"
+       },
+       {
+        "languageCode": "2",
+        "description": "Registrerad"
+       },
+       {
+        "languageCode": "1",
+        "description": "Rekisterissä"
+       }
+      ],
+      "registrationDate": "2005-06-01",
+      "register": "7",
+      "authority": "1"
+     }
+    ],
+    "addresses": [
+     {
+      "type": 1,
+      "street": "Kartanontie",
+      "postCode": "00330",
+      "postOffices": [
+       {
+        "city": "HELSINGFORS",
+        "languageCode": "2",
+        "municipalityCode": "091"
+       },
+       {
+        "city": "HELSINKI",
+        "languageCode": "1",
+        "municipalityCode": "091"
+       }
+      ],
+      "postOfficeBox": "",
+      "buildingNumber": "1",
+      "entrance": "",
+      "apartmentNumber": "",
+      "apartmentIdSuffix": "",
+      "co": "",
+      "registrationDate": "2004-11-01",
+      "source": "0"
+     },
+     {
+      "type": 2,
+      "street": "",
+      "postCode": "00331",
+      "postOffices": [
+       {
+        "city": "HELSINGFORS",
+        "languageCode": "2",
+        "municipalityCode": "091"
+       },
+       {
+        "city": "HELSINKI",
+        "languageCode": "1",
+        "municipalityCode": "091"
+       }
+      ],
+      "postOfficeBox": "8",
+      "buildingNumber": "",
+      "entrance": "",
+      "apartmentNumber": "",
+      "apartmentIdSuffix": "",
+      "co": "",
+      "registrationDate": "2004-11-01",
+      "source": "0"
+     }
+    ],
+    "tradeRegisterStatus": "1",
+    "status": "2",
+    "registrationDate": "2005-06-01",
+    "lastModified": "2026-11-03T10:08:16"
+   }
+  ]
+ }
+}

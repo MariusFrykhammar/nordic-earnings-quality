@@ -1,40 +1,9 @@
-21:31:54 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-21:32:34 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-21:33:23 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
-  .. 429, waiting 10s
-  .. 429, waiting 20s
-21:34:02 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
-21:34:02 unique filings to process: 5552
-21:34:02   facts 0/5552 (0s)
-21:34:02   facts 250/5552 (0s)
-21:34:03   facts 500/5552 (0s)
-21:34:03   facts 750/5552 (0s)
-21:34:03   facts 1000/5552 (0s)
-21:34:03   facts 1250/5552 (1s)
-21:34:03   facts 1500/5552 (1s)
-21:34:03   facts 1750/5552 (1s)
-21:34:03   facts 2000/5552 (1s)
-21:34:03   facts 2250/5552 (1s)
-21:34:03   facts 2500/5552 (1s)
-21:34:04   facts 2750/5552 (1s)
-21:34:04   facts 3000/5552 (1s)
-21:34:04   facts 3250/5552 (1s)
-21:34:04   facts 3500/5552 (2s)
-21:34:04   facts 3750/5552 (2s)
-21:34:04   facts 4000/5552 (2s)
-21:34:04   facts 4250/5552 (2s)
-21:34:04   facts 4500/5552 (2s)
-21:34:05   facts 4750/5552 (2s)
-21:34:05   facts 5000/5552 (2s)
-21:34:05   facts 5250/5552 (2s)
-21:34:05   facts 5500/5552 (2s)
-21:34:05 downloads failed: 0
-21:34:08 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
-21:34:08 wikidata lookup for 1272 LEIs
-21:34:25 wikidata hits: 638
-21:34:28 companies assembled: 1207
-21:34:31 done
+gleif.json 200 10711
+gleif_isins.json 200 1423
+brreg_orkla.json 200 2698
+prh_kone.json 200 3885
+virk_offentliggoerelser.json 200 1509
+cvr_open.json 401 172
+scb_fr.json ERROR HTTPSConnectionPool(host='privateapi.scb.se', port=443): Max retries exceeded with url: /nv0101/v1/sokpavar/api/je/HamtaForetag (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:2581)')))
+firds_files.json 200 37612
+firds sample ok 8300055

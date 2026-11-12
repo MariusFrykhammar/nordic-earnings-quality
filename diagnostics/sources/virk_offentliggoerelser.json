@@ -1,0 +1,82 @@
+{
+ "url": "http://distribution.virk.dk/offentliggoerelser/_search?q=cvrNummer:24256790&size=2",
+ "status": 200,
+ "ctype": "application/json; charset=UTF-8",
+ "len": 1509,
+ "json": {
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+   "total": 3,
+   "successful": 3,
+   "skipped": 0,
+   "failed": 0
+  },
+  "hits": {
+   "total": 98,
+   "max_score": 1.0,
+   "hits": [
+    {
+     "_index": "indberetninger-20230623",
+     "_type": "_doc",
+     "_id": "urn:ofk:oid:17570514",
+     "_score": 1.0,
+     "_source": {
+      "indlaesningsId": null,
+      "sagsNummer": "07-157.465",
+      "regnskab": {
+       "regnskabsperiode": {
+        "slutDato": "2007-03-31",
+        "startDato": "2007-01-01"
+       }
+      },
+      "sidstOpdateret": "2007-05-21T22:00:00.000Z",
+      "cvrNummer": 24256790,
+      "dokumenter": [
+       {
+        "dokumentType": "DELAARSRAPPORT",
+        "dokumentMimeType": "image/tiff",
+        "dokumentUrl": "http://regnskaber.virk.dk/09765242/Y3ZyLmRrOi8vcGRmcy8yNDI1Njc5MDtBL1MxNjIwMTsyMDA3MDEwMTsyMDA3MDMzMTtEO0Q.tif"
+       }
+      ],
+      "regNummer": null,
+      "indlaesningsTidspunkt": "2018-04-05T19:00:21.208Z",
+      "offentliggoerelsesTidspunkt": "2007-05-21T22:00:00.000Z",
+      "omgoerelse": false,
+      "offentliggoerelsestype": "regnskab"
+     }
+    },
+    {
+     "_index": "indberetninger-20230623",
+     "_type": "_doc",
+     "_id": "urn:ofk:oid:17570475",
+     "_score": 1.0,
+     "_source": {
+      "indlaesningsId": null,
+      "sagsNummer": "05-28.256",
+      "regnskab": {
+       "regnskabsperiode": {
+        "slutDato": "2004-12-31",
+        "startDato": "2004-01-01"
+       }
+      },
+      "sidstOpdateret": "2005-03-13T23:00:00.000Z",
+      "cvrNummer": 24256790,
+      "dokumenter": [
+       {
+        "dokumentType": "AARSRAPPORT",
+        "dokumentMimeType": "image/tiff",
+        "dokumentUrl": "http://regnskaber.virk.dk/09765242/Y3ZyLmRrOi8vcGRmcy8yNDI1Njc5MDtBL1MxNjIwMTsyMDA0MDEwMTsyMDA0MTIzMTtSO1I.tif"
+       }
+      ],
+      "regNummer": null,
+      "indlaesningsTidspunkt": "2018-04-06T15:45:18.833Z",
+      "offentliggoerelsesTidspunkt": "2005-03-13T23:00:00.000Z",
+      "omgoerelse": false,
+      "offentliggoerelsestype": "regnskab"
+     }
+    }
+   ]
+  }
+ }
+}

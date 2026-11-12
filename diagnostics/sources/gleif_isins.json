@@ -1,0 +1,91 @@
+{
+ "url": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/isins?page[size]=50",
+ "status": 200,
+ "ctype": "application/vnd.api+json",
+ "len": 1423,
+ "json": {
+  "meta": {
+   "goldenCopy": {
+    "publishDate": "2026-11-12T16:00:00Z"
+   },
+   "pagination": {
+    "currentPage": 1,
+    "perPage": 50,
+    "from": 1,
+    "to": 8,
+    "total": 8,
+    "lastPage": 1
+   }
+  },
+  "links": {
+   "first": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/isins?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+   "last": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/isins?page%5Bnumber%5D=1&page%5Bsize%5D=50"
+  },
+  "data": [
+   {
+    "type": "isins",
+    "id": "63a64556-14ea-4da4-8f56-a25da32b2a05",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "SE0017486889"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "9605cbd8-da73-45af-b480-dac4ecb7a51a",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492557063"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "40ddbb8e-b5d3-421e-a93c-2e5fb0204504",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492554094"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "0c1ecfff-3542-47e5-8c8b-094a0f1fd6b4",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492552015"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "77685b17-592f-4548-8400-1bd478e9a6aa",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "SE0017486897"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "c1dd89a9-80a0-4744-ab31-5f8acdbe1059",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492555083"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "60d98ef0-7132-4be6-a859-5b8be134608a",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492558053"
+    }
+   },
+   {
+    "type": "isins",
+    "id": "fdadafd1-266c-468e-9cef-f856a6f187f1",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "isin": "US0492556073"
+    }
+   }
+  ]
+ }
+}

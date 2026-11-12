@@ -1,0 +1,528 @@
+{
+ "url": "https://api.gleif.org/api/v1/lei-records?filter[lei]=213800T8PC8Q4FYJZR07,529900X41C0BSLK67H70,5299001O0WJQYB5GYZ19&page[size]=10",
+ "status": 200,
+ "ctype": "application/vnd.api+json",
+ "len": 10711,
+ "json": {
+  "meta": {
+   "goldenCopy": {
+    "publishDate": "2026-11-12T16:00:00Z"
+   },
+   "pagination": {
+    "currentPage": 1,
+    "perPage": 10,
+    "from": 1,
+    "to": 3,
+    "total": 3,
+    "lastPage": 1
+   }
+  },
+  "links": {
+   "first": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=213800T8PC8Q4FYJZR07%2C529900X41C0BSLK67H70%2C5299001O0WJQYB5GYZ19&page%5Bnumber%5D=1&page%5Bsize%5D=10",
+   "last": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=213800T8PC8Q4FYJZR07%2C529900X41C0BSLK67H70%2C5299001O0WJQYB5GYZ19&page%5Bnumber%5D=1&page%5Bsize%5D=10"
+  },
+  "data": [
+   {
+    "type": "lei-records",
+    "id": "5299001O0WJQYB5GYZ19",
+    "attributes": {
+     "lei": "5299001O0WJQYB5GYZ19",
+     "entity": {
+      "legalName": {
+       "name": "CARLSBERG A/S",
+       "language": "da"
+      },
+      "otherNames": [],
+      "transliteratedOtherNames": [],
+      "legalAddress": {
+       "language": "da",
+       "addressLines": [
+        "J.C. Jacobsens Gade 1"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "København V",
+       "region": "DK-84",
+       "country": "DK",
+       "postalCode": "1799"
+      },
+      "headquartersAddress": {
+       "language": "da",
+       "addressLines": [
+        "J.C. Jacobsens Gade 1"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "København V",
+       "region": "DK-84",
+       "country": "DK",
+       "postalCode": "1799"
+      },
+      "registeredAt": {
+       "id": "RA000170",
+       "other": null
+      },
+      "registeredAs": "61056416",
+      "jurisdiction": "DK",
+      "category": "GENERAL",
+      "legalForm": {
+       "id": "ZRPO",
+       "other": null
+      },
+      "associatedEntity": {
+       "lei": null,
+       "name": null
+      },
+      "status": "ACTIVE",
+      "expiration": {
+       "date": null,
+       "reason": null
+      },
+      "successorEntity": {
+       "lei": null,
+       "name": null
+      },
+      "successorEntities": [],
+      "creationDate": "1999-10-16T00:00:00Z",
+      "subCategory": null,
+      "otherAddresses": [
+       {
+        "fieldType": "TransliteratedOtherAddress",
+        "language": "da",
+        "type": "AUTO_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+        "addressLines": [
+         "J.C. Jacobsens Gade 1"
+        ],
+        "city": "Kobenhavn V",
+        "region": "DK-84",
+        "country": "DK",
+        "postalCode": "1799"
+       },
+       {
+        "fieldType": "TransliteratedOtherAddress",
+        "language": "da",
+        "type": "AUTO_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+        "addressLines": [
+         "J.C. Jacobsens Gade 1"
+        ],
+        "city": "Kobenhavn V",
+        "region": "DK-84",
+        "country": "DK",
+        "postalCode": "1799"
+       }
+      ],
+      "eventGroups": []
+     },
+     "registration": {
+      "initialRegistrationDate": "2016-12-30T16:12:29Z",
+      "lastUpdateDate": "2026-11-05T06:09:00Z",
+      "status": "ISSUED",
+      "nextRenewalDate": "2028-01-02T07:43:50Z",
+      "managingLou": "549300O897ZC5H7CY412",
+      "corroborationLevel": "FULLY_CORROBORATED",
+      "validatedAt": {
+       "id": "RA000170",
+       "other": null
+      },
+      "validatedAs": "61056416",
+      "otherValidationAuthorities": []
+     },
+     "bic": [
+      "CARWDKK2XXX"
+     ],
+     "mic": null,
+     "ocid": "dk/61056416",
+     "qcc": "QDKWW2Q3X6",
+     "gem": null,
+     "spglobal": [
+      "5522640"
+     ],
+     "conformityFlag": "CONFORMING"
+    },
+    "relationships": {
+     "managing-lou": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/managing-lou"
+      }
+     },
+     "lei-issuer": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/lei-issuer"
+      }
+     },
+     "field-modifications": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/field-modifications"
+      }
+     },
+     "direct-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/direct-parent-reporting-exception"
+      }
+     },
+     "ultimate-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/ultimate-parent-reporting-exception"
+      }
+     },
+     "direct-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/direct-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/direct-children"
+      }
+     },
+     "ultimate-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/ultimate-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/ultimate-children"
+      }
+     },
+     "isins": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19/isins"
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.gleif.org/api/v1/lei-records/5299001O0WJQYB5GYZ19"
+    }
+   },
+   {
+    "type": "lei-records",
+    "id": "213800T8PC8Q4FYJZR07",
+    "attributes": {
+     "lei": "213800T8PC8Q4FYJZR07",
+     "entity": {
+      "legalName": {
+       "name": "ATLAS COPCO AKTIEBOLAG",
+       "language": "en"
+      },
+      "otherNames": [],
+      "transliteratedOtherNames": [],
+      "legalAddress": {
+       "language": "en",
+       "addressLines": [
+        "NACKA KOMMUN, STOCKHOLMS LÄN"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "STOCKHOLM",
+       "region": "SE-AB",
+       "country": "SE",
+       "postalCode": "105 23"
+      },
+      "headquartersAddress": {
+       "language": "en",
+       "addressLines": [
+        "NACKA KOMMUN, STOCKHOLMS LÄN"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "STOCKHOLM",
+       "region": "SE-AB",
+       "country": "SE",
+       "postalCode": "105 23"
+      },
+      "registeredAt": {
+       "id": "RA000544",
+       "other": null
+      },
+      "registeredAs": "5560142720",
+      "jurisdiction": "SE",
+      "category": "GENERAL",
+      "legalForm": {
+       "id": "XJHM",
+       "other": null
+      },
+      "associatedEntity": {
+       "lei": null,
+       "name": null
+      },
+      "status": "ACTIVE",
+      "expiration": {
+       "date": null,
+       "reason": null
+      },
+      "successorEntity": {
+       "lei": null,
+       "name": null
+      },
+      "successorEntities": [],
+      "creationDate": "1917-03-30T00:00:00Z",
+      "subCategory": null,
+      "otherAddresses": [],
+      "eventGroups": [
+       {
+        "groupType": "STANDALONE",
+        "events": [
+         {
+          "validationDocuments": "ACCOUNTS_FILING",
+          "effectiveDate": "2026-02-24T00:00:00Z",
+          "recordedDate": "2026-02-26T15:34:39Z",
+          "type": "CHANGE_LEGAL_ADDRESS",
+          "status": "COMPLETED"
+         }
+        ]
+       },
+       {
+        "groupType": "STANDALONE",
+        "events": [
+         {
+          "validationDocuments": "ACCOUNTS_FILING",
+          "effectiveDate": "2026-02-24T00:00:00Z",
+          "recordedDate": "2026-02-26T15:34:18Z",
+          "type": "CHANGE_HQ_ADDRESS",
+          "status": "COMPLETED"
+         }
+        ]
+       }
+      ]
+     },
+     "registration": {
+      "initialRegistrationDate": "2014-01-14T00:00:00Z",
+      "lastUpdateDate": "2026-10-26T17:28:30Z",
+      "status": "ISSUED",
+      "nextRenewalDate": "2027-03-06T00:00:00Z",
+      "managingLou": "213800WAVVOPS85N2205",
+      "corroborationLevel": "FULLY_CORROBORATED",
+      "validatedAt": {
+       "id": "RA000544",
+       "other": null
+      },
+      "validatedAs": "5560142720",
+      "otherValidationAuthorities": []
+     },
+     "bic": [
+      "ATLPSESSXXX"
+     ],
+     "mic": null,
+     "ocid": "se/556014-2720",
+     "qcc": "QSEJQBQN3H",
+     "gem": null,
+     "spglobal": [
+      "418524"
+     ],
+     "conformityFlag": "CONFORMING"
+    },
+    "relationships": {
+     "managing-lou": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/managing-lou"
+      }
+     },
+     "lei-issuer": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/lei-issuer"
+      }
+     },
+     "field-modifications": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/field-modifications"
+      }
+     },
+     "direct-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/direct-parent-reporting-exception"
+      }
+     },
+     "ultimate-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/ultimate-parent-reporting-exception"
+      }
+     },
+     "direct-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/direct-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/direct-children"
+      }
+     },
+     "ultimate-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/ultimate-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/ultimate-children"
+      }
+     },
+     "isins": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07/isins"
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.gleif.org/api/v1/lei-records/213800T8PC8Q4FYJZR07"
+    }
+   },
+   {
+    "type": "lei-records",
+    "id": "529900X41C0BSLK67H70",
+    "attributes": {
+     "lei": "529900X41C0BSLK67H70",
+     "entity": {
+      "legalName": {
+       "name": "DSV A/S",
+       "language": "da"
+      },
+      "otherNames": [],
+      "transliteratedOtherNames": [],
+      "legalAddress": {
+       "language": "da",
+       "addressLines": [
+        "Hovedgaden 630"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "Høje-Taastrup",
+       "region": "DK-84",
+       "country": "DK",
+       "postalCode": "2640"
+      },
+      "headquartersAddress": {
+       "language": "da",
+       "addressLines": [
+        "Hovedgaden 630"
+       ],
+       "addressNumber": null,
+       "addressNumberWithinBuilding": null,
+       "mailRouting": null,
+       "city": "Høje-Taastrup",
+       "region": "DK-84",
+       "country": "DK",
+       "postalCode": "2640"
+      },
+      "registeredAt": {
+       "id": "RA000170",
+       "other": null
+      },
+      "registeredAs": "58233528",
+      "jurisdiction": "DK",
+      "category": "GENERAL",
+      "legalForm": {
+       "id": "ZRPO",
+       "other": null
+      },
+      "associatedEntity": {
+       "lei": null,
+       "name": null
+      },
+      "status": "ACTIVE",
+      "expiration": {
+       "date": null,
+       "reason": null
+      },
+      "successorEntity": {
+       "lei": null,
+       "name": null
+      },
+      "successorEntities": [],
+      "creationDate": "1976-07-12T23:00:00Z",
+      "subCategory": null,
+      "otherAddresses": [],
+      "eventGroups": [
+       {
+        "groupType": "STANDALONE",
+        "events": [
+         {
+          "validationDocuments": "SUPPORTING_DOCUMENTS",
+          "effectiveDate": "2022-05-17T22:00:00Z",
+          "recordedDate": "2022-05-18T16:01:13Z",
+          "type": "CHANGE_HQ_ADDRESS",
+          "status": "COMPLETED"
+         }
+        ]
+       },
+       {
+        "groupType": "STANDALONE",
+        "events": [
+         {
+          "validationDocuments": "SUPPORTING_DOCUMENTS",
+          "effectiveDate": "2022-05-17T22:00:00Z",
+          "recordedDate": "2022-05-18T16:01:13Z",
+          "type": "CHANGE_LEGAL_ADDRESS",
+          "status": "COMPLETED"
+         }
+        ]
+       }
+      ]
+     },
+     "registration": {
+      "initialRegistrationDate": "2014-01-07T12:57:52Z",
+      "lastUpdateDate": "2026-04-23T12:29:32Z",
+      "status": "ISSUED",
+      "nextRenewalDate": "2027-05-19T22:00:00Z",
+      "managingLou": "5299000J2N45DDNE4Y28",
+      "corroborationLevel": "FULLY_CORROBORATED",
+      "validatedAt": {
+       "id": "RA000170",
+       "other": null
+      },
+      "validatedAs": "58233528",
+      "otherValidationAuthorities": []
+     },
+     "bic": [
+      "DSVADKKKXXX"
+     ],
+     "mic": null,
+     "ocid": "dk/58233528",
+     "qcc": "QDK3PN7N9B",
+     "gem": null,
+     "spglobal": [
+      "878704"
+     ],
+     "conformityFlag": "CONFORMING"
+    },
+    "relationships": {
+     "managing-lou": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/managing-lou"
+      }
+     },
+     "lei-issuer": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/lei-issuer"
+      }
+     },
+     "field-modifications": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/field-modifications"
+      }
+     },
+     "direct-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/direct-parent-reporting-exception"
+      }
+     },
+     "ultimate-parent": {
+      "links": {
+       "reporting-exception": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/ultimate-parent-reporting-exception"
+      }
+     },
+     "direct-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/direct-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/direct-children"
+      }
+     },
+     "ultimate-children": {
+      "links": {
+       "relationship-records": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/ultimate-child-relationships",
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/ultimate-children"
+      }
+     },
+     "isins": {
+      "links": {
+       "related": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70/isins"
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.gleif.org/api/v1/lei-records/529900X41C0BSLK67H70"
+    }
+   }
+  ]
+ }
+}

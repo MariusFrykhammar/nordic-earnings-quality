@@ -1,0 +1,26 @@
+[
+ {
+  "_root_": "119787",
+  "id": "119787",
+  "published_instrument_file_id": "119787",
+  "file_name": "FULINS_E_20261107_01of02.zip",
+  "file_type": "FULINS",
+  "publication_date": "2026-11-07T00:00:00Z",
+  "download_link": "https://firds.esma.europa.eu/firds/FULINS_E_20261107_01of02.zip",
+  "checksum": "0ff576d20c739c68d0712a9612dc9c65",
+  "_version_": 1881633999022981195,
+  "timestamp": "2026-11-12T06:46:57.016Z"
+ },
+ {
+  "_root_": "119788",
+  "id": "119788",
+  "published_instrument_file_id": "119788",
+  "file_name": "FULINS_E_20261107_02of02.zip",
+  "file_type": "FULINS",
+  "publication_date": "2026-11-07T00:00:00Z",
+  "download_link": "https://firds.esma.europa.eu/firds/FULINS_E_20261107_02of02.zip",
+  "checksum": "0feb27dfa4946b72f78ed81b4f50dc7e",
+  "_version_": 1881633999022981196,
+  "timestamp": "2026-11-12T06:46:57.016Z"
+ }
+]

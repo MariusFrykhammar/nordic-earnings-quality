@@ -1,0 +1,4 @@
+{
+ "url": "https://privateapi.scb.se/nv0101/v1/sokpavar/api/je/HamtaForetag",
+ "error": "HTTPSConnectionPool(host='privateapi.scb.se', port=443): Max retries exceeded with url: /nv0101/v1/sokpavar/api/je/HamtaForetag (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:2581)')))"
+}
