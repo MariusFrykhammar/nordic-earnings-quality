@@ -7,7 +7,7 @@
   "non_financial": 406,
   "excluded_financial_or_untagged": 33,
   "gate_core4_3yrs": 332,
-  "rankable": 296,
+  "rankable": 295,
   "sectors": [
    [
     "Unclassified",
@@ -185,7 +185,7 @@
   "non_financial": 268,
   "excluded_financial_or_untagged": 34,
   "gate_core4_3yrs": 213,
-  "rankable": 169,
+  "rankable": 142,
   "sectors": [
    [
     "Unclassified",
@@ -371,7 +371,7 @@
   "non_financial": 262,
   "excluded_financial_or_untagged": 39,
   "gate_core4_3yrs": 173,
-  "rankable": 174,
+  "rankable": 150,
   "sectors": [
    [
     "Unclassified",
@@ -557,7 +557,7 @@
   "non_financial": 149,
   "excluded_financial_or_untagged": 16,
   "gate_core4_3yrs": 132,
-  "rankable": 113,
+  "rankable": 112,
   "sectors": [
    [
     "Unclassified",

@@ -104,53 +104,53 @@
   }
  },
  "electrolux": {
-  "name": "Aktiebolaget Electrolux",
-  "lei": "549300Y3HHZB1ZGFPJ93",
-  "sector": "Consumer",
+  "name": "Electrolux Professional AB (publ)",
+  "lei": "254900KI62Q46ZWD8084",
+  "sector": "Industrials",
   "years": {
    "2023": {
     "currency": "SEK",
-    "revenue": 134451.0,
-    "ebit": -2988.0,
-    "net_profit": -5227.0,
-    "ocf": 4003.0,
-    "total_assets": 120053.0,
-    "equity": 11274.0,
+    "revenue": 11848.0,
+    "ebit": 1154.0,
+    "net_profit": 775.0,
+    "ocf": 1175.0,
+    "total_assets": 11347.0,
+    "equity": 4705.0,
     "concepts": {
-     "revenue": "RevenueFromContractsWithCustomers",
+     "revenue": "specific-line:RevenueFromSaleOfGoods",
      "ebit": "ProfitLossFromOperatingActivities",
      "net_profit": "ProfitLoss",
-     "ocf": "CashFlowsFromUsedInOperatingActivities"
+     "ocf": "fallback:CashFlowsFromUsedInOperations"
     }
    },
    "2024": {
     "currency": "SEK",
-    "revenue": 136150.0,
-    "ebit": 1100.0,
-    "net_profit": -1394.0,
-    "ocf": 4197.0,
-    "total_assets": 125388.0,
-    "equity": 9723.0,
+    "revenue": 12583.0,
+    "ebit": 1231.0,
+    "net_profit": 803.0,
+    "ocf": 1405.0,
+    "total_assets": 14075.0,
+    "equity": 5697.0,
     "concepts": {
-     "revenue": "RevenueFromContractsWithCustomers",
+     "revenue": "specific-line:RevenueFromSaleOfGoods",
      "ebit": "ProfitLossFromOperatingActivities",
      "net_profit": "ProfitLoss",
-     "ocf": "CashFlowsFromUsedInOperatingActivities"
+     "ocf": "fallback:CashFlowsFromUsedInOperations"
     }
    },
    "2025": {
     "currency": "SEK",
-    "revenue": 131282.0,
-    "ebit": 3657.0,
-    "net_profit": 878.0,
-    "ocf": 1177.0,
-    "total_assets": 114626.0,
-    "equity": 8706.0,
+    "revenue": 12169.0,
+    "ebit": 1016.0,
+    "net_profit": 736.0,
+    "ocf": 1293.0,
+    "total_assets": 13045.0,
+    "equity": 5523.0,
     "concepts": {
-     "revenue": "RevenueFromContractsWithCustomers",
+     "revenue": "specific-line:RevenueFromSaleOfGoods",
      "ebit": "ProfitLossFromOperatingActivities",
      "net_profit": "ProfitLoss",
-     "ocf": "CashFlowsFromUsedInOperatingActivities"
+     "ocf": "fallback:CashFlowsFromUsedInOperations"
     }
    }
   }
@@ -311,7 +311,7 @@
    }
   }
  },
- "carlsberg": {
+ "carlsberg a/s": {
   "name": "CARLSBERG A/S",
   "lei": "5299001O0WJQYB5GYZ19",
   "sector": "Consumer",
@@ -363,7 +363,7 @@
    }
   }
  },
- "dsv": {
+ "dsv a/s": {
   "name": "DSV A/S",
   "lei": "529900X41C0BSLK67H70",
   "sector": "Transport & shipping",
@@ -415,19 +415,19 @@
    }
   }
  },
- "novo nordisk": {
-  "name": "Novo Nordisk Fonden",
-  "lei": "529900UTAHSVRYZL0380",
-  "sector": "Unclassified",
+ "novo nordisk a/s": {
+  "name": "NOVO NORDISK A/S",
+  "lei": "549300DAQ1CVT6CXN342",
+  "sector": "Health care",
   "years": {
    "2023": {
     "currency": "DKK",
-    "revenue": 269066.0,
-    "ebit": 113784.0,
-    "net_profit": 93345.0,
-    "ocf": 113653.0,
-    "total_assets": 572744.0,
-    "equity": 283233.0,
+    "revenue": 232261.0,
+    "ebit": 102574.0,
+    "net_profit": 83683.0,
+    "ocf": 108908.0,
+    "total_assets": 314486.0,
+    "equity": 106561.0,
     "concepts": {
      "revenue": "Revenue",
      "ebit": "ProfitLossFromOperatingActivities",
@@ -437,12 +437,12 @@
    },
    "2024": {
     "currency": "DKK",
-    "revenue": 342798.0,
-    "ebit": 146270.0,
-    "net_profit": 126171.0,
-    "ocf": 130812.0,
-    "total_assets": 883419.0,
-    "equity": 411227.0,
+    "revenue": 290403.0,
+    "ebit": 128339.0,
+    "net_profit": 100988.0,
+    "ocf": 120968.0,
+    "total_assets": 465795.0,
+    "equity": 143486.0,
     "concepts": {
      "revenue": "Revenue",
      "ebit": "ProfitLossFromOperatingActivities",
@@ -452,12 +452,12 @@
    },
    "2025": {
     "currency": "DKK",
-    "revenue": 384724.0,
-    "ebit": 132580.0,
-    "net_profit": 104320.0,
-    "ocf": 120884.0,
-    "total_assets": 955474.0,
-    "equity": 458578.0,
+    "revenue": 309064.0,
+    "ebit": 127658.0,
+    "net_profit": 102434.0,
+    "ocf": 119102.0,
+    "total_assets": 542902.0,
+    "equity": 194047.0,
     "concepts": {
      "revenue": "Revenue",
      "ebit": "ProfitLossFromOperatingActivities",

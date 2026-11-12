@@ -1,41 +1,40 @@
-21:22:31 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
+21:27:36 SE {'filings_listed': 1839, 'filings_fy2020_2025': 1811}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:23:11 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
+21:28:15 NO {'filings_listed': 1199, 'filings_fy2020_2025': 1188}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:23:58 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
+21:29:03 DK {'filings_listed': 2227, 'filings_fy2020_2025': 2043}
   .. 429, waiting 10s
   .. 429, waiting 20s
-21:24:37 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
-21:24:37 unique filings to process: 5552
-21:24:37   facts 0/5552 (0s)
-21:24:37   facts 250/5552 (0s)
-21:24:38   facts 500/5552 (0s)
-21:24:38   facts 750/5552 (0s)
-21:24:38   facts 1000/5552 (0s)
-21:24:38   facts 1250/5552 (1s)
-21:24:38   facts 1500/5552 (1s)
-21:24:38   facts 1750/5552 (1s)
-21:24:38   facts 2000/5552 (1s)
-21:24:38   facts 2250/5552 (1s)
-21:24:38   facts 2500/5552 (1s)
-21:24:39   facts 2750/5552 (1s)
-21:24:39   facts 3000/5552 (1s)
-21:24:39   facts 3250/5552 (2s)
-21:24:39   facts 3500/5552 (2s)
-21:24:39   facts 3750/5552 (2s)
-21:24:39   facts 4000/5552 (2s)
-21:24:39   facts 4250/5552 (2s)
-21:24:40   facts 4500/5552 (2s)
-21:24:40   facts 4750/5552 (2s)
-21:24:40   facts 5000/5552 (2s)
-21:24:40   facts 5250/5552 (2s)
-21:24:40   facts 5500/5552 (3s)
-21:24:40 downloads failed: 0
-21:24:41 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
-21:24:41 wikidata lookup for 1272 LEIs
-  ! wikidata chunk 300: 429 Client Error: Too Many Requests for url: https://query.wikidata.org/sparql
-21:25:04 wikidata hits: 638
-21:25:06 companies assembled: 1207
-21:25:08 done
+21:29:42 FI {'filings_listed': 1169, 'filings_fy2020_2025': 1148}
+21:29:42 unique filings to process: 5552
+21:29:42   facts 0/5552 (0s)
+21:29:42   facts 250/5552 (0s)
+21:29:42   facts 500/5552 (0s)
+21:29:42   facts 750/5552 (0s)
+21:29:42   facts 1000/5552 (0s)
+21:29:42   facts 1250/5552 (0s)
+21:29:42   facts 1500/5552 (0s)
+21:29:42   facts 1750/5552 (1s)
+21:29:42   facts 2000/5552 (1s)
+21:29:42   facts 2250/5552 (1s)
+21:29:42   facts 2500/5552 (1s)
+21:29:43   facts 2750/5552 (1s)
+21:29:43   facts 3000/5552 (1s)
+21:29:43   facts 3250/5552 (1s)
+21:29:43   facts 3500/5552 (1s)
+21:29:43   facts 3750/5552 (1s)
+21:29:43   facts 4000/5552 (1s)
+21:29:43   facts 4250/5552 (1s)
+21:29:43   facts 4500/5552 (1s)
+21:29:43   facts 4750/5552 (2s)
+21:29:43   facts 5000/5552 (2s)
+21:29:43   facts 5250/5552 (2s)
+21:29:43   facts 5500/5552 (2s)
+21:29:43 downloads failed: 0
+21:29:44 ECB rates loaded: ['AUD', 'CAD', 'CHF', 'CNY', 'DKK', 'GBP', 'ISK', 'JPY', 'NOK', 'PLN', 'SEK', 'USD']
+21:29:44 wikidata lookup for 1272 LEIs
+21:29:57 wikidata hits: 638
+21:29:58 companies assembled: 1207
+21:30:00 done
