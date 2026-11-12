@@ -54,7 +54,7 @@
  "sandvik": {
   "name": "Sandvik Aktiebolag",
   "lei": "5299008ZUAXN43LVZF54",
-  "sector": "Materials",
+  "sector": "Basic Materials",
   "years": {
    "2023": {
     "currency": "SEK",
@@ -106,7 +106,7 @@
  "electrolux": {
   "name": "Electrolux Professional AB (publ)",
   "lei": "254900KI62Q46ZWD8084",
-  "sector": "Industrials",
+  "sector": "Consumer Discretionary",
   "years": {
    "2023": {
     "currency": "SEK",
@@ -158,7 +158,7 @@
  "orkla": {
   "name": "ORKLA ASA",
   "lei": "549300PZS8G8RG6RVZ52",
-  "sector": "Consumer",
+  "sector": "Consumer Staples",
   "years": {
    "2023": {
     "currency": "NOK",
@@ -210,7 +210,7 @@
  "kongsberg gruppen": {
   "name": "KONGSBERG GRUPPEN ASA",
   "lei": "5967007LIEEXZXJ9HK73",
-  "sector": "Technology",
+  "sector": "Industrials",
   "years": {
    "2023": {
     "currency": "NOK",
@@ -262,7 +262,7 @@
  "telenor": {
   "name": "TELENOR ASA",
   "lei": "549300IM1QSBY4SLPM26",
-  "sector": "Telecom & media",
+  "sector": "Telecommunications",
   "years": {
    "2023": {
     "currency": "NOK",
@@ -314,7 +314,7 @@
  "carlsberg a/s": {
   "name": "CARLSBERG A/S",
   "lei": "5299001O0WJQYB5GYZ19",
-  "sector": "Consumer",
+  "sector": "Consumer Staples",
   "years": {
    "2023": {
     "currency": "DKK",
@@ -366,7 +366,7 @@
  "dsv a/s": {
   "name": "DSV A/S",
   "lei": "529900X41C0BSLK67H70",
-  "sector": "Transport & shipping",
+  "sector": "Industrials",
   "years": {
    "2023": {
     "currency": "DKK",
@@ -418,7 +418,7 @@
  "novo nordisk a/s": {
   "name": "NOVO NORDISK A/S",
   "lei": "549300DAQ1CVT6CXN342",
-  "sector": "Health care",
+  "sector": "Health Care",
   "years": {
    "2023": {
     "currency": "DKK",
@@ -522,7 +522,7 @@
  "upm": {
   "name": "UPM-KYMMENE OYJ",
   "lei": "213800EC6PW5VU4J9U64",
-  "sector": "Materials",
+  "sector": "Basic Materials",
   "years": {
    "2023": {
     "currency": "EUR",
