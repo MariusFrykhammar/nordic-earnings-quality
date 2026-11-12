@@ -72,29 +72,29 @@
   },
   "peer_thresholds": {
    "all": {
-    "cash_conversion_3y_p10": 0.7150332809533196,
-    "accruals_ratio_p90": 0.0027371523514247535,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
-    "n": 674
+    "cash_conversion_3y_p10": 0.7178687276532976,
+    "accruals_ratio_p90": 0.0024009373505453385,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
+    "n": 701
    },
    "Unclassified": {
-    "cash_conversion_3y_p10": 0.719558135784551,
-    "accruals_ratio_p90": 0.009459459459459458,
-    "intangible_capex_to_revenue_p90": 0.07014857515614623,
-    "n": 478,
+    "cash_conversion_3y_p10": 0.7251910982099661,
+    "accruals_ratio_p90": 0.008828375728331467,
+    "intangible_capex_to_revenue_p90": 0.06965735007413454,
+    "n": 500,
     "peer_group": "Unclassified"
    },
    "Industrials": {
-    "cash_conversion_3y_p10": 0.7608477801490917,
-    "accruals_ratio_p90": 0.0034318860968229315,
-    "intangible_capex_to_revenue_p90": 0.048395801982893234,
-    "n": 49,
+    "cash_conversion_3y_p10": 0.8156841982968919,
+    "accruals_ratio_p90": 0.00031240884201324176,
+    "intangible_capex_to_revenue_p90": 0.048365388690873166,
+    "n": 51,
     "peer_group": "Industrials"
    },
    "Materials": {
     "cash_conversion_3y_p10": 0.8713898922390823,
     "accruals_ratio_p90": -0.01019518357610083,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
     "n": 18,
     "peer_group": "Materials"
    },
@@ -108,43 +108,43 @@
    "Telecom & media": {
     "cash_conversion_3y_p10": 1.4209853177934195,
     "accruals_ratio_p90": -0.004485696191892859,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
     "n": 18,
     "peer_group": "Telecom & media"
    },
    "Technology": {
-    "cash_conversion_3y_p10": 0.8581114192698466,
-    "accruals_ratio_p90": -0.01150156434939189,
+    "cash_conversion_3y_p10": 0.8195743605649344,
+    "accruals_ratio_p90": -0.0037220843672456576,
     "intangible_capex_to_revenue_p90": 0.14231503408448726,
     "n": 21,
     "peer_group": "Technology"
    },
    "Consumer": {
-    "cash_conversion_3y_p10": 0.8535818913852435,
-    "accruals_ratio_p90": -0.018601966770701108,
-    "intangible_capex_to_revenue_p90": 0.013091476176145948,
-    "n": 28,
+    "cash_conversion_3y_p10": 0.8624277311975973,
+    "accruals_ratio_p90": -0.02246118731316461,
+    "intangible_capex_to_revenue_p90": 0.012650472864921327,
+    "n": 30,
     "peer_group": "Consumer"
    },
    "Transport & shipping": {
     "cash_conversion_3y_p10": 0.784400802076592,
     "accruals_ratio_p90": -0.0018982743688921583,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
     "n": 20,
     "peer_group": "Transport & shipping"
    },
    "Energy": {
-    "cash_conversion_3y_p10": 0.726736240542854,
-    "accruals_ratio_p90": -0.009778042672938466,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
+    "cash_conversion_3y_p10": 0.7292872299382716,
+    "accruals_ratio_p90": -0.004967481747945395,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
     "n": 13,
     "peer_group": "Energy"
    },
    "Utilities": {
-    "cash_conversion_3y_p10": 0.7150332809533196,
-    "accruals_ratio_p90": 0.0027371523514247535,
-    "intangible_capex_to_revenue_p90": 0.07320807847955413,
-    "n": 10,
+    "cash_conversion_3y_p10": -0.06015859994531036,
+    "accruals_ratio_p90": -0.006285492707203769,
+    "intangible_capex_to_revenue_p90": 0.07246037972744561,
+    "n": 11,
     "peer_group": "Utilities"
    }
   }
@@ -275,31 +275,6 @@
     "revenue_growth": 0.4139,
     "ebit_margin": 0.1804,
     "cash_conversion_3y": null
-   },
-   {
-    "lei": "743700X6KUJ0Z8GJIF03",
-    "name": "Pohjolan Voima Oyj",
-    "country": "FI",
-    "sector": "Utilities",
-    "currency": "EUR",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 834.3,
-    "n_flags": 3,
-    "flags": [
-     "profit_without_cash",
-     "receivables_outpace_sales",
-     "leverage_creep"
-    ],
-    "profit_cash_gap": 0.8752,
-    "profit_cash_gap_scaled": 0.1027,
-    "net_profit_growth": -0.1972,
-    "ocf_growth": -1.0723,
-    "receivables_growth": 0.3887,
-    "revenue_growth": 0.0001,
-    "ebit_margin": 0.0586,
-    "cash_conversion_3y": 0.5181
    },
    {
     "lei": "894500HOIOGL651TVX16",
@@ -546,6 +521,30 @@
     "cash_conversion_3y": null
    },
    {
+    "lei": "549300IG13IP3OK19V41",
+    "name": "SMÅKRAFT AS",
+    "country": "NO",
+    "sector": "Utilities",
+    "currency": "EUR",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 52.9,
+    "n_flags": 2,
+    "flags": [
+     "profit_without_cash",
+     "receivables_outpace_sales"
+    ],
+    "profit_cash_gap": null,
+    "profit_cash_gap_scaled": 0.4474,
+    "net_profit_growth": null,
+    "ocf_growth": -2.2217,
+    "receivables_growth": 0.5485,
+    "revenue_growth": -0.0281,
+    "ebit_margin": -0.1486,
+    "cash_conversion_3y": -0.4172
+   },
+   {
     "lei": "9845009F7Q0D56B38270",
     "name": "MilDef Group AB",
     "country": "SE",
@@ -690,6 +689,30 @@
     "cash_conversion_3y": 1.4106
    },
    {
+    "lei": "743700X6KUJ0Z8GJIF03",
+    "name": "Pohjolan Voima Oyj",
+    "country": "FI",
+    "sector": "Utilities",
+    "currency": "EUR",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 834.3,
+    "n_flags": 2,
+    "flags": [
+     "receivables_outpace_sales",
+     "leverage_creep"
+    ],
+    "profit_cash_gap": 0.8752,
+    "profit_cash_gap_scaled": 0.1027,
+    "net_profit_growth": -0.1972,
+    "ocf_growth": -1.0723,
+    "receivables_growth": 0.3887,
+    "revenue_growth": 0.0001,
+    "ebit_margin": 0.0586,
+    "cash_conversion_3y": 0.5181
+   },
+   {
     "lei": "5967007LIEEXZXFQY092",
     "name": "VISTIN PHARMA ASA",
     "country": "NO",
@@ -832,30 +855,6 @@
     "revenue_growth": 0.0946,
     "ebit_margin": 0.0751,
     "cash_conversion_3y": 1.6875
-   },
-   {
-    "lei": "5967007LIEEXZXIUTS36",
-    "name": "SOGN OG FJORDANE ENERGI AS",
-    "country": "NO",
-    "sector": "Utilities",
-    "currency": "NOK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 167.6,
-    "n_flags": 2,
-    "flags": [
-     "profit_without_cash",
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": 0.3836,
-    "profit_cash_gap_scaled": 0.0468,
-    "net_profit_growth": 0.4135,
-    "ocf_growth": 0.03,
-    "receivables_growth": 0.3055,
-    "revenue_growth": -0.0255,
-    "ebit_margin": 0.3358,
-    "cash_conversion_3y": 0.5564
    },
    {
     "lei": "9845007BA4ZD9CCR8846",
@@ -1122,6 +1121,30 @@
     "cash_conversion_3y": 1.9046
    },
    {
+    "lei": "549300KHSJZJOMF2WJ23",
+    "name": "PELAGIA HOLDING AS",
+    "country": "NO",
+    "sector": "Unclassified",
+    "currency": "NOK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 1147.4,
+    "n_flags": 2,
+    "flags": [
+     "inventory_build_up",
+     "leverage_creep"
+    ],
+    "profit_cash_gap": -0.2292,
+    "profit_cash_gap_scaled": 0.0074,
+    "net_profit_growth": -0.9742,
+    "ocf_growth": -0.745,
+    "receivables_growth": -0.2546,
+    "revenue_growth": -0.106,
+    "ebit_margin": 0.026,
+    "cash_conversion_3y": 0.6798
+   },
+   {
     "lei": "549300PB67LZ38PTO750",
     "name": "Cabonline Group Holding AB",
     "country": "SE",
@@ -1336,30 +1359,6 @@
     "revenue_growth": 0.1878,
     "ebit_margin": null,
     "cash_conversion_3y": null
-   },
-   {
-    "lei": "5493008YL42784DMWN61",
-    "name": "CARLSBERG BREWERIES A/S",
-    "country": "DK",
-    "sector": "Unclassified",
-    "currency": "DKK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 11937.6,
-    "n_flags": 2,
-    "flags": [
-     "receivables_outpace_sales",
-     "acquisition_driven"
-    ],
-    "profit_cash_gap": -0.4338,
-    "profit_cash_gap_scaled": -0.0612,
-    "net_profit_growth": -0.341,
-    "ocf_growth": 0.0928,
-    "receivables_growth": 0.5591,
-    "revenue_growth": 0.1878,
-    "ebit_margin": null,
-    "cash_conversion_3y": null
    }
   ],
   "widest_profit_cash_gap": [
@@ -1410,6 +1409,29 @@
     "revenue_growth": 0.0295,
     "ebit_margin": 0.0327,
     "cash_conversion_3y": 7.0066
+   },
+   {
+    "lei": "5967007LIEEXZXJNDK21",
+    "name": "STEEN & STRØM AS",
+    "country": "NO",
+    "sector": "Unclassified",
+    "currency": "NOK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 141.6,
+    "n_flags": 1,
+    "flags": [
+     "profit_without_cash"
+    ],
+    "profit_cash_gap": 0.3715,
+    "profit_cash_gap_scaled": 0.2914,
+    "net_profit_growth": 0.1021,
+    "ocf_growth": -0.2695,
+    "receivables_growth": -0.2412,
+    "revenue_growth": 0.0554,
+    "ebit_margin": 1.1556,
+    "cash_conversion_3y": 1.0339
    },
    {
     "lei": "743700NFG5W5I59OVX65",
@@ -1845,6 +1867,29 @@
     "cash_conversion_3y": 1.9335
    },
    {
+    "lei": "549300GYQIIJ3UXB7655",
+    "name": "Husqvarna AB",
+    "country": "SE",
+    "sector": "Industrials",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 4212.8,
+    "n_flags": 1,
+    "flags": [
+     "profit_without_cash"
+    ],
+    "profit_cash_gap": 0.7194,
+    "profit_cash_gap_scaled": 0.0636,
+    "net_profit_growth": 0.3341,
+    "ocf_growth": -0.3853,
+    "receivables_growth": -0.1012,
+    "revenue_growth": -0.036,
+    "ebit_margin": 0.0622,
+    "cash_conversion_3y": 1.9312
+   },
+   {
     "lei": "213800314VQ2TXFPB471",
     "name": "PETROLIA SE",
     "country": "NO",
@@ -2140,6 +2185,29 @@
     "cash_conversion_3y": 1.3321
    },
    {
+    "lei": "213800T7T7I7WAOX8Y72",
+    "name": "Nolato Aktiebolag",
+    "country": "SE",
+    "sector": "Unclassified",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 855.2,
+    "n_flags": 1,
+    "flags": [
+     "profit_without_cash"
+    ],
+    "profit_cash_gap": 0.4096,
+    "profit_cash_gap_scaled": 0.0449,
+    "net_profit_growth": 0.1809,
+    "ocf_growth": -0.2288,
+    "receivables_growth": 0.027,
+    "revenue_growth": -0.0209,
+    "ebit_margin": 0.1082,
+    "cash_conversion_3y": 1.2413
+   },
+   {
     "lei": "5299007OWYZ6I1E46843",
     "name": "Pandora A/S",
     "country": "DK",
@@ -2203,6 +2271,27 @@
     "revenue_growth": -0.4817,
     "ebit_margin": 0.1176,
     "cash_conversion_3y": 0.8863
+   },
+   {
+    "lei": "54930085MH6IRQ1JP227",
+    "name": "Lindab International AB",
+    "country": "SE",
+    "sector": "Unclassified",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 1161.7,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": 1.476,
+    "profit_cash_gap_scaled": 0.0402,
+    "net_profit_growth": 1.4127,
+    "ocf_growth": -0.0633,
+    "receivables_growth": -0.0769,
+    "revenue_growth": -0.0352,
+    "ebit_margin": 0.0853,
+    "cash_conversion_3y": 1.4932
    },
    {
     "lei": "549300UIPGM58Z67Z634",
@@ -2318,6 +2407,29 @@
     "cash_conversion_3y": 1.2532
    },
    {
+    "lei": "54930038JVQ3CMTEO084",
+    "name": "NOTE AB (publ)",
+    "country": "SE",
+    "sector": "Technology",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 344.7,
+    "n_flags": 1,
+    "flags": [
+     "profit_without_cash"
+    ],
+    "profit_cash_gap": 0.2899,
+    "profit_cash_gap_scaled": 0.0324,
+    "net_profit_growth": 0.1359,
+    "ocf_growth": -0.154,
+    "receivables_growth": -0.0113,
+    "revenue_growth": -0.0222,
+    "ebit_margin": 0.1,
+    "cash_conversion_3y": 1.2487
+   },
+   {
     "lei": "5299008ZUAXN43LVZF54",
     "name": "Sandvik Aktiebolag",
     "country": "SE",
@@ -2362,137 +2474,27 @@
     "cash_conversion_3y": 2.3449
    },
    {
-    "lei": "529900P5DOKT3XLWL480",
-    "name": "TCM Group A/S",
-    "country": "DK",
-    "sector": "Unclassified",
-    "currency": "DKK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 171.4,
-    "n_flags": 2,
-    "flags": [
-     "profit_without_cash",
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": 0.5039,
-    "profit_cash_gap_scaled": 0.0301,
-    "net_profit_growth": 0.3484,
-    "ocf_growth": -0.1554,
-    "receivables_growth": 0.5607,
-    "revenue_growth": 0.0626,
-    "ebit_margin": 0.0909,
-    "cash_conversion_3y": 1.0771
-   },
-   {
-    "lei": "549300MPJPYQB0KCNH03",
-    "name": "Byggmax Group AB",
+    "lei": "549300V512S3QMRNO618",
+    "name": "Rusta AB (publ)",
     "country": "SE",
     "sector": "Unclassified",
     "currency": "SEK",
     "latest_year": 2025,
     "in_universe": true,
     "rankable": true,
-    "revenue_eur_m": 557.3,
-    "n_flags": 0,
-    "flags": [],
-    "profit_cash_gap": 1.91,
-    "profit_cash_gap_scaled": 0.0291,
-    "net_profit_growth": 1.8507,
-    "ocf_growth": -0.0593,
-    "receivables_growth": -0.3571,
-    "revenue_growth": 0.0249,
-    "ebit_margin": 0.0496,
-    "cash_conversion_3y": 4.0429
-   },
-   {
-    "lei": "7437001AEZHLL3UEX093",
-    "name": "Terveystalo Oyj",
-    "country": "FI",
-    "sector": "Unclassified",
-    "currency": "EUR",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 1278.9,
-    "n_flags": 0,
-    "flags": [],
-    "profit_cash_gap": 0.3661,
-    "profit_cash_gap_scaled": 0.0281,
-    "net_profit_growth": 0.2915,
-    "ocf_growth": -0.0747,
-    "receivables_growth": -0.08,
-    "revenue_growth": -0.0456,
-    "ebit_margin": 0.1075,
-    "cash_conversion_3y": 2.4642
-   },
-   {
-    "lei": "5967007LIEEXZXINVS13",
-    "name": "ATEA ASA",
-    "country": "NO",
-    "sector": "Unclassified",
-    "currency": "NOK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 3189.9,
+    "revenue_eur_m": 1040.5,
     "n_flags": 1,
     "flags": [
      "profit_without_cash"
     ],
-    "profit_cash_gap": 0.5392,
-    "profit_cash_gap_scaled": 0.0268,
-    "net_profit_growth": 0.1329,
-    "ocf_growth": -0.4063,
-    "receivables_growth": 0.0801,
-    "revenue_growth": 0.0808,
-    "ebit_margin": 0.0368,
-    "cash_conversion_3y": 1.3476
-   },
-   {
-    "lei": "549300H88IJGPNNL3T61",
-    "name": "Bravida Holding AB",
-    "country": "SE",
-    "sector": "Unclassified",
-    "currency": "SEK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 2549.4,
-    "n_flags": 1,
-    "flags": [
-     "profit_without_cash"
-    ],
-    "profit_cash_gap": 0.3923,
-    "profit_cash_gap_scaled": 0.0206,
-    "net_profit_growth": 0.1587,
-    "ocf_growth": -0.2336,
-    "receivables_growth": -0.0108,
-    "revenue_growth": -0.0487,
-    "ebit_margin": 0.0591,
-    "cash_conversion_3y": 0.9673
-   },
-   {
-    "lei": "529900UHC8SM9RKVRX31",
-    "name": "FIBERTEX PERSONAL CARE A/S",
-    "country": "DK",
-    "sector": "Unclassified",
-    "currency": "DKK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 230.5,
-    "n_flags": 0,
-    "flags": [],
-    "profit_cash_gap": 0.7955,
-    "profit_cash_gap_scaled": 0.0197,
-    "net_profit_growth": 0.7034,
-    "ocf_growth": -0.092,
-    "receivables_growth": 0.0768,
-    "revenue_growth": -0.0858,
-    "ebit_margin": 0.0478,
-    "cash_conversion_3y": 1.9083
+    "profit_cash_gap": 0.3622,
+    "profit_cash_gap_scaled": 0.0307,
+    "net_profit_growth": 0.1667,
+    "ocf_growth": -0.1956,
+    "receivables_growth": -0.0625,
+    "revenue_growth": 0.0641,
+    "ebit_margin": 0.0721,
+    "cash_conversion_3y": 1.6601
    }
   ],
   "fastest_receivables_build_up": [
@@ -2658,6 +2660,27 @@
     "cash_conversion_3y": 0.297
    },
    {
+    "lei": "5493001IZXU12M8NYV95",
+    "name": "Annehem Fastigheter AB (publ)",
+    "country": "SE",
+    "sector": "Real estate",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 27.3,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": -2.744,
+    "profit_cash_gap_scaled": -0.3949,
+    "net_profit_growth": -1.2378,
+    "ocf_growth": 1.5062,
+    "receivables_growth": 1.2632,
+    "revenue_growth": 0.0967,
+    "ebit_margin": 0.3601,
+    "cash_conversion_3y": 1.0382
+   },
+   {
     "lei": "213800R2TQW1OZGYDX93",
     "name": "SOTKAMO SILVER AB",
     "country": "SE",
@@ -2750,6 +2773,27 @@
     "revenue_growth": 0.0541,
     "ebit_margin": 0.2042,
     "cash_conversion_3y": 1.1228
+   },
+   {
+    "lei": "549300HT0F6CFLJR3Y69",
+    "name": "Humlegården Fastigheter AB",
+    "country": "SE",
+    "sector": "Real estate",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 185.0,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": 0.413,
+    "profit_cash_gap_scaled": 0.2289,
+    "net_profit_growth": 0.1017,
+    "ocf_growth": -0.3113,
+    "receivables_growth": 0.9512,
+    "revenue_growth": 0.0348,
+    "ebit_margin": 0.5085,
+    "cash_conversion_3y": 0.9679
    },
    {
     "lei": "5967007LIEEXZXHAI017",
@@ -3030,6 +3074,27 @@
     "cash_conversion_3y": null
    },
    {
+    "lei": "549300QIXCZWZLHE8L05",
+    "name": "Axfood AB",
+    "country": "SE",
+    "sector": "Consumer",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 8057.3,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": -0.1664,
+    "profit_cash_gap_scaled": -0.0135,
+    "net_profit_growth": 0.0703,
+    "ocf_growth": 0.2367,
+    "receivables_growth": 0.6567,
+    "revenue_growth": 0.0606,
+    "ebit_margin": 0.0401,
+    "cash_conversion_3y": 1.7638
+   },
+   {
     "lei": "549300Z8JUDQ3BN8QB79",
     "name": "Balco Group AB",
     "country": "SE",
@@ -3051,6 +3116,30 @@
     "revenue_growth": -0.0866,
     "ebit_margin": -0.0144,
     "cash_conversion_3y": 0.8577
+   },
+   {
+    "lei": "549300IG13IP3OK19V41",
+    "name": "SMÅKRAFT AS",
+    "country": "NO",
+    "sector": "Utilities",
+    "currency": "EUR",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 52.9,
+    "n_flags": 2,
+    "flags": [
+     "profit_without_cash",
+     "receivables_outpace_sales"
+    ],
+    "profit_cash_gap": null,
+    "profit_cash_gap_scaled": 0.4474,
+    "net_profit_growth": null,
+    "ocf_growth": -2.2217,
+    "receivables_growth": 0.5485,
+    "revenue_growth": -0.0281,
+    "ebit_margin": -0.1486,
+    "cash_conversion_3y": -0.4172
    },
    {
     "lei": "894500HOIOGL651TVX16",
@@ -3076,6 +3165,27 @@
     "revenue_growth": 0.2494,
     "ebit_margin": 0.056,
     "cash_conversion_3y": 0.7502
+   },
+   {
+    "lei": "254900AWRHP1QNE6OQ19",
+    "name": "Swedish Logistic Property AB",
+    "country": "SE",
+    "sector": "Real estate",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 91.7,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": -0.1751,
+    "profit_cash_gap_scaled": -0.0282,
+    "net_profit_growth": 0.2368,
+    "ocf_growth": 0.4119,
+    "receivables_growth": 1.0,
+    "revenue_growth": 0.4296,
+    "ebit_margin": 0.8502,
+    "cash_conversion_3y": 0.6883
    },
    {
     "lei": "391200UIIWMXRLGARB95",
@@ -3197,6 +3307,27 @@
     "cash_conversion_3y": null
    },
    {
+    "lei": "549300Q62J8QZJ5TGJ71",
+    "name": "K2A Knaust & Andersson Fastigheter AB (publ)",
+    "country": "SE",
+    "sector": "Real estate",
+    "currency": "SEK",
+    "latest_year": 2025,
+    "in_universe": true,
+    "rankable": true,
+    "revenue_eur_m": 27.7,
+    "n_flags": 0,
+    "flags": [],
+    "profit_cash_gap": null,
+    "profit_cash_gap_scaled": 1.1227,
+    "net_profit_growth": null,
+    "ocf_growth": -1.2613,
+    "receivables_growth": 0.1935,
+    "revenue_growth": -0.282,
+    "ebit_margin": 0.4127,
+    "cash_conversion_3y": null
+   },
+   {
     "lei": "636700WDI7YVR5F6V241",
     "name": "Carasent AB (publ)",
     "country": "SE",
@@ -3278,13 +3409,13 @@
      "receivables_outpace_sales"
     ],
     "profit_cash_gap": null,
-    "profit_cash_gap_scaled": null,
+    "profit_cash_gap_scaled": -0.251,
     "net_profit_growth": null,
-    "ocf_growth": null,
+    "ocf_growth": 2.076,
     "receivables_growth": 0.6173,
     "revenue_growth": 0.1993,
     "ebit_margin": 0.3877,
-    "cash_conversion_3y": null
+    "cash_conversion_3y": 0.9371
    },
    {
     "lei": "7437003VZ3JPF7DBTG92",
@@ -3342,9 +3473,8 @@
     "in_universe": true,
     "rankable": true,
     "revenue_eur_m": 834.3,
-    "n_flags": 3,
+    "n_flags": 2,
     "flags": [
-     "profit_without_cash",
      "receivables_outpace_sales",
      "leverage_creep"
     ],
@@ -3519,145 +3649,6 @@
     "revenue_growth": -0.3047,
     "ebit_margin": -0.8758,
     "cash_conversion_3y": null
-   },
-   {
-    "lei": "2138001H6FCSZBP26351",
-    "name": "ITAB Shop Concept AB",
-    "country": "SE",
-    "sector": "Unclassified",
-    "currency": "SEK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 1155.0,
-    "n_flags": 2,
-    "flags": [
-     "receivables_outpace_sales",
-     "acquisition_driven"
-    ],
-    "profit_cash_gap": -0.7658,
-    "profit_cash_gap_scaled": -0.0492,
-    "net_profit_growth": -0.5078,
-    "ocf_growth": 0.258,
-    "receivables_growth": 1.3095,
-    "revenue_growth": 0.9408,
-    "ebit_margin": 0.0454,
-    "cash_conversion_3y": 1.5085
-   },
-   {
-    "lei": "5493001NNP6HM67OVU09",
-    "name": "Atrium Ljungberg AB",
-    "country": "SE",
-    "sector": "Real estate",
-    "currency": "SEK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 311.4,
-    "n_flags": 0,
-    "flags": [],
-    "profit_cash_gap": 0.0378,
-    "profit_cash_gap_scaled": 0.0176,
-    "net_profit_growth": -0.0318,
-    "ocf_growth": -0.0696,
-    "receivables_growth": 0.3404,
-    "revenue_growth": -0.0199,
-    "ebit_margin": null,
-    "cash_conversion_3y": null
-   },
-   {
-    "lei": "743700HAOL35VNKK1711",
-    "name": "Tornator Oyj",
-    "country": "FI",
-    "sector": "Unclassified",
-    "currency": "EUR",
-    "latest_year": 2024,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 213.0,
-    "n_flags": 2,
-    "flags": [
-     "profit_without_cash",
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": -0.7632,
-    "profit_cash_gap_scaled": -1.1505,
-    "net_profit_growth": -0.6111,
-    "ocf_growth": 0.1521,
-    "receivables_growth": 0.4493,
-    "revenue_growth": 0.093,
-    "ebit_margin": 0.8913,
-    "cash_conversion_3y": 0.2425
-   },
-   {
-    "lei": "5967007LIEEXZXIARK36",
-    "name": "SCATEC ASA",
-    "country": "NO",
-    "sector": "Utilities",
-    "currency": "NOK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 447.0,
-    "n_flags": 1,
-    "flags": [
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": null,
-    "profit_cash_gap_scaled": null,
-    "net_profit_growth": -0.3358,
-    "ocf_growth": null,
-    "receivables_growth": 0.1396,
-    "revenue_growth": -0.2032,
-    "ebit_margin": 0.5304,
-    "cash_conversion_3y": null
-   },
-   {
-    "lei": "549300VT0UXKWES37P59",
-    "name": "K-Fast Holding AB",
-    "country": "SE",
-    "sector": "Real estate",
-    "currency": "SEK",
-    "latest_year": 2024,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 99.8,
-    "n_flags": 1,
-    "flags": [
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": null,
-    "profit_cash_gap_scaled": 0.5962,
-    "net_profit_growth": null,
-    "ocf_growth": -0.8492,
-    "receivables_growth": 0.3848,
-    "revenue_growth": 0.0535,
-    "ebit_margin": null,
-    "cash_conversion_3y": null
-   },
-   {
-    "lei": "5967007LIEEXZXIUTS36",
-    "name": "SOGN OG FJORDANE ENERGI AS",
-    "country": "NO",
-    "sector": "Utilities",
-    "currency": "NOK",
-    "latest_year": 2025,
-    "in_universe": true,
-    "rankable": true,
-    "revenue_eur_m": 167.6,
-    "n_flags": 2,
-    "flags": [
-     "profit_without_cash",
-     "receivables_outpace_sales"
-    ],
-    "profit_cash_gap": 0.3836,
-    "profit_cash_gap_scaled": 0.0468,
-    "net_profit_growth": 0.4135,
-    "ocf_growth": 0.03,
-    "receivables_growth": 0.3055,
-    "revenue_growth": -0.0255,
-    "ebit_margin": 0.3358,
-    "cash_conversion_3y": 0.5564
    }
   ]
  }

@@ -183,6 +183,14 @@
   [
    "ProfitLoss",
    5721
+  ],
+  [
+   "fallback:ProfitLossAttributableToOwnersOfParent",
+   25
+  ],
+  [
+   "ProfitLossAttributableToOwnersOfParent+ProfitLossAttributableToNoncontrollingInterests",
+   2
   ]
  ],
  "net_profit_owners": [
@@ -195,6 +203,14 @@
   [
    "CashFlowsFromUsedInOperatingActivities",
    5540
+  ],
+  [
+   "fallback:CashFlowsFromUsedInOperations",
+   175
+  ],
+  [
+   "CashFlowsFromUsedInOperatingActivitiesContinuingOperations",
+   14
   ],
   [
    "extension-auto:",
@@ -233,8 +249,64 @@
    411
   ],
   [
+   "fallback:RentalIncomeFromInvestmentProperty",
+   192
+  ],
+  [
+   "specific-line:RevenueFromSaleOfGoods",
+   84
+  ],
+  [
+   "specific-line:RevenueFromRenderingOfServices",
+   34
+  ],
+  [
+   "fallback:RentalIncome",
+   23
+  ],
+  [
    "extension-auto:",
    16
+  ],
+  [
+   "specific-line:RevenueFromSaleOfOilAndGasProducts",
+   14
+  ],
+  [
+   "specific-line:RevenueFromConstructionContracts",
+   10
+  ],
+  [
+   "specific-line:RevenueFromRenderingOfGamingServices",
+   7
+  ],
+  [
+   "specific-line:RevenueFromRenderingOfInternetAndDataServices",
+   6
+  ],
+  [
+   "specific-line:RevenueFromRenderingOfCargoAndMailTransportServices",
+   6
+  ],
+  [
+   "specific-line:RevenueFromSaleOfElectricity",
+   5
+  ],
+  [
+   "specific-line:RevenueFromRoyalties",
+   5
+  ],
+  [
+   "specific-line:RevenueFromRenderingOfTransportServices",
+   3
+  ],
+  [
+   "specific-line:RevenueFromSaleOfFoodAndBeverage",
+   1
+  ],
+  [
+   "specific-line:RevenueFromSaleOfCrudeOil",
+   1
   ]
  ],
  "total_assets": [
