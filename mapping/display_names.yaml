@@ -1,0 +1,3 @@
+# Display-name overrides keyed by LEI, for names the automatic clean-up gets wrong.
+# Example:  <LEI>: Kone
+{}

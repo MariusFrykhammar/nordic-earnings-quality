@@ -1,0 +1,3 @@
+# Companies removed from rankings, keyed by LEI, with a reason. Use only when official data can't decide.
+# Example:  <LEI>: "listed shares are a holding vehicle's; operating group reports separately"
+{}
